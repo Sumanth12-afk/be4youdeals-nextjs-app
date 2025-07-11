@@ -1,10 +1,11 @@
 // components/Layout.tsx
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, ReactNode } from "react";
 import { auth } from "../lib/firebase";
+import toast from "react-hot-toast";
 
-const Layout = ({ children }) => {
-  const [user, setUser] = useState(null);
+const Layout = ({ children }: { children: ReactNode }) => {
+  const [user, setUser] = useState<any>(null);
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((u) => {
@@ -14,8 +15,18 @@ const Layout = ({ children }) => {
   }, []);
 
   const handleLogout = async () => {
-    await auth.signOut();
-    window.location.href = "/login";
+    toast("Logging out...", {
+      icon: "👋",
+      duration: 1500,
+      style: {
+        background: "#facc15",
+        color: "#000"
+      },
+    });
+    setTimeout(async () => {
+      await auth.signOut();
+      window.location.href = "/login";
+    }, 1500);
   };
 
   return (
@@ -31,7 +42,6 @@ const Layout = ({ children }) => {
             <Link href="/privacy" className="hover:underline">Privacy</Link>
             <Link href="/disclosure" className="hover:underline">Disclosure</Link>
 
-            {/* Show Logout and User */}
             {user && (
               <>
                 <span className="text-sm text-black bg-white px-3 py-1 rounded-full">
@@ -50,6 +60,15 @@ const Layout = ({ children }) => {
       </header>
 
       <main className="min-h-screen bg-gray-100 p-6">{children}</main>
+
+      <footer className="bg-yellow-500 text-white py-4 mt-10">
+        <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-6 text-sm">
+          <a href="/about" className="hover:underline">About</a>
+          <a href="/contact" className="hover:underline">Contact</a>
+          <a href="/privacy" className="hover:underline">Privacy</a>
+          <a href="/disclosure" className="hover:underline">Disclosure</a>
+        </div>
+      </footer>
     </div>
   );
 };
