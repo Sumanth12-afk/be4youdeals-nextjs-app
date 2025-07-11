@@ -5,8 +5,9 @@ import { useRouter } from "next/router";
 import { auth } from "../lib/firebase";
 import Layout from "../components/Layout";
 import { Toaster } from "react-hot-toast";
+import type { AppProps } from "next/app";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const [userChecked, setUserChecked] = useState(false);
   const [isAuth, setIsAuth] = useState(false);
@@ -20,11 +21,9 @@ function MyApp({ Component, pageProps }) {
       setUserChecked(true);
 
       if (user && (isLoginPage || isSignupPage)) {
-        // ✅ Redirect to home after login/signup
         router.push("/");
       }
     });
-
     return () => unsubscribe();
   }, [router.pathname]);
 
