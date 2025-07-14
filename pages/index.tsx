@@ -1,4 +1,3 @@
-// pages/index.tsx
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -8,8 +7,15 @@ export default function Home() {
     <div className="bg-white text-gray-800">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-lime-200 via-yellow-100 to-lime-100 py-20 px-6">
-        <div className="absolute inset-0 opacity-10">
-          <Image src="/hero-bg.jpg" alt="Hero Background" fill objectFit="cover" />
+        {/* ✅ Fix: added relative + style */}
+        <div className="absolute inset-0 opacity-10 z-0">
+          <Image
+            src="/hero-bg.jpg"
+            alt="Hero Background"
+            width={1920}
+            height={1080}
+            className="w-full h-full object-cover"
+          />
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
@@ -63,7 +69,6 @@ export default function Home() {
         </motion.h2>
 
         <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-4">
-          {/* Category Card Template */}
           {[
             {
               title: "Headphones",
@@ -90,7 +95,7 @@ export default function Home() {
               desc: "Power & portability combined",
               cta: "View All →",
             },
-          ].map((item, i) => (
+          ].map((item) => (
             <motion.div
               key={item.title}
               whileHover={{ scale: 1.05 }}
