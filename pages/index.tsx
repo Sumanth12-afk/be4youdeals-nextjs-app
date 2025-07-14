@@ -1,88 +1,119 @@
 // pages/index.tsx
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
 import Link from "next/link";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Home() {
-  const featuredProducts = [
-    {
-      title: "Sony WH-1000XM5",
-      description: "Industry-leading noise-canceling headphones.",
-      image: "https://m.media-amazon.com/images/I/41lArSiD5hL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
-      link: "/headphones/page/1",
-    },
-    {
-      title: "HP Victus Gaming Laptop",
-      description: "Affordable performance for gaming & creation.",
-      image: "https://m.media-amazon.com/images/I/71wF7YDIQkL._AC_UY327_FMwebp_QL65_.jpg",
-      link: "/laptops/page/1",
-    },
-    {
-      title: "Apple AirPods Pro",
-      description: "Now with Adaptive Audio and H2 chip.",
-      image: "https://m.media-amazon.com/images/I/61SUj2aKoEL._AC_UY327_FMwebp_QL65_.jpg",
-      link: "/headphones/page/1",
-    },
-  ];
-
   return (
-    <main className="min-h-screen bg-blue-50 text-gray-800 p-6">
-      <div className="max-w-6xl mx-auto text-center mb-10">
-        <h1 className="text-4xl font-bold text-indigo-700 mb-2">Welcome to be4youdeals</h1>
-        <p className="text-gray-600 mb-6">
-          Explore the best deals on Laptops, Headphones & More.
-        </p>
+    <div className="bg-white text-gray-800">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-lime-200 via-yellow-100 to-lime-100 py-20 px-6">
+        <div className="absolute inset-0 opacity-10">
+          <Image src="/hero-bg.jpg" alt="Hero Background" fill objectFit="cover" />
+        </div>
 
-        <Swiper
-          modules={[Autoplay, Pagination]}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          pagination={{ clickable: true }}
-          loop={true}
-          className="rounded-xl shadow-xl"
-        >
-          {featuredProducts.map((item, index) => (
-            <SwiperSlide key={index}>
-              <Link href={item.link}>
-                <div className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition duration-300 cursor-pointer">
-                  <div className="w-full h-64 bg-gray-100 flex items-center justify-center">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="max-h-full max-w-full object-contain"
-                    />
-                  </div>
-                  <h2 className="text-xl font-semibold mt-4">{item.title}</h2>
-                  <p className="text-sm text-gray-600">{item.description}</p>
-                </div>
-              </Link>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-
-      {/* Category Grid Section */}
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-2xl font-bold text-blue-600 mb-4">Browse Categories</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {[
-            { title: "🏠 Home", link: "/", desc: "Back to homepage" },
-            { title: "💻 Laptops", link: "/laptops/page/1", desc: "Shop top laptops" },
-            { title: "🎧 Headphones", link: "/headphones/page/1", desc: "Noise-canceling & more" },
-            { title: "📱 Mobiles", link: "/mobiles/page/1", desc: "Latest smartphones" },
-            { title: "🏠 Household", link: "/household/page/1", desc: "Essentials & gadgets" },
-            { title: "📞 Contact", link: "/contact", desc: "Get in touch with us" },
-          ].map((card, i) => (
-            <Link key={i} href={card.link}>
-              <div className="bg-white shadow-md hover:shadow-lg transition p-6 rounded-lg cursor-pointer hover:bg-blue-100">
-                <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
-                <p className="text-sm text-gray-600">{card.desc}</p>
-              </div>
+        <div className="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center md:text-left max-w-xl"
+          >
+            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-green-800">
+              Discover Deals <br /> on What Matters Most
+            </h1>
+            <p className="mt-4 text-lg text-gray-700">
+              Explore top offers on tech and home essentials — only at{" "}
+              <span className="font-semibold">be4youdeals</span>.
+            </p>
+            <Link href="/deals">
+              <button className="mt-6 bg-black text-white px-6 py-3 rounded-full font-semibold shadow hover:bg-green-800 transition">
+                Shop Now
+              </button>
             </Link>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="w-full md:w-[50%]"
+          >
+            <Image
+              src="/hero-tech-glow.png"
+              alt="Hero Tech Layout"
+              width={600}
+              height={600}
+              className="rounded-lg shadow-xl"
+            />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Explore Categories */}
+      <section className="py-20 px-6 max-w-7xl mx-auto">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-4xl font-bold text-center mb-16 text-indigo-700"
+        >
+          Explore Categories
+        </motion.h2>
+
+        <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-4">
+          {/* Category Card Template */}
+          {[
+            {
+              title: "Headphones",
+              image: "/headphones.png",
+              link: "/headphones/page/1",
+              desc: "Experience next-gen sound",
+            },
+            {
+              title: "Mobile Phones",
+              image: "/mobiles.png",
+              link: "/mobiles/page/1",
+              desc: "Discover cutting-edge tech",
+            },
+            {
+              title: "Household",
+              image: "/household.png",
+              link: "/household/page/1",
+              desc: "Essentials & smart gadgets",
+            },
+            {
+              title: "Laptops",
+              image: "/laptop.png",
+              link: "/laptops/page/1",
+              desc: "Power & portability combined",
+              cta: "View All →",
+            },
+          ].map((item, i) => (
+            <motion.div
+              key={item.title}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+              className="bg-white border border-gray-200 rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300"
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                className="mx-auto mb-4 h-32 object-contain"
+              />
+              <h3 className="text-lg font-bold mb-1">{item.title}</h3>
+              <p className="text-sm text-gray-600 mb-3">{item.desc}</p>
+              <Link
+                href={item.link}
+                className="text-indigo-600 text-sm font-semibold hover:underline"
+              >
+                {item.cta || "Shop Now →"}
+              </Link>
+            </motion.div>
           ))}
         </div>
-      </div>
-    </main>
+      </section>
+    </div>
   );
 }

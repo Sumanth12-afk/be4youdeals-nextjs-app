@@ -1,4 +1,3 @@
-// components/Layout.tsx
 import Link from "next/link";
 import { useEffect, useState, ReactNode } from "react";
 import { auth } from "../lib/firebase";
@@ -36,6 +35,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
           <h1 className="text-2xl font-bold">be4youdeals</h1>
           <nav className="flex items-center space-x-6">
             <Link href="/" className="hover:underline">Home</Link>
+            <Link href="/deals" className="hover:underline">Deals</Link> {/* ✅ NEW */}
             <Link href="/laptops/page/1" className="hover:underline">Laptops</Link>
             <Link href="/about" className="hover:underline">About</Link>
             <Link href="/contact" className="hover:underline">Contact</Link>
