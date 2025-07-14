@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -7,13 +6,10 @@ export default function Home() {
     <div className="bg-white text-gray-800">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-lime-200 via-yellow-100 to-lime-100 py-20 px-6">
-        {/* ✅ Fix: added relative + style */}
         <div className="absolute inset-0 opacity-10 z-0">
-          <Image
+          <img
             src="/hero-bg.jpg"
             alt="Hero Background"
-            width={1920}
-            height={1080}
             className="w-full h-full object-cover"
           />
         </div>
@@ -45,7 +41,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="w-full md:w-[50%]"
           >
-            <Image
+            <img
               src="/hero-tech-glow.png"
               alt="Hero Tech Layout"
               width={600}
