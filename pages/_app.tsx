@@ -31,7 +31,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     return <p className="text-center p-10">Checking login status...</p>;
   }
 
-  if (!isAuth && !isLoginPage && !isSignupPage) {
+  // Allow public access to landing page
+  const isPublicPage = router.pathname === "/" || isLoginPage || isSignupPage;
+  
+  if (!isAuth && !isPublicPage) {
     router.push("/login");
     return null;
   }
