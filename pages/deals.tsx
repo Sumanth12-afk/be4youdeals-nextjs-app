@@ -22,7 +22,7 @@ export default function DealsWall() {
       category: "💻 Laptops",
       productName: "HP 15, Intel Core i5-1335U",
       tagline: "Performance meets portability",
-      originalPrice: null,
+      originalPrice: "₹74,990",
       currentPrice: "₹55,990",
       currency: "INR",
       rating: 3.6,
@@ -35,7 +35,6 @@ export default function DealsWall() {
       badgeColor: "from-red-500 to-orange-500",
       discount: 25,
       dealEndTime: new Date(Date.now() + 2 * 24 * 60 * 60 * 1000), // 2 days from now
-      originalPrice: "₹74,990",
       salesCount: 127,
       viewCount: 1543
     },

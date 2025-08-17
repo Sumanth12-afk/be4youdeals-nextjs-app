@@ -24,7 +24,7 @@ const extractPrice = (priceString: string): number => {
 
 // Helper function to group items by currency
 const groupByCurrency = (items: WishlistItem[]) => {
-  const groups = { INR: [], USD: [] };
+  const groups = { INR: [] as WishlistItem[], USD: [] as WishlistItem[] };
   
   items.forEach(item => {
     if (item.price.includes('₹')) {

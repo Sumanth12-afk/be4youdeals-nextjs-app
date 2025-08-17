@@ -72,7 +72,7 @@ export default function HeadphonesPage6() {
 
   const pages = Array.from({ length: 10 }, (_, i) => i + 1);
 
-  const handleAddToWishlist = (productName) => {
+  const handleAddToWishlist = (productName: string) => {
     toast(`❤️ ${productName} added to wishlist!`, {
       icon: '🎉',
       style: {
@@ -89,7 +89,7 @@ export default function HeadphonesPage6() {
     });
   };
 
-  const handleBuyClick = (link, productName) => {
+  const handleBuyClick = (link: string, productName: string) => {
     toast(`🛒 Redirecting to Amazon for ${productName}...`, {
       icon: '🚀',
       style: {

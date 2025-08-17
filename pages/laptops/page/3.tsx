@@ -48,7 +48,7 @@ export default function LaptopPage3() {
 
   const pages = Array.from({ length: 10 }, (_, i) => i + 1);
 
-  const handleAddToWishlist = (laptop) => {
+  const handleAddToWishlist = (laptop: any) => {
     const wishlistItem = {
       id: `laptop-${Date.now()}`,
       name: laptop.title === "nan" ? "Premium Laptop" : laptop.title,
@@ -60,7 +60,7 @@ export default function LaptopPage3() {
     };
 
     const existingWishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
-    const isAlreadyInWishlist = existingWishlist.some(item => 
+    const isAlreadyInWishlist = existingWishlist.some((item: any) => 
       item.name === wishlistItem.name && item.category === wishlistItem.category
     );
 
@@ -100,7 +100,7 @@ export default function LaptopPage3() {
     });
   };
 
-  const handleBuyClick = (link, productName) => {
+  const handleBuyClick = (link: string, productName: string) => {
     toast(`🛒 Redirecting to Amazon for ${productName}...`, {
       icon: '🚀',
       style: {

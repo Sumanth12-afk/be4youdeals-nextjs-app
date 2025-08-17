@@ -73,7 +73,7 @@ export default function HeadphonesPage2() {
 
   const pages = Array.from({ length: 10 }, (_, i) => i + 1);
 
-  const handleAddToWishlist = (headphone) => {
+  const handleAddToWishlist = (headphone: any) => {
     const wishlistItem = {
       id: `headphone-${Date.now()}`,
       name: headphone.title === "nan" ? "Premium Headphones" : headphone.title,
@@ -85,7 +85,7 @@ export default function HeadphonesPage2() {
     };
 
     const existingWishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
-    const isAlreadyInWishlist = existingWishlist.some(item => 
+    const isAlreadyInWishlist = existingWishlist.some((item: any) => 
       item.name === wishlistItem.name && item.category === wishlistItem.category
     );
 
@@ -125,7 +125,7 @@ export default function HeadphonesPage2() {
     });
   };
 
-  const handleBuyClick = (link, productName) => {
+  const handleBuyClick = (link: string, productName: string) => {
     toast(`🛒 Redirecting to Amazon for ${productName}...`, {
       icon: '🚀',
       style: {
