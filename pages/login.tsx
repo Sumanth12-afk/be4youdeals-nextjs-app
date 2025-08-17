@@ -94,14 +94,14 @@ const LoginPage = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="min-h-screen grid lg:grid-cols-2"
+        className="min-h-screen flex flex-col lg:grid lg:grid-cols-2"
       >
         {/* Left Panel - Brand Section */}
         <motion.div 
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="hidden lg:flex relative bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 overflow-hidden"
+          className="relative bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 overflow-hidden lg:flex flex-shrink-0"
         >
           {/* Animated background elements */}
           <div className="absolute inset-0">
@@ -124,16 +124,96 @@ const LoginPage = () => {
           </div>
           
           {/* Content */}
-          <div className="relative z-10 flex flex-col justify-between p-12 text-white">
-            {/* Top - Logo */}
+          <div className="relative z-10 flex flex-col justify-between p-6 lg:p-12 text-white min-h-[40vh] lg:min-h-full">
+            {/* Top - Logo and Mobile Welcome */}
             <motion.div
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.6 }}
+              className="text-center lg:text-left"
             >
-              <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <h1 className="text-3xl lg:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2 lg:mb-0">
                 be4youdeals
               </h1>
+              {/* Mobile welcome message */}
+              <div className="lg:hidden mt-4">
+                <h2 className="text-2xl font-bold text-white mb-2">Welcome Back</h2>
+                <p className="text-white/80 text-sm">Discover amazing tech deals</p>
+              </div>
+              
+              {/* Compact illustration for all screens */}
+              <div className="mt-6 lg:mt-8 flex justify-center">
+                <div className="relative h-40 lg:h-56 w-full max-w-sm mx-auto lg:max-w-lg">
+                  {/* Background elements */}
+                  <div className="absolute top-3 lg:top-4 left-6 lg:left-8 w-10 lg:w-12 h-5 lg:h-6 bg-cyan-400 rounded transform -rotate-12"></div>
+                  <div className="absolute top-0 lg:top-2 right-8 lg:right-12 w-12 lg:w-16 h-10 lg:h-12 bg-white rounded-full opacity-80"></div>
+                  <div className="absolute top-6 lg:top-8 right-3 lg:right-4 w-14 lg:w-18 h-14 lg:h-18 bg-cyan-400 rounded-full opacity-90"></div>
+                  <div className="absolute bottom-8 lg:bottom-12 left-3 lg:left-4 w-5 lg:w-6 h-5 lg:h-6 bg-cyan-400 rounded-full"></div>
+                  
+                  {/* Main dashboard card */}
+                  <div className="absolute top-12 lg:top-16 left-1/2 transform -translate-x-1/2 w-40 lg:w-52 h-24 lg:h-30 bg-slate-700 rounded-lg shadow-xl">
+                    <div className="p-2 lg:p-3 h-full">
+                      <div className="w-full h-full bg-slate-600 rounded">
+                        {/* Top bar */}
+                        <div className="flex items-center gap-1 lg:gap-2 p-1 lg:p-2">
+                          <div className="w-1 lg:w-2 h-1 lg:h-2 bg-red-400 rounded-full"></div>
+                          <div className="w-1 lg:w-2 h-1 lg:h-2 bg-yellow-400 rounded-full"></div>
+                          <div className="w-1 lg:w-2 h-1 lg:h-2 bg-green-400 rounded-full"></div>
+                        </div>
+                        
+                        {/* Dashboard content */}
+                        <div className="px-2 lg:px-3 pb-2 lg:pb-3 space-y-1 lg:space-y-2">
+                          {/* User profile */}
+                          <div className="flex items-center gap-1 lg:gap-2">
+                            <div className="w-4 lg:w-5 h-4 lg:h-5 bg-slate-500 rounded-full"></div>
+                            <div className="w-12 lg:w-16 h-1 lg:h-2 bg-cyan-400 rounded"></div>
+                          </div>
+                          
+                          {/* Progress bars */}
+                          <div className="space-y-0.5 lg:space-y-1">
+                            <div className="w-14 lg:w-18 h-1 lg:h-1.5 bg-cyan-400 rounded"></div>
+                            <div className="w-12 lg:w-16 h-1 lg:h-1.5 bg-cyan-400 rounded"></div>
+                          </div>
+                          
+                          {/* Login button */}
+                          <div className="mt-2 lg:mt-3 flex justify-center">
+                            <div className="w-12 lg:w-16 h-4 lg:h-6 bg-cyan-400 rounded text-xs lg:text-sm flex items-center justify-center text-white font-semibold">
+                              Log in
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Business person */}
+                  <div className="absolute bottom-0 left-8 lg:left-12 w-8 lg:w-10 h-12 lg:h-14">
+                    <div className="absolute bottom-0 w-8 lg:w-10 h-9 lg:h-11 bg-slate-700 rounded-t-lg"></div>
+                    <div className="absolute bottom-0 w-8 lg:w-10 h-6 lg:h-8 bg-slate-800 rounded-t-lg"></div>
+                    <div className="absolute bottom-2 lg:bottom-3 left-1/2 transform -translate-x-1/2 w-1.5 lg:w-2 h-5 lg:h-6 bg-cyan-400"></div>
+                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-4 lg:w-5 h-4 lg:h-5 bg-orange-300 rounded-full"></div>
+                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-4 lg:w-5 h-2 lg:h-3 bg-slate-800 rounded-full"></div>
+                  </div>
+                  
+                  {/* Security lock */}
+                  <div className="absolute bottom-3 lg:bottom-4 right-3 lg:right-4 w-8 lg:w-10 h-8 lg:h-10 bg-cyan-400 rounded-lg flex items-center justify-center">
+                    <div className="w-4 lg:w-5 h-5 lg:h-6 border-2 border-white rounded-sm relative">
+                      <div className="absolute -top-1 lg:-top-1.5 left-1/2 transform -translate-x-1/2 w-3 lg:w-4 h-3 lg:h-4 border-2 border-white rounded-full bg-transparent"></div>
+                      <div className="absolute bottom-1 lg:bottom-1.5 left-1/2 transform -translate-x-1/2 w-1 lg:w-1.5 h-1 lg:h-1.5 bg-white rounded-full"></div>
+                    </div>
+                  </div>
+                  
+                  {/* Credit card */}
+                  <div className="absolute top-3 lg:top-4 right-6 lg:right-8 transform rotate-12 w-12 lg:w-16 h-7 lg:h-10 bg-cyan-500 rounded shadow-lg">
+                    <div className="mt-1 lg:mt-1.5 ml-1 lg:ml-1.5 w-2 lg:w-3 h-1.5 lg:h-2 bg-slate-600 rounded-sm"></div>
+                    <div className="mt-1 lg:mt-1.5 ml-1 lg:ml-1.5 w-6 lg:w-8 h-1 lg:h-1.5 bg-slate-700 rounded"></div>
+                  </div>
+                  
+                  {/* Floating elements */}
+                  <div className="absolute top-6 lg:top-8 left-0 lg:left-2 w-4 lg:w-5 h-3 lg:h-4 bg-cyan-300 rounded-full transform rotate-45"></div>
+                  <div className="absolute bottom-12 lg:bottom-16 right-0 lg:right-2 w-3 lg:w-4 h-2 lg:h-3 bg-cyan-300 rounded-full transform -rotate-12"></div>
+                </div>
+              </div>
             </motion.div>
             
             {/* Center - Main content */}
@@ -142,7 +222,7 @@ const LoginPage = () => {
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.8 }}
-                className="text-5xl font-bold mb-6 leading-tight"
+                className="hidden lg:block text-5xl font-bold mb-6 leading-tight"
               >
                 Welcome<br />
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -153,109 +233,11 @@ const LoginPage = () => {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.7, duration: 0.6 }}
-                className="text-xl text-white/80 mb-8 leading-relaxed"
+                className="hidden lg:block text-xl text-white/80 mb-8 leading-relaxed"
               >
                 Continue your journey to discover amazing deals on tech essentials. 
                 Your saved items and personalized recommendations are waiting.
               </motion.p>
-              
-              {/* Login Illustration */}
-              <div className="relative h-80 w-full max-w-lg mx-auto">
-                {/* Background elements */}
-                <div className="absolute top-12 left-8 w-16 h-8 bg-cyan-400 rounded transform -rotate-12"></div>
-                <div className="absolute top-4 right-12 w-20 h-16 bg-white rounded-full opacity-80"></div>
-                <div className="absolute top-8 right-20 w-12 h-10 bg-white rounded-full opacity-60"></div>
-                <div className="absolute top-16 right-4 w-24 h-24 bg-cyan-400 rounded-full opacity-90"></div>
-                <div className="absolute bottom-12 left-4 w-8 h-8 bg-cyan-400 rounded-full"></div>
-                
-                {/* Main laptop/dashboard */}
-                <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-64 h-44 bg-slate-700 rounded-lg shadow-2xl">
-                  {/* Screen */}
-                  <div className="p-3 h-full">
-                    <div className="w-full h-full bg-slate-600 rounded">
-                      {/* Top bar */}
-                      <div className="flex items-center gap-2 p-2">
-                        <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                        <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-                        <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                      </div>
-                      
-                      {/* Dashboard content */}
-                      <div className="px-3 pb-3 space-y-2">
-                        {/* User profile section */}
-                        <div className="flex items-center gap-2">
-                          <div className="w-6 h-6 bg-slate-500 rounded-full"></div>
-                          <div className="w-16 h-2 bg-cyan-400 rounded"></div>
-                        </div>
-                        
-                        {/* Progress bars */}
-                        <div className="space-y-1">
-                          <div className="w-20 h-1 bg-cyan-400 rounded"></div>
-                          <div className="w-16 h-1 bg-cyan-400 rounded"></div>
-                          <div className="w-12 h-1 bg-cyan-400 rounded"></div>
-                        </div>
-                        
-                        {/* Login button */}
-                        <div className="mt-4 flex justify-center">
-                          <div className="w-20 h-6 bg-cyan-400 rounded text-xs flex items-center justify-center text-white font-semibold">
-                            Log in
-                          </div>
-                        </div>
-                        
-                        {/* Dots indicator */}
-                        <div className="flex justify-center gap-1 mt-2">
-                          <div className="w-1 h-1 bg-cyan-400 rounded-full"></div>
-                          <div className="w-1 h-1 bg-slate-500 rounded-full"></div>
-                          <div className="w-1 h-1 bg-slate-500 rounded-full"></div>
-                          <div className="w-1 h-1 bg-slate-500 rounded-full"></div>
-                          <div className="w-1 h-1 bg-slate-500 rounded-full"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Business person */}
-                <div className="absolute bottom-0 left-12 w-12 h-20">
-                  {/* Body */}
-                  <div className="absolute bottom-0 w-12 h-14 bg-slate-700 rounded-t-lg"></div>
-                  {/* Shirt */}
-                  <div className="absolute bottom-0 w-12 h-10 bg-slate-800 rounded-t-lg"></div>
-                  {/* Tie */}
-                  <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-8 bg-cyan-400"></div>
-                  {/* Head */}
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-orange-300 rounded-full"></div>
-                  {/* Hair */}
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-6 h-3 bg-slate-800 rounded-full"></div>
-                </div>
-                
-                {/* Security elements */}
-                <div className="absolute bottom-4 right-8 w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center">
-                  {/* Lock icon */}
-                  <div className="w-6 h-7 border-2 border-white rounded-sm relative">
-                    <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-3 h-3 border-2 border-white rounded-full bg-transparent"></div>
-                    <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-white rounded-full"></div>
-                  </div>
-                </div>
-                
-                {/* Dollar sign */}
-                <div className="absolute top-6 right-8 text-3xl text-cyan-400 font-bold">$</div>
-                
-                {/* Credit card */}
-                <div className="absolute top-4 left-1/2 transform -translate-x-1/2 rotate-12 w-16 h-10 bg-cyan-500 rounded shadow-lg">
-                  <div className="mt-1 ml-1 w-3 h-2 bg-slate-600 rounded-sm"></div>
-                  <div className="mt-1 ml-1 w-8 h-1 bg-slate-700 rounded"></div>
-                  <div className="absolute top-2 right-1 flex gap-1">
-                    <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                    <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-                  </div>
-                </div>
-                
-                {/* Floating leaves */}
-                <div className="absolute top-8 left-0 w-6 h-3 bg-cyan-300 rounded-full transform rotate-45"></div>
-                <div className="absolute bottom-20 right-0 w-4 h-2 bg-cyan-300 rounded-full transform -rotate-12"></div>
-                <div className="absolute bottom-8 left-20 w-3 h-6 bg-cyan-300 rounded-full transform rotate-12"></div>
-              </div>
             </div>
             
             {/* Bottom - Stats */}
@@ -263,28 +245,28 @@ const LoginPage = () => {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 1.2, duration: 0.6 }}
-              className="grid grid-cols-3 gap-8 text-center"
+              className="grid grid-cols-3 gap-4 lg:gap-8 text-center"
             >
               <motion.div
                 whileHover={{ y: -5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">1000+</div>
-                <div className="text-sm text-white/60">Products</div>
+                <div className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">1000+</div>
+                <div className="text-xs lg:text-sm text-white/60">Products</div>
               </motion.div>
               <motion.div
                 whileHover={{ y: -5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">50k+</div>
-                <div className="text-sm text-white/60">Happy Users</div>
+                <div className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">50k+</div>
+                <div className="text-xs lg:text-sm text-white/60">Happy Users</div>
               </motion.div>
               <motion.div
                 whileHover={{ y: -5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <div className="text-3xl font-bold bg-gradient-to-r from-pink-400 to-blue-400 bg-clip-text text-transparent">24/7</div>
-                <div className="text-sm text-white/60">Support</div>
+                <div className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-pink-400 to-blue-400 bg-clip-text text-transparent">24/7</div>
+                <div className="text-xs lg:text-sm text-white/60">Support</div>
               </motion.div>
             </motion.div>
           </div>
@@ -292,38 +274,27 @@ const LoginPage = () => {
 
         {/* Right Panel - Login Form */}
         <motion.div 
-          initial={{ x: 100, opacity: 0 }}
+          initial={{ x: 0, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="flex items-center justify-center p-6 lg:p-12 bg-white"
+          className="flex items-center justify-center p-6 lg:p-12 bg-white flex-1"
         >
           <div className="w-full max-w-md">
-            {/* Mobile logo */}
-            <motion.div 
-              initial={{ y: -20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="lg:hidden text-center mb-8"
-            >
-              <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                be4youdeals
-              </h1>
-            </motion.div>
             
             {/* Login Card */}
             <motion.div 
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
+              initial={{ y: 20, opacity: 0, scale: 0.95 }}
+              animate={{ y: 0, opacity: 1, scale: 1 }}
+              transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
               className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-8 border border-white/20"
               style={{
                 boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.1)'
               }}
             >
               <motion.div 
-                initial={{ y: 20, opacity: 0 }}
+                initial={{ y: 10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.8, duration: 0.6 }}
+                transition={{ delay: 0.6, duration: 0.5 }}
                 className="text-center mb-8"
               >
                 <h2 className="text-4xl font-bold text-gray-900 mb-2">Welcome Back</h2>
@@ -346,9 +317,9 @@ const LoginPage = () => {
               <form onSubmit={(e) => { e.preventDefault(); handleLogin(); }} className="space-y-6">
                 {/* Email Field */}
                 <motion.div
-                  initial={{ x: -20, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ delay: 1.0, duration: 0.5 }}
+                  initial={{ y: 10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.8, duration: 0.4 }}
                 >
                   <label className="block text-sm font-semibold text-gray-700 mb-3">
                     Email Address
@@ -365,9 +336,9 @@ const LoginPage = () => {
 
                 {/* Password Field */}
                 <motion.div
-                  initial={{ x: -20, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ delay: 1.1, duration: 0.5 }}
+                  initial={{ y: 10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.9, duration: 0.4 }}
                 >
                   <label className="block text-sm font-semibold text-gray-700 mb-3">
                     Password
@@ -388,9 +359,9 @@ const LoginPage = () => {
                   disabled={isLoading || !email || !password}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  initial={{ y: 20, opacity: 0 }}
+                  initial={{ y: 10, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 1.2, duration: 0.5 }}
+                  transition={{ delay: 1.0, duration: 0.4 }}
                   className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-4 px-6 rounded-xl font-semibold shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
                 >
                   {isLoading ? (
@@ -408,7 +379,7 @@ const LoginPage = () => {
               <motion.div 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 1.3, duration: 0.5 }}
+                transition={{ delay: 1.1, duration: 0.4 }}
                 className="flex items-center my-8"
               >
                 <div className="flex-grow h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
@@ -418,9 +389,9 @@ const LoginPage = () => {
 
               {/* Social Login */}
               <motion.div 
-                initial={{ y: 20, opacity: 0 }}
+                initial={{ y: 10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 1.4, duration: 0.5 }}
+                transition={{ delay: 1.2, duration: 0.4 }}
                 className="mb-8"
               >
                 {showUI ? (
@@ -435,9 +406,9 @@ const LoginPage = () => {
 
               {/* Sign Up Link */}
               <motion.p 
-                initial={{ y: 10, opacity: 0 }}
+                initial={{ y: 5, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 1.5, duration: 0.5 }}
+                transition={{ delay: 1.3, duration: 0.4 }}
                 className="text-center text-gray-600 text-sm"
               >
                 Don't have an account?{" "}
