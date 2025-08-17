@@ -135,8 +135,8 @@ export default function About() {
                   className="relative"
                 >
                   <div className="relative overflow-hidden rounded-2xl">
-                    <img
-                      src="/about-banner.png"
+        <img
+          src="/about-banner.png"
                       alt="Be4YouDeals Team"
                       className="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
                     />

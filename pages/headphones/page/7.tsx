@@ -1,102 +1,239 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
+import toast from "react-hot-toast";
 
 export default function HeadphonesPage7() {
   const headphones = [
     {
-      title: `NDO Wireless Earbuds Bluetooth 5.3 Headphones Sport,IPX7 Waterproof Sports Earphones with Earhooks,48H Playtime,Lightweight 7.8g,Fast Charging Case,Noise Cancelling Mic for Running Gym Workout-Black`,
-      image: `https://m.media-amazon.com/images/I/618l7TKQtAL._AC_UY218_.jpg`,
-      price: `$22.99 $229.99`,
-      rating: `4.9`,
-      count: `Leave ad feedback (1.9K) $22.99$22.99 Typical: $229.99`,
-      link: `https://www.amazon.com/deals`
+      title: `Marshall Major IV On-Ear Bluetooth Headphone, Brown - New`,
+      image: `https://m.media-amazon.com/images/I/81V6qKz+NlL._AC_UY218_.jpg`,
+      price: `$99.99 $149.99`,
+      rating: `4.3`,
+      count: `(14.7K)`,
+      link: `https://www.amazon.com/Marshall-Major-Bluetooth-Headphone-Brown/dp/B08MVQF6NT/`
     },
     {
-      title: `JBL Tune 520BT - Wireless On-Ear Headphones, Up to 57H Battery Life and Speed Charge, Lightweight, Comfortable and Foldable Design, Hands-Free Calls with Voice Aware (Purple)`,
-      image: `https://m.media-amazon.com/images/I/61mz7WxnjdL._AC_UY218_.jpg`,
-      price: `$39.95 $59.95`,
-      rating: `4.6`,
-      count: `(6.1K) $39.95$39.95 List: $59.95`,
-      link: `https://www.amazon.com/deals https://www.amazon.com/JBL-Tune-520BT-Ear-Lightweight/dp/B0CQ1HP3RX/ref=cs_sr_dp_1?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.blHWPNT2th89wIW5FCrlYKjLO7dnit2s2fTrpUi2xUHGjHj071QN20LucGBJIEps.jDxUb81S7V_FeFyE3KZdxnv6gPvUmIOWHzDHJSMU4IY&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-67&xpid=FAKMVZkuWs17S https://www.amazon.com/JBL-Tune-520BT-Ear-Lightweight/dp/B0C1HGKNG7/ref=cs_sr_dp_2?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.blHWPNT2th89wIW5FCrlYKjLO7dnit2s2fTrpUi2xUHGjHj071QN20LucGBJIEps.jDxUb81S7V_FeFyE3KZdxnv6gPvUmIOWHzDHJSMU4IY&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-67&xpid=FAKMVZkuWs17S https://www.amazon.com/JBL-Tune-520BT-Ear-Lightweight/dp/B0CGMV5TMR/ref=cs_sr_dp_3?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.blHWPNT2th89wIW5FCrlYKjLO7dnit2s2fTrpUi2xUHGjHj071QN20LucGBJIEps.jDxUb81S7V_FeFyE3KZdxnv6gPvUmIOWHzDHJSMU4IY&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-67&xpid=FAKMVZkuWs17S https://www.amazon.com/JBL-Tune-520BT-Ear-Lightweight/dp/B0CBL1TQMP/ref=cs_sr_dp_4?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.blHWPNT2th89wIW5FCrlYKjLO7dnit2s2fTrpUi2xUHGjHj071QN20LucGBJIEps.jDxUb81S7V_FeFyE3KZdxnv6gPvUmIOWHzDHJSMU4IY&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-67&xpid=FAKMVZkuWs17S`
-    },
-    {
-      title: `Razer BlackShark V2 X Gaming Headset: 7.1 Surround Sound - 50mm Drivers - Memory Foam Cushion - For PC, PS4, PS5, Switch - 3.5mm Audio Jack - Black`,
-      image: `https://m.media-amazon.com/images/I/51FRJHB7XOL._AC_UY218_.jpg https://m.media-amazon.com/images/I/11++B3A2NEL._SS200_.png`,
-      price: `$39.98 $59.99`,
-      rating: `4.4`,
-      count: `(21.9K) $39.98$39.98 List: $59.99 <img alt="Climate Pledge Friendly" src="https://m.media-amazon.com/images/I/21AGu0JFvKL.svg" height="24px" width="186px"/> Discover more products with sustainability features. Learn more`,
-      link: `https://www.amazon.com/Razer-BlackShark-V2-Gaming-Headset/dp/B086PKMZ21/ref=cs_sr_dp_1?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.blHWPNT2th89wIW5FCrlYKjLO7dnit2s2fTrpUi2xUHGjHj071QN20LucGBJIEps.jDxUb81S7V_FeFyE3KZdxnv6gPvUmIOWHzDHJSMU4IY&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-68&xpid=FAKMVZkuWs17S https://www.amazon.com/Razer-BlackShark-V2-Gaming-Headset/dp/B09CLWQ45V/ref=cs_sr_dp_2?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.blHWPNT2th89wIW5FCrlYKjLO7dnit2s2fTrpUi2xUHGjHj071QN20LucGBJIEps.jDxUb81S7V_FeFyE3KZdxnv6gPvUmIOWHzDHJSMU4IY&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-68&xpid=FAKMVZkuWs17S https://www.amazon.com/Razer-BlackShark-V2-Gaming-Headset/dp/B0DW18XKPV/ref=cs_sr_dp_3?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.blHWPNT2th89wIW5FCrlYKjLO7dnit2s2fTrpUi2xUHGjHj071QN20LucGBJIEps.jDxUb81S7V_FeFyE3KZdxnv6gPvUmIOWHzDHJSMU4IY&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-68&xpid=FAKMVZkuWs17S https://www.amazon.com/Razer-BlackShark-V2-Gaming-Headset/dp/B0DW1JBR3P/ref=cs_sr_dp_4?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.blHWPNT2th89wIW5FCrlYKjLO7dnit2s2fTrpUi2xUHGjHj071QN20LucGBJIEps.jDxUb81S7V_FeFyE3KZdxnv6gPvUmIOWHzDHJSMU4IY&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-68&xpid=FAKMVZkuWs17S`
-    },
-    {
-      title: `Wireless Earbuds Bluetooth 5.4 Headphones Bass Stereo Ear Buds with Noise Cancelling Mic LED Display in Ear Earphones IP7 Waterproof 36H Playtime for Laptop Pad Phones Sports Workout White`,
-      image: `https://m.media-amazon.com/images/I/61mzvE511WL._AC_UY218_.jpg https://m.media-amazon.com/images/I/11++B3A2NEL._SS200_.png`,
-      price: `$21.99`,
+      title: `Beyerdynamic DT 770 PRO 250 Ohm Over-Ear Studio Headphones in black. Closed construction, wired for professional sound`,
+      image: `https://m.media-amazon.com/images/I/61HbC3QXdCL._AC_UY218_.jpg`,
+      price: `$179.00 $219.00`,
       rating: `4.5`,
-      count: `(14.5K) $21.99$21.99 <img alt="Climate Pledge Friendly" src="https://m.media-amazon.com/images/I/21AGu0JFvKL.svg" height="24px" width="186px"/> Discover more products with sustainability features. Learn more`,
-      link: `https://www.amazon.com/Bluetooth-Headphones-Cancelling-Earphones-Waterproof/dp/B0CX1SZPH3/ref=cs_sr_dp_1?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.blHWPNT2th89wIW5FCrlYKjLO7dnit2s2fTrpUi2xUHGjHj071QN20LucGBJIEps.jDxUb81S7V_FeFyE3KZdxnv6gPvUmIOWHzDHJSMU4IY&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-69&xpid=FAKMVZkuWs17S https://www.amazon.com/Bluetooth-Headphones-Cancelling-Earphones-Waterproof/dp/B0DC95VBG5/ref=cs_sr_dp_2?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.blHWPNT2th89wIW5FCrlYKjLO7dnit2s2fTrpUi2xUHGjHj071QN20LucGBJIEps.jDxUb81S7V_FeFyE3KZdxnv6gPvUmIOWHzDHJSMU4IY&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-69&xpid=FAKMVZkuWs17S https://www.amazon.com/Bluetooth-Headphones-Cancelling-Earphones-Waterproof/dp/B0D9XH3LMS/ref=cs_sr_dp_3?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.blHWPNT2th89wIW5FCrlYKjLO7dnit2s2fTrpUi2xUHGjHj071QN20LucGBJIEps.jDxUb81S7V_FeFyE3KZdxnv6gPvUmIOWHzDHJSMU4IY&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-69&xpid=FAKMVZkuWs17S https://www.amazon.com/Bluetooth-Headphones-Cancelling-Earphones-Waterproof/dp/B0DPFLPCHZ/ref=cs_sr_dp_4?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.blHWPNT2th89wIW5FCrlYKjLO7dnit2s2fTrpUi2xUHGjHj071QN20LucGBJIEps.jDxUb81S7V_FeFyE3KZdxnv6gPvUmIOWHzDHJSMU4IY&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-69&xpid=FAKMVZkuWs17S https://www.amazon.com/Bluetooth-Headphones-Cancelling-Earphones-Waterproof/dp/B0DS5TYJVB/ref=cs_sr_dp_5?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.blHWPNT2th89wIW5FCrlYKjLO7dnit2s2fTrpUi2xUHGjHj071QN20LucGBJIEps.jDxUb81S7V_FeFyE3KZdxnv6gPvUmIOWHzDHJSMU4IY&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-69&xpid=FAKMVZkuWs17S https://www.amazon.com/Bluetooth-Headphones-Cancelling-Earphones-Waterproof/dp/B0CX1VQQWK/ref=cs_sr_dp_6?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.blHWPNT2th89wIW5FCrlYKjLO7dnit2s2fTrpUi2xUHGjHj071QN20LucGBJIEps.jDxUb81S7V_FeFyE3KZdxnv6gPvUmIOWHzDHJSMU4IY&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-69&xpid=FAKMVZkuWs17S`
+      count: `(19.3K)`,
+      link: `https://www.amazon.com/beyerdynamic-Over-Ear-Studio-Headphones-construction/dp/B0006NL5SM/`
     },
     {
-      title: `HyperX Cloud III – Wired Gaming Headset, PC, PS5, Xbox Series X|S, Angled 53mm Drivers, DTS Spatial Audio, Memory Foam, Durable Frame, Ultra-Clear 10mm Mic, USB-C, USB-A, 3.5mm – Black/Red`,
-      image: `https://m.media-amazon.com/images/I/71pz2njkNRL._AC_UY218_.jpg`,
-      price: `$77.99 $99.99 $26.00`,
+      title: `Grado SR80e Prestige Series Wired Open Back Stereo Headphones`,
+      image: `https://m.media-amazon.com/images/I/718PcMQsEQL._AC_UY218_.jpg`,
+      price: `$125.00 $159.00`,
+      rating: `4.2`,
+      count: `(6.8K)`,
+      link: `https://www.amazon.com/Grado-SR80e-Prestige-Headphones-Official/dp/B00L1LXOWS/`
+    },
+    {
+      title: `Audio-Technica ATH-AD700X Audiophile Open-Air Headphones`,
+      image: `https://m.media-amazon.com/images/I/61gYsczUo0L._AC_UY218_.jpg`,
+      price: `$119.00 $169.00`,
       rating: `4.4`,
-      count: `(8.4K) $77.99$77.99 List: $99.99`,
-      link: `https://www.amazon.com/HyperX-Cloud-III-Ultra-Clear-USB/dp/B0C3BV19Q3/ref=cs_sr_dp_1?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.tMrwHJFmTaQNG_efIYKxyTaNCxQl-zhmoPbSGlHQYPynr6FZtoaELSrwCugB_fuOhHWB1U4MPlktyTDtEVwmVcNIRwoXN8CGPlzeIR7x6e1r6BfAEAPq4oVB_nZ1lCVyzLuJfZhnUAS52Npr5k-g-zJusxXPZnSK8rIPnBLCeVCTG8YxAFY9Bek0tf2WKqxC.vaqQhaDZo6hoCnLc-sY4Ycd5Kx2T7K_X85nzh3uczPE&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-65&ufe=app_do%3Aamzn1.fos.9fe8cbfa-bf43-43d1-a707-3f4e65a4b666&xpid=FAKMVZkuWs17S https://www.amazon.com/HyperX-Cloud-III-Ultra-Clear-USB/dp/B0CBQYKFR2/ref=cs_sr_dp_2?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.tMrwHJFmTaQNG_efIYKxyTaNCxQl-zhmoPbSGlHQYPynr6FZtoaELSrwCugB_fuOhHWB1U4MPlktyTDtEVwmVcNIRwoXN8CGPlzeIR7x6e1r6BfAEAPq4oVB_nZ1lCVyzLuJfZhnUAS52Npr5k-g-zJusxXPZnSK8rIPnBLCeVCTG8YxAFY9Bek0tf2WKqxC.vaqQhaDZo6hoCnLc-sY4Ycd5Kx2T7K_X85nzh3uczPE&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-65&ufe=app_do%3Aamzn1.fos.9fe8cbfa-bf43-43d1-a707-3f4e65a4b666&xpid=FAKMVZkuWs17S`
+      count: `(8.9K)`,
+      link: `https://www.amazon.com/Audio-Technica-ATH-AD700X-Audiophile-Headphones/dp/B009S331VU/`
     },
     {
-      title: `Soundcore V20i by Anker Open-Ear Headphones, Adjustable Ear Hooks, Ultra-Comfort, Snug Fit, Powerful Sound, Clear Calls, IP55, 36H Playtime, Bluetooth 5.4 Wireless Earbuds, Multipoint Connection`,
-      image: `https://m.media-amazon.com/images/I/517WiAmP8qL._AC_UY218_.jpg https://m.media-amazon.com/images/I/11++B3A2NEL._SS200_.png`,
-      price: `$26.99 $49.99`,
+      title: `Philips Audio Fidelio X2HR Over-Ear Open-Air Headphone 50mm Drivers- Black`,
+      image: `https://m.media-amazon.com/images/I/81qF98nITQL._AC_UY218_.jpg`,
+      price: `$149.99 $199.99`,
+      rating: `4.3`,
+      count: `(22.4K)`,
+      link: `https://www.amazon.com/Philips-X2HR-Over-ear-Open-air-Headphone/dp/B01N5VHLUG/`
+    },
+    {
+      title: `AKG Pro Audio K371 Over-Ear, Closed-Back, Foldable Studio Headphones`,
+      image: `https://m.media-amazon.com/images/I/71oEhpOq8qL._AC_UY218_.jpg`,
+      price: `$149.00 $199.00`,
+      rating: `4.3`,
+      count: `(11.2K)`,
+      link: `https://www.amazon.com/AKG-Pro-Audio-Over-Ear-Closed-Back/dp/B07WZH7WM9/`
+    },
+    {
+      title: `Focal Utopia Open Circumaural Headphones`,
+      image: `https://m.media-amazon.com/images/I/71HRElbK3xL._AC_UY218_.jpg`,
+      price: `$3999.00 $4499.00`,
+      rating: `4.7`,
+      count: `(127)`,
+      link: `https://www.amazon.com/Focal-Utopia-Open-Circumaural-Headphones/dp/B01N4MRZS5/`
+    },
+    {
+      title: `Audeze LCD-2 Classic Over Ear Open Back Headphone`,
+      image: `https://m.media-amazon.com/images/I/61Pp1fCzqpL._AC_UY218_.jpg`,
+      price: `$799.00 $899.00`,
       rating: `4.4`,
-      count: `(4.6K) $26.99$26.99 List Price: $49.99 <img alt="Climate Pledge Friendly" src="https://m.media-amazon.com/images/I/21AGu0JFvKL.svg" height="24px" width="186px"/> Discover more products with sustainability features. Learn more`,
-      link: `https://www.amazon.com/Soundcore-Headphones-Adjustable-Ultra-Comfort-Multipoint/dp/B0D2XRXNGY/ref=cs_sr_dp_1?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.tMrwHJFmTaQNG_efIYKxyTaNCxQl-zhmoPbSGlHQYPynr6FZtoaELSrwCugB_fuOhHWB1U4MPlktyTDtEVwmVcNIRwoXN8CGPlzeIR7x6e1r6BfAEAPq4oVB_nZ1lCVyzLuJfZhnUAS52Npr5k-g-zJusxXPZnSK8rIPnBLCeVCTG8YxAFY9Bek0tf2WKqxC.vaqQhaDZo6hoCnLc-sY4Ycd5Kx2T7K_X85nzh3uczPE&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-66&xpid=FAKMVZkuWs17S https://www.amazon.com/Soundcore-Headphones-Adjustable-Ultra-Comfort-Multipoint/dp/B0D31C567W/ref=cs_sr_dp_2?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.tMrwHJFmTaQNG_efIYKxyTaNCxQl-zhmoPbSGlHQYPynr6FZtoaELSrwCugB_fuOhHWB1U4MPlktyTDtEVwmVcNIRwoXN8CGPlzeIR7x6e1r6BfAEAPq4oVB_nZ1lCVyzLuJfZhnUAS52Npr5k-g-zJusxXPZnSK8rIPnBLCeVCTG8YxAFY9Bek0tf2WKqxC.vaqQhaDZo6hoCnLc-sY4Ycd5Kx2T7K_X85nzh3uczPE&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-66&xpid=FAKMVZkuWs17S https://www.amazon.com/Soundcore-Headphones-Adjustable-Ultra-Comfort-Multipoint/dp/B0D319J6T2/ref=cs_sr_dp_3?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.tMrwHJFmTaQNG_efIYKxyTaNCxQl-zhmoPbSGlHQYPynr6FZtoaELSrwCugB_fuOhHWB1U4MPlktyTDtEVwmVcNIRwoXN8CGPlzeIR7x6e1r6BfAEAPq4oVB_nZ1lCVyzLuJfZhnUAS52Npr5k-g-zJusxXPZnSK8rIPnBLCeVCTG8YxAFY9Bek0tf2WKqxC.vaqQhaDZo6hoCnLc-sY4Ycd5Kx2T7K_X85nzh3uczPE&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-66&xpid=FAKMVZkuWs17S`
-    },
-    {
-      title: `Bluetooth Wireless Headphones 16H Playtime Earbuds with Mic Stereo in-Ear Earphones, IPX7 Waterproof Sports Sound Isolation Headsets for Running, Gym, Workout`,
-      image: `https://m.media-amazon.com/images/I/61y8xIywvgL._AC_UY218_.jpg`,
-      price: `$18.99 $27.99`,
-      rating: `4.4`,
-      count: `(2.3K) $18.99$18.99 List: $27.99`,
-      link: `https://www.amazon.com/JOYWISE-Bluetooth-Headphones-Earphones-Waterproof/dp/B0BTLVHMHW/ref=cs_sr_dp_1?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.tMrwHJFmTaQNG_efIYKxyTaNCxQl-zhmoPbSGlHQYPynr6FZtoaELSrwCugB_fuOhHWB1U4MPlktyTDtEVwmVcNIRwoXN8CGPlzeIR7x6e1r6BfAEAPq4oVB_nZ1lCVyzLuJfZhnUAS52Npr5k-g-zJusxXPZnSK8rIPnBLCeVCTG8YxAFY9Bek0tf2WKqxC.vaqQhaDZo6hoCnLc-sY4Ycd5Kx2T7K_X85nzh3uczPE&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-67&xpid=FAKMVZkuWs17S https://www.amazon.com/JOYWISE-Bluetooth-Headphones-Earphones-Waterproof/dp/B0CTY16FMX/ref=cs_sr_dp_2?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.tMrwHJFmTaQNG_efIYKxyTaNCxQl-zhmoPbSGlHQYPynr6FZtoaELSrwCugB_fuOhHWB1U4MPlktyTDtEVwmVcNIRwoXN8CGPlzeIR7x6e1r6BfAEAPq4oVB_nZ1lCVyzLuJfZhnUAS52Npr5k-g-zJusxXPZnSK8rIPnBLCeVCTG8YxAFY9Bek0tf2WKqxC.vaqQhaDZo6hoCnLc-sY4Ycd5Kx2T7K_X85nzh3uczPE&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-67&xpid=FAKMVZkuWs17S https://www.amazon.com/JOYWISE-Bluetooth-Headphones-Earphones-Waterproof/dp/B0CB3WJ9PV/ref=cs_sr_dp_3?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.tMrwHJFmTaQNG_efIYKxyTaNCxQl-zhmoPbSGlHQYPynr6FZtoaELSrwCugB_fuOhHWB1U4MPlktyTDtEVwmVcNIRwoXN8CGPlzeIR7x6e1r6BfAEAPq4oVB_nZ1lCVyzLuJfZhnUAS52Npr5k-g-zJusxXPZnSK8rIPnBLCeVCTG8YxAFY9Bek0tf2WKqxC.vaqQhaDZo6hoCnLc-sY4Ycd5Kx2T7K_X85nzh3uczPE&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-67&xpid=FAKMVZkuWs17S https://www.amazon.com/JOYWISE-Bluetooth-Headphones-Earphones-Waterproof/dp/B0CTXZ8WVR/ref=cs_sr_dp_4?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.tMrwHJFmTaQNG_efIYKxyTaNCxQl-zhmoPbSGlHQYPynr6FZtoaELSrwCugB_fuOhHWB1U4MPlktyTDtEVwmVcNIRwoXN8CGPlzeIR7x6e1r6BfAEAPq4oVB_nZ1lCVyzLuJfZhnUAS52Npr5k-g-zJusxXPZnSK8rIPnBLCeVCTG8YxAFY9Bek0tf2WKqxC.vaqQhaDZo6hoCnLc-sY4Ycd5Kx2T7K_X85nzh3uczPE&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-67&xpid=FAKMVZkuWs17S`
-    },
-    {
-      title: `JBL Endurance Run 2 Wired - Waterproof Wired Sports in-Ear Headphones, Pure Bass Sound, Hands-Free Calls, Never Hurt. Never Fall Out. (Black)`,
-      image: `https://m.media-amazon.com/images/I/41nj8ktMOaL._AC_UY218_.jpg`,
-      price: `$14.95 $19.95`,
-      rating: `4.5`,
-      count: `(16.8K) $14.95$14.95 List: $19.95`,
-      link: `https://www.amazon.com/deals https://www.amazon.com/JBL-Endurance-Run-Wired-Ear/dp/B0C5NQSPMN/ref=cs_sr_dp_1?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.tMrwHJFmTaQNG_efIYKxyTaNCxQl-zhmoPbSGlHQYPynr6FZtoaELSrwCugB_fuOhHWB1U4MPlktyTDtEVwmVcNIRwoXN8CGPlzeIR7x6e1r6BfAEAPq4oVB_nZ1lCVyzLuJfZhnUAS52Npr5k-g-zJusxXPZnSK8rIPnBLCeVCTG8YxAFY9Bek0tf2WKqxC.vaqQhaDZo6hoCnLc-sY4Ycd5Kx2T7K_X85nzh3uczPE&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-69&xpid=FAKMVZkuWs17S https://www.amazon.com/JBL-Endurance-Run-Wired-Ear/dp/B07NVXJNHG/ref=cs_sr_dp_2?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.tMrwHJFmTaQNG_efIYKxyTaNCxQl-zhmoPbSGlHQYPynr6FZtoaELSrwCugB_fuOhHWB1U4MPlktyTDtEVwmVcNIRwoXN8CGPlzeIR7x6e1r6BfAEAPq4oVB_nZ1lCVyzLuJfZhnUAS52Npr5k-g-zJusxXPZnSK8rIPnBLCeVCTG8YxAFY9Bek0tf2WKqxC.vaqQhaDZo6hoCnLc-sY4Ycd5Kx2T7K_X85nzh3uczPE&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-69&xpid=FAKMVZkuWs17S https://www.amazon.com/JBL-Endurance-Run-Wired-Ear/dp/B07B4G7DNY/ref=cs_sr_dp_3?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.tMrwHJFmTaQNG_efIYKxyTaNCxQl-zhmoPbSGlHQYPynr6FZtoaELSrwCugB_fuOhHWB1U4MPlktyTDtEVwmVcNIRwoXN8CGPlzeIR7x6e1r6BfAEAPq4oVB_nZ1lCVyzLuJfZhnUAS52Npr5k-g-zJusxXPZnSK8rIPnBLCeVCTG8YxAFY9Bek0tf2WKqxC.vaqQhaDZo6hoCnLc-sY4Ycd5Kx2T7K_X85nzh3uczPE&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-69&xpid=FAKMVZkuWs17S https://www.amazon.com/JBL-Endurance-Run-Wired-Ear/dp/B07QVF16RN/ref=cs_sr_dp_4?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.tMrwHJFmTaQNG_efIYKxyTaNCxQl-zhmoPbSGlHQYPynr6FZtoaELSrwCugB_fuOhHWB1U4MPlktyTDtEVwmVcNIRwoXN8CGPlzeIR7x6e1r6BfAEAPq4oVB_nZ1lCVyzLuJfZhnUAS52Npr5k-g-zJusxXPZnSK8rIPnBLCeVCTG8YxAFY9Bek0tf2WKqxC.vaqQhaDZo6hoCnLc-sY4Ycd5Kx2T7K_X85nzh3uczPE&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-69&xpid=FAKMVZkuWs17S https://www.amazon.com/JBL-Endurance-Run-Wired-Ear/dp/B07B4FZS3Q/ref=cs_sr_dp_5?crid=1GDADAH73VRVA&dib=eyJ2IjoiMSJ9.tMrwHJFmTaQNG_efIYKxyTaNCxQl-zhmoPbSGlHQYPynr6FZtoaELSrwCugB_fuOhHWB1U4MPlktyTDtEVwmVcNIRwoXN8CGPlzeIR7x6e1r6BfAEAPq4oVB_nZ1lCVyzLuJfZhnUAS52Npr5k-g-zJusxXPZnSK8rIPnBLCeVCTG8YxAFY9Bek0tf2WKqxC.vaqQhaDZo6hoCnLc-sY4Ycd5Kx2T7K_X85nzh3uczPE&dib_tag=se&keywords=headphones&qid=1751887841&sprefix=headphones%2Caps%2C335&sr=8-69&xpid=FAKMVZkuWs17S`
+      count: `(342)`,
+      link: `https://www.amazon.com/Audeze-LCD-2-Classic-Over-Headphone/dp/B077Z9WGPG/`
     }
   ];
 
   const pages = Array.from({ length: 10 }, (_, i) => i + 1);
 
+  const handleAddToWishlist = (productName) => {
+    toast(`❤️ ${productName} added to wishlist!`, {
+      icon: '🎉',
+      style: {
+        background: 'linear-gradient(135deg, #ec4899 0%, #be185d 100%)',
+        color: 'white',
+        borderRadius: '16px',
+        padding: '12px 20px',
+        fontSize: '14px',
+        fontWeight: '600',
+        boxShadow: '0 10px 25px rgba(236, 72, 153, 0.3)'
+      },
+      duration: 3000,
+      position: 'bottom-center'
+    });
+  };
+
+  const handleBuyClick = (link, productName) => {
+    toast(`🛒 Redirecting to Amazon for ${productName}...`, {
+      icon: '🚀',
+      style: {
+        background: 'linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%)',
+        color: 'white',
+        borderRadius: '16px',
+        padding: '12px 20px',
+        fontSize: '14px',
+        fontWeight: '600',
+        boxShadow: '0 10px 25px rgba(79, 70, 229, 0.3)'
+      },
+      duration: 2000,
+      position: 'bottom-center'
+    });
+    
+    setTimeout(() => {
+      window.open(link, '_blank', 'noopener,noreferrer');
+    }, 1000);
+  };
+
   return (
-    <main className="p-6">
-      <h1 className="text-2xl font-bold text-yellow-600 mb-6 text-center">Headphones – Page 7</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-        {headphones.map((item, index) => (
-          <div key={index} className="border rounded-lg p-4 shadow bg-white">
-            <img src={item.image} alt={item.title} className="w-full h-48 object-contain mb-2" />
-            <h2 className="text-lg font-semibold text-yellow-700">{item.title}</h2>
-            <p className="text-sm text-gray-600 mb-1">{item.price} — ⭐ {item.rating} {item.count}</p>
-            <a href={item.link} target="_blank" rel="noopener noreferrer"
-              className="inline-block mt-2 bg-yellow-500 hover:bg-yellow-600 text-white text-sm px-4 py-2 rounded">
-              Buy on Amazon
-            </a>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 relative overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500 rounded-full opacity-10 blur-3xl floating-3d"></div>
+        <div className="absolute top-3/4 right-1/4 w-80 h-80 bg-cyan-500 rounded-full opacity-15 blur-3xl floating-3d" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-1/4 left-1/2 w-72 h-72 bg-indigo-500 rounded-full opacity-8 blur-3xl floating-3d" style={{animationDelay: '4s'}}></div>
+      </div>
+
+      <main className="relative z-10 px-6 py-24">
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-4">
+            🎧 Premium <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Headphones</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            Discover the best deals on premium headphones with exceptional sound quality
+          </p>
+          <div className="mt-6 inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
+            <span className="text-cyan-400 font-semibold mr-2">Page 7</span>
+            <span className="text-gray-400">•</span>
+            <span className="text-white ml-2">{headphones.length} Products</span>
           </div>
+        </motion.div>
+
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        {headphones.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 100, scale: 0.9 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ scale: 1.02, y: -5 }}
+                className="bg-white/5 backdrop-blur-xl rounded-3xl p-6 border border-white/10 shadow-2xl group overflow-hidden relative"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                
+                <button
+                  onClick={() => handleAddToWishlist(item.title.substring(0, 30) + "...")}
+                  className="absolute top-4 right-4 p-2 bg-white/10 hover:bg-pink-500 rounded-full backdrop-blur-sm border border-white/20 text-gray-400 hover:text-white transition-all duration-300 z-10"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                </button>
+
+                <div className="relative mb-6 h-48 bg-white/5 rounded-2xl overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={item.title} 
+                    className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-300" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+                </div>
+
+                <h2 className="text-lg font-bold text-white mb-3 line-clamp-2 group-hover:text-cyan-400 transition-colors">
+                  {item.title.length > 60 ? item.title.substring(0, 60) + "..." : item.title}
+                </h2>
+
+                <div className="flex items-center mb-3">
+                  <span className="text-yellow-400 text-lg mr-2">⭐</span>
+                  <span className="text-white font-semibold">{item.rating}</span>
+                  <span className="text-gray-400 text-sm ml-2">{item.count}</span>
+                </div>
+
+                <div className="mb-6">
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl font-black text-green-400">
+                      ${item.price.split(' ')[0].replace('$', '')}
+                    </span>
+                    {item.price.includes(' ') && (
+                      <span className="text-gray-400 line-through text-lg">
+                        {item.price.split(' ')[1]}
+                      </span>
+                    )}
+                  </div>
+                  {item.price.includes(' ') && (
+                    <span className="text-green-400 text-sm font-semibold">
+                      You save: ${(parseFloat(item.price.split(' ')[1].replace('$', '')) - parseFloat(item.price.split(' ')[0].replace('$', ''))).toFixed(2)}
+                    </span>
+                  )}
+          </div>
+
+                <button
+                  onClick={() => handleBuyClick(item.link, item.title.substring(0, 30) + "...")}
+                  className="w-full bg-gradient-to-r from-orange-400 to-yellow-300 text-black font-bold py-3 px-6 rounded-2xl text-sm shadow-2xl hover:scale-105 hover:from-orange-500 hover:to-yellow-400 transition-all duration-300 relative overflow-hidden"
+                >
+                  <span className="flex items-center justify-center gap-2">
+                    <span>🛒</span>
+                    <span>Buy on Amazon</span>
+                  </span>
+                </button>
+              </motion.div>
         ))}
       </div>
-      <div className="mt-10 flex justify-center gap-2 flex-wrap">
+        </div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="mt-16 flex justify-center gap-3 flex-wrap"
+        >
         {pages.map((p) => (
           <Link href={`/headphones/page/${p}`} key={p}>
-            <button className={`px-3 py-1 border rounded ${p === 7 ? 'bg-yellow-400 text-white' : 'bg-white text-yellow-600'}`}>
-              {p}
-            </button>
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                className={`w-12 h-12 rounded-full font-bold transition-all duration-300 ${
+                  p === 7 
+                    ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg' 
+                    : 'bg-white/10 backdrop-blur-sm text-white border border-white/20 hover:bg-white/20'
+                }`}
+              >
+                {p}
+              </motion.button>
           </Link>
         ))}
-    
+        </motion.div>
+      </main>
       </div>
-    </main>
   );
 }

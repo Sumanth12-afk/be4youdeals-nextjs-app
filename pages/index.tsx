@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import toast from "react-hot-toast";
 
 export default function Home() {
   const [currentDeal, setCurrentDeal] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   const scrollToCategories = () => {
     document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' });
@@ -23,10 +25,19 @@ export default function Home() {
     const interval = setInterval(() => {
       setCurrentDeal((prev) => (prev + 1) % deals.length);
     }, 3000);
-    return () => clearInterval(interval);
+    
+    // Simulate loading for categories
+    const loadingTimer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+    
+    return () => {
+      clearInterval(interval);
+      clearTimeout(loadingTimer);
+    };
   }, [deals.length]);
 
-  // Category data with proper links
+  // Category data with proper links and popularity metrics
   const categories = [
     {
       id: 1,
@@ -36,17 +47,25 @@ export default function Home() {
       badge: "Hot",
       badgeType: "badge-hot",
       link: "/laptops",
-      available: true
+      available: true,
+      popularity: 89,
+      stock: 12,
+      totalViews: 2340,
+      dealCount: 25
     },
     {
       id: 2,
       name: "Mobiles", 
       emoji: "📱",
       tagline: "Latest tech, best prices",
-      badge: "$199+",
-      badgeType: "badge-price",
-      link: "/mobiles",
-      available: true
+      badge: "Coming Soon",
+      badgeType: "badge-coming-soon",
+      link: "#",
+      available: false,
+      popularity: 0,
+      stock: 0,
+      totalViews: 0,
+      dealCount: 0
     },
     {
       id: 3,
@@ -56,7 +75,11 @@ export default function Home() {
       badge: "Trending",
       badgeType: "badge-trending",
       link: "/headphones",
-      available: true
+      available: true,
+      popularity: 94,
+      stock: 3,
+      totalViews: 3120,
+      dealCount: 32
     },
     {
       id: 4,
@@ -66,7 +89,11 @@ export default function Home() {
       badge: "$29.99",
       badgeType: "badge-price",
       link: "#",
-      available: false
+      available: false,
+      popularity: 0,
+      stock: 0,
+      totalViews: 0,
+      dealCount: 0
     },
     {
       id: 5,
@@ -76,7 +103,11 @@ export default function Home() {
       badge: "Hot",
       badgeType: "badge-hot", 
       link: "#",
-      available: false
+      available: false,
+      popularity: 0,
+      stock: 0,
+      totalViews: 0,
+      dealCount: 0
     },
     {
       id: 6,
@@ -86,7 +117,11 @@ export default function Home() {
       badge: "$12.99",
       badgeType: "badge-price",
       link: "#",
-      available: false
+      available: false,
+      popularity: 0,
+      stock: 0,
+      totalViews: 0,
+      dealCount: 0
     },
     {
       id: 7,
@@ -96,7 +131,11 @@ export default function Home() {
       badge: "Trending", 
       badgeType: "badge-trending",
       link: "#",
-      available: false
+      available: false,
+      popularity: 0,
+      stock: 0,
+      totalViews: 0,
+      dealCount: 0
     },
     {
       id: 8,
@@ -106,7 +145,11 @@ export default function Home() {
       badge: "$4.99",
       badgeType: "badge-price",
       link: "#",
-      available: false
+      available: false,
+      popularity: 0,
+      stock: 0,
+      totalViews: 0,
+      dealCount: 0
     }
   ];
 
@@ -255,36 +298,61 @@ export default function Home() {
 
           {/* 3D Category Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {categories.map((category, index) => (
-              <motion.div
-                key={category.id}
-                initial={{ opacity: 0, y: 100, rotateX: 45 }}
-                whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
-                transition={{ 
-                  duration: 0.8, 
-                  delay: index * 0.1,
-                  ease: "easeOut" 
-                }}
-                viewport={{ once: true }}
-                whileHover={{ 
-                  scale: 1.02, 
-                  rotateY: 5, 
-                  rotateX: 5,
-                  transition: { duration: 0.3 }
-                }}
-                className="group cursor-pointer"
-              >
-                {category.available ? (
-                  <Link href={category.link}>
-                    <CategoryCard category={category} />
-                  </Link>
-                ) : (
-                  <div className="opacity-75">
-                    <CategoryCard category={category} />
-                  </div>
-                )}
-              </motion.div>
-            ))}
+            {isLoading ? (
+              // Skeleton Loading for Categories
+              Array.from({ length: 8 }).map((_, index) => (
+                <SkeletonCategoryCard key={index} index={index} />
+              ))
+            ) : (
+              categories.map((category, index) => (
+                <motion.div
+                  key={category.id}
+                  initial={{ opacity: 0, y: 100, rotateX: 45 }}
+                  whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+                  transition={{ 
+                    duration: 0.8, 
+                    delay: index * 0.1,
+                    ease: "easeOut" 
+                  }}
+                  viewport={{ once: true }}
+                  whileHover={{ 
+                    scale: 1.02, 
+                    rotateY: 5, 
+                    rotateX: 5,
+                    transition: { duration: 0.3 }
+                  }}
+                  className="group cursor-pointer"
+                >
+                  {category.available ? (
+                    <Link href={category.link}>
+                      <CategoryCard category={category} />
+                    </Link>
+                  ) : (
+                    <div 
+                      className="opacity-75 cursor-pointer"
+                      onClick={() => {
+                        toast('🚧 Coming Soon!', {
+                          icon: '🔜',
+                          style: {
+                            background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+                            color: 'white',
+                            borderRadius: '16px',
+                            padding: '12px 20px',
+                            fontSize: '14px',
+                            fontWeight: '600',
+                            boxShadow: '0 10px 25px rgba(99, 102, 241, 0.3)'
+                          },
+                          duration: 3000,
+                          position: 'bottom-center'
+                        });
+                      }}
+                    >
+                      <CategoryCard category={category} />
+                    </div>
+                  )}
+                </motion.div>
+              ))
+            )}
           </div>
 
           {/* Coming Soon Note */}
@@ -305,14 +373,48 @@ export default function Home() {
   );
 }
 
-// Category Card Component
+// Enhanced Category Card Component with Progress Indicators
 function CategoryCard({ category }: { category: any }) {
   return (
     <div className="category-card-3d rounded-3xl p-8 text-center h-full relative overflow-hidden">
       {/* Badge */}
-      <div className={`absolute top-4 right-4 ${category.badgeType} text-white text-xs font-bold px-3 py-1 rounded-full`}>
+      <div className={`absolute top-4 right-4 ${category.badgeType} text-white text-xs font-bold px-3 py-1 rounded-full z-10`}>
         {category.badge}
       </div>
+      
+      {/* Popularity Meter (only for available categories) */}
+      {category.available && category.popularity > 0 && (
+        <div className="absolute top-4 left-4 z-10">
+          <div className="bg-black/40 backdrop-blur-sm rounded-lg p-2">
+            <div className="flex items-center gap-2 mb-1">
+              <span className="text-xs text-green-400 font-medium">🔥 {category.popularity}%</span>
+            </div>
+            <div className="w-16 h-1 bg-gray-600 rounded-full overflow-hidden">
+              <motion.div
+                className="h-full bg-gradient-to-r from-green-400 to-cyan-400 rounded-full"
+                initial={{ width: 0 }}
+                whileInView={{ width: `${category.popularity}%` }}
+                transition={{ duration: 1.5, delay: 0.5 }}
+                viewport={{ once: true }}
+              />
+            </div>
+          </div>
+        </div>
+      )}
+      
+      {/* Stock Counter (only for available categories with low stock) */}
+      {category.available && category.stock > 0 && category.stock <= 15 && (
+        <motion.div
+          className="absolute bottom-4 left-4 bg-red-500/90 text-white text-xs font-bold px-2 py-1 rounded-full z-10"
+          animate={{ 
+            scale: category.stock <= 5 ? [1, 1.1, 1] : 1,
+            opacity: category.stock <= 5 ? [1, 0.7, 1] : 1
+          }}
+          transition={{ duration: 1, repeat: category.stock <= 5 ? Infinity : 0 }}
+        >
+          Only {category.stock} left!
+        </motion.div>
+      )}
       
       {/* Category Icon */}
       <div className="mb-6">
@@ -326,9 +428,30 @@ function CategoryCard({ category }: { category: any }) {
         {category.name}
       </h3>
       
-      <p className="text-gray-400 text-sm mb-6 group-hover:text-gray-300 transition-colors">
+      <p className="text-gray-400 text-sm mb-4 group-hover:text-gray-300 transition-colors">
         {category.tagline}
       </p>
+      
+      {/* Analytics Stats (for available categories) */}
+      {category.available && (
+        <div className="mb-6 space-y-2">
+          <div className="flex justify-between text-xs text-gray-400">
+            <span>{category.dealCount} deals</span>
+            <span>{category.totalViews.toLocaleString()} views</span>
+          </div>
+          
+          {/* Deal Activity Bar */}
+          <div className="w-full h-1 bg-gray-700 rounded-full overflow-hidden">
+            <motion.div
+              className="h-full bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"
+              initial={{ width: 0 }}
+              whileInView={{ width: `${Math.min((category.totalViews / 3500) * 100, 100)}%` }}
+              transition={{ duration: 2, delay: 0.8 }}
+              viewport={{ once: true }}
+            />
+          </div>
+        </div>
+      )}
       
       {/* Action Indicator */}
       <div className="flex items-center justify-center text-gray-500 group-hover:text-indigo-400 transition-colors">
@@ -347,5 +470,52 @@ function CategoryCard({ category }: { category: any }) {
       {/* Hover Glow Effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-cyan-500/20 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
     </div>
+  );
+}
+
+// Skeleton Category Card Component
+function SkeletonCategoryCard({ index }: { index: number }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 100, rotateX: 45 }}
+      animate={{ opacity: 1, y: 0, rotateX: 0 }}
+      transition={{ 
+        duration: 0.8, 
+        delay: index * 0.1,
+        ease: "easeOut" 
+      }}
+      className="skeleton-card p-8 text-center h-full relative overflow-hidden"
+    >
+      {/* Badge skeleton */}
+      <div className="absolute top-4 right-4 skeleton w-16 h-6 rounded-full"></div>
+      
+      {/* Popularity meter skeleton */}
+      <div className="absolute top-4 left-4">
+        <div className="skeleton rounded-lg w-20 h-12"></div>
+      </div>
+      
+      {/* Category Icon skeleton */}
+      <div className="mb-6 flex justify-center">
+        <div className="skeleton-circle w-16 h-16"></div>
+      </div>
+      
+      {/* Category Info skeleton */}
+      <div className="skeleton-text-lg w-3/4 mx-auto mb-3"></div>
+      <div className="skeleton-text w-1/2 mx-auto mb-6"></div>
+      
+      {/* Analytics Stats skeleton */}
+      <div className="mb-6 space-y-2">
+        <div className="flex justify-between">
+          <div className="skeleton-text-sm w-12"></div>
+          <div className="skeleton-text-sm w-16"></div>
+        </div>
+        <div className="skeleton h-1 w-full rounded-full"></div>
+      </div>
+      
+      {/* Action Indicator skeleton */}
+      <div className="flex items-center justify-center">
+        <div className="skeleton-text w-16"></div>
+      </div>
+    </motion.div>
   );
 }

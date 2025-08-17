@@ -1,10 +1,21 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import toast from "react-hot-toast";
 
 export default function DealsWall() {
+  const [isLoading, setIsLoading] = useState(true);
 
-  // Real product data
+  // Simulate loading state
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Real product data with time-limited deals
   const featuredDeals = [
     {
       id: 1,
@@ -21,7 +32,12 @@ export default function DealsWall() {
       specs: ["Intel Core i5-1335U", "8GB RAM", "512GB SSD", "15.6″ Display"],
       available: true,
       badge: "🔥 Hot Deal",
-      badgeColor: "from-red-500 to-orange-500"
+      badgeColor: "from-red-500 to-orange-500",
+      discount: 25,
+      dealEndTime: new Date(Date.now() + 2 * 24 * 60 * 60 * 1000), // 2 days from now
+      originalPrice: "₹74,990",
+      salesCount: 127,
+      viewCount: 1543
     },
     {
       id: 2,
@@ -38,7 +54,11 @@ export default function DealsWall() {
       specs: ["40H Battery Life", "Bluetooth 5.0", "JBL Pure Bass", "Foldable Design"],
       available: true,
       badge: "💥 67% Off",
-      badgeColor: "from-green-500 to-emerald-500"
+      badgeColor: "from-green-500 to-emerald-500",
+      discount: 67,
+      dealEndTime: new Date(Date.now() + 6 * 60 * 60 * 1000), // 6 hours from now
+      salesCount: 89,
+      viewCount: 892
     }
   ];
 
@@ -198,16 +218,24 @@ export default function DealsWall() {
                 </div>
                   </div>
             </motion.div>
-                </div>
-      </div>
+                  </div>
+                  </div>
 
         {/* Featured Products Showcase */}
         <div className="max-w-7xl mx-auto mb-20">
           <div className="grid lg:grid-cols-2 gap-12">
-            {featuredDeals.map((deal, index) => (
-              <FeaturedDealCard key={deal.id} deal={deal} index={index} />
-          ))}
-        </div>
+            {isLoading ? (
+              // Skeleton Loading for Featured Deals
+              <>
+                <SkeletonFeaturedCard />
+                <SkeletonFeaturedCard />
+              </>
+            ) : (
+              featuredDeals.map((deal, index) => (
+                <FeaturedDealCard key={deal.id} deal={deal} index={index} />
+              ))
+            )}
+                </div>
       </div>
 
         {/* Coming Soon Section */}
@@ -225,9 +253,19 @@ export default function DealsWall() {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
-            {comingSoonDeals.map((deal, index) => (
-              <ComingSoonCard key={deal.id} deal={deal} index={index} />
-            ))}
+            {isLoading ? (
+              // Skeleton Loading for Coming Soon Cards
+              <>
+                <SkeletonComingSoonCard />
+                <SkeletonComingSoonCard />
+                <SkeletonComingSoonCard />
+                <SkeletonComingSoonCard />
+              </>
+            ) : (
+              comingSoonDeals.map((deal, index) => (
+                <ComingSoonCard key={deal.id} deal={deal} index={index} />
+              ))
+            )}
           </div>
         </motion.div>
       </div>
@@ -235,13 +273,126 @@ export default function DealsWall() {
   );
 }
 
+// Countdown Timer Component
+function CountdownTimer({ targetDate }: { targetDate: Date }) {
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate.getTime() - now;
+
+      if (distance > 0) {
+        setTimeLeft({
+          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((distance % (1000 * 60)) / 1000)
+        });
+      } else {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      }
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [targetDate]);
+
+  return (
+    <div className="bg-black/60 backdrop-blur-sm rounded-xl p-3 border border-red-500/30">
+      <div className="text-center mb-2">
+        <span className="text-red-400 font-bold text-xs">⏰ DEAL ENDS IN</span>
+      </div>
+      <div className="flex justify-center gap-2">
+        {[
+          { label: 'D', value: timeLeft.days },
+          { label: 'H', value: timeLeft.hours },
+          { label: 'M', value: timeLeft.minutes },
+          { label: 'S', value: timeLeft.seconds }
+        ].map((unit, i) => (
+          <div key={i} className="text-center">
+            <motion.div
+              className="bg-red-500 text-white font-bold text-sm px-2 py-1 rounded min-w-[28px]"
+              animate={{ scale: unit.label === 'S' ? [1, 1.1, 1] : 1 }}
+              transition={{ duration: 0.5, repeat: unit.label === 'S' ? Infinity : 0 }}
+            >
+              {unit.value.toString().padStart(2, '0')}
+            </motion.div>
+            <div className="text-xs text-gray-400 mt-1">{unit.label}</div>
+              </div>
+          ))}
+        </div>
+      </div>
+  );
+}
+
 // Featured Deal Card Component
 function FeaturedDealCard({ deal, index }: { deal: any; index: number }) {
   const [isHovered, setIsHovered] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
+  const [isInWishlist, setIsInWishlist] = useState(false);
 
   const handleAmazonRedirect = () => {
-    window.open(deal.amazonLink, '_blank', 'noopener,noreferrer');
+    // Show toast notification
+    toast('🛒 Redirecting to Amazon...', {
+      icon: '🚀',
+      style: {
+        background: 'linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%)',
+        color: 'white',
+        borderRadius: '16px',
+        padding: '12px 20px',
+        fontSize: '14px',
+        fontWeight: '600'
+      },
+      duration: 2000,
+      position: 'bottom-center'
+    });
+    
+    setTimeout(() => {
+      window.open(deal.amazonLink, '_blank', 'noopener,noreferrer');
+    }, 1000);
+  };
+
+  const toggleWishlist = () => {
+    setIsInWishlist(!isInWishlist);
+    
+    // Enhanced toast with custom styling
+    if (!isInWishlist) {
+      toast('❤️ Added to Wishlist!', {
+        icon: '🎉',
+        style: {
+          background: 'linear-gradient(135deg, #ec4899 0%, #be185d 100%)',
+          color: 'white',
+          borderRadius: '16px',
+          padding: '12px 20px',
+          fontSize: '14px',
+          fontWeight: '600',
+          boxShadow: '0 10px 25px rgba(236, 72, 153, 0.3)'
+        },
+        duration: 3000,
+        position: 'bottom-center'
+      });
+    } else {
+      toast('💔 Removed from Wishlist', {
+        icon: '👋',
+        style: {
+          background: 'linear-gradient(135deg, #6b7280 0%, #374151 100%)',
+          color: 'white',
+          borderRadius: '16px',
+          padding: '12px 20px',
+          fontSize: '14px',
+          fontWeight: '600'
+        },
+        duration: 2000,
+        position: 'bottom-center'
+      });
+    }
+    
+    // Here you would typically save to localStorage or backend
   };
 
   return (
@@ -284,7 +435,7 @@ function FeaturedDealCard({ deal, index }: { deal: any; index: number }) {
 
         {/* Floating Badge */}
         <motion.div
-          className={`absolute top-6 right-6 bg-gradient-to-r ${deal.badgeColor} text-white px-4 py-2 rounded-full text-sm font-bold`}
+          className={`absolute top-6 right-6 bg-gradient-to-r ${deal.badgeColor} text-white px-4 py-2 rounded-full text-sm font-bold z-20`}
           animate={isHovered ? {
             rotate: [0, 5, -5, 0],
             scale: [1, 1.1, 1]
@@ -293,6 +444,32 @@ function FeaturedDealCard({ deal, index }: { deal: any; index: number }) {
         >
           {deal.badge}
         </motion.div>
+
+        {/* Wishlist Button */}
+        <motion.button
+          onClick={toggleWishlist}
+          className={`absolute top-6 left-6 p-2 rounded-full backdrop-blur-sm border z-20 ${
+            isInWishlist 
+              ? 'bg-pink-500 border-pink-400 text-white' 
+              : 'bg-white/10 border-white/20 text-gray-400 hover:text-pink-400'
+          }`}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <svg className="w-5 h-5" fill={isInWishlist ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg>
+        </motion.button>
+
+        {/* Deal Metrics */}
+        <div className="absolute bottom-6 right-6 bg-black/40 backdrop-blur-sm rounded-lg p-2 text-xs text-white z-20">
+          <div className="flex items-center gap-2 mb-1">
+            <span>👥 {deal.salesCount || 0} sold</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span>👁️ {deal.viewCount || 0} views</span>
+          </div>
+        </div>
 
         {/* Category */}
         <div className="text-2xl mb-4">{deal.category}</div>
@@ -324,13 +501,20 @@ function FeaturedDealCard({ deal, index }: { deal: any; index: number }) {
           <span className="text-gray-400 ml-2">({deal.reviewCount.toLocaleString()})</span>
         </div>
 
-        {/* Price */}
+        {/* Price Section with Savings */}
         <div className="mb-6">
-          {deal.originalPrice && (
-            <span className="text-gray-400 line-through text-lg mr-3">{deal.originalPrice}</span>
-          )}
+          <div className="flex items-center justify-between mb-2">
+            {deal.originalPrice && (
+              <span className="text-gray-400 line-through text-lg">{deal.originalPrice}</span>
+            )}
+            {deal.discount && (
+              <span className="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                {deal.discount}% OFF
+              </span>
+            )}
+          </div>
           <motion.span
-            className="text-3xl font-black text-green-400"
+            className="text-3xl font-black text-green-400 block"
             animate={isHovered ? {
               scale: [1, 1.1, 1],
               textShadow: [
@@ -343,7 +527,19 @@ function FeaturedDealCard({ deal, index }: { deal: any; index: number }) {
           >
             {deal.currentPrice}
           </motion.span>
+          {deal.originalPrice && deal.discount && (
+            <span className="text-green-400 text-sm font-semibold">
+              You save: {Math.round((parseFloat(deal.originalPrice.replace(/[^\d.]/g, '')) - parseFloat(deal.currentPrice.replace(/[^\d.]/g, ''))))} {deal.currency === 'INR' ? '₹' : '$'}
+            </span>
+          )}
         </div>
+
+        {/* Countdown Timer */}
+        {deal.dealEndTime && (
+          <div className="mb-6">
+            <CountdownTimer targetDate={deal.dealEndTime} />
+          </div>
+        )}
 
         {/* Amazon Buy Button */}
         <motion.button
@@ -458,5 +654,73 @@ function ComingSoonCard({ deal, index }: { deal: any; index: number }) {
         </motion.button>
       </div>
     </motion.div>
+  );
+}
+
+// Skeleton Loading Components
+function SkeletonFeaturedCard() {
+  return (
+    <div className="skeleton-card p-8 h-[600px]">
+      {/* Top badges skeleton */}
+      <div className="flex justify-between items-start mb-6">
+        <div className="skeleton-circle w-12 h-12"></div>
+        <div className="skeleton w-20 h-8"></div>
+      </div>
+      
+      {/* Category */}
+      <div className="skeleton-text w-24 mb-4"></div>
+      
+      {/* Product image skeleton */}
+      <div className="skeleton h-48 rounded-2xl mb-6"></div>
+      
+      {/* Product info */}
+      <div className="skeleton-text-lg w-3/4 mb-2"></div>
+      <div className="skeleton-text w-1/2 mb-4"></div>
+      
+      {/* Rating */}
+      <div className="flex items-center mb-4">
+        <div className="skeleton-circle w-6 h-6 mr-2"></div>
+        <div className="skeleton-text w-16"></div>
+      </div>
+      
+      {/* Price section */}
+      <div className="mb-6">
+        <div className="skeleton-text w-32 mb-2"></div>
+        <div className="skeleton-text-lg w-24"></div>
+      </div>
+      
+      {/* Timer skeleton */}
+      <div className="skeleton rounded-xl h-20 mb-6"></div>
+      
+      {/* Button */}
+      <div className="skeleton-button w-full"></div>
+    </div>
+  );
+}
+
+function SkeletonComingSoonCard() {
+  return (
+    <div className="skeleton-card p-6 h-[400px] flex flex-col">
+      {/* Badge */}
+      <div className="skeleton w-20 h-6 mb-4 self-end"></div>
+      
+      {/* Category */}
+      <div className="skeleton-text w-24 mb-4"></div>
+      
+      {/* Image */}
+      <div className="skeleton h-40 rounded-xl mb-4 flex-shrink-0"></div>
+      
+      {/* Content */}
+      <div className="flex-grow flex flex-col justify-between">
+        <div>
+          <div className="skeleton-text w-3/4 mb-2"></div>
+          <div className="skeleton-text-sm w-1/2 mb-3"></div>
+          <div className="skeleton-text w-16 mb-4"></div>
+        </div>
+        
+        {/* Button */}
+        <div className="skeleton-button w-full mt-auto"></div>
+      </div>
+    </div>
   );
 }
