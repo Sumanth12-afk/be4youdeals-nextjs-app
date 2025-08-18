@@ -57,7 +57,7 @@ export default function Home() {
       id: 2,
       name: "Mobiles", 
       emoji: "📱",
-      tagline: "Latest tech, best prices",
+      tagline: "Latest tech at your fingertips",
       badge: "Coming Soon",
       badgeType: "badge-coming-soon",
       link: "#",
@@ -85,7 +85,7 @@ export default function Home() {
       id: 4,
       name: "Home Essentials",
       emoji: "🛋️",
-      tagline: "Comfort meets style",
+      tagline: "Smart essentials arriving soon",
       badge: "$29.99",
       badgeType: "badge-price",
       link: "#",
@@ -99,7 +99,7 @@ export default function Home() {
       id: 5,
       name: "Gadgets",
       emoji: "🔌",
-      tagline: "Tech that amazes",
+      tagline: "Next-gen gadgets on the way",
       badge: "Hot",
       badgeType: "badge-hot", 
       link: "#",
@@ -113,7 +113,7 @@ export default function Home() {
       id: 6,
       name: "Self-Care",
       emoji: "🧴",
-      tagline: "Wellness essentials",
+      tagline: "Wellness made simple, coming soon",
       badge: "$12.99",
       badgeType: "badge-price",
       link: "#",
@@ -127,7 +127,7 @@ export default function Home() {
       id: 7,
       name: "Fashion",
       emoji: "👗",
-      tagline: "Style that speaks",
+      tagline: "Style upgrade coming your way",
       badge: "Trending", 
       badgeType: "badge-trending",
       link: "#",
@@ -141,7 +141,7 @@ export default function Home() {
       id: 8,
       name: "Stationery",
       emoji: "📝",
-      tagline: "Creativity unleashed", 
+      tagline: "Creativity gets a new look", 
       badge: "$4.99",
       badgeType: "badge-price",
       link: "#",
@@ -297,7 +297,7 @@ export default function Home() {
           </motion.div>
 
           {/* 3D Category Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {isLoading ? (
               // Skeleton Loading for Categories
               Array.from({ length: 8 }).map((_, index) => (
@@ -321,15 +321,15 @@ export default function Home() {
                     rotateX: 5,
                     transition: { duration: 0.3 }
                   }}
-                  className="group cursor-pointer"
+                  className="group cursor-pointer h-full"
                 >
                   {category.available ? (
-                    <Link href={category.link}>
+                    <Link href={category.link} className="block h-full">
                       <CategoryCard category={category} />
                     </Link>
                   ) : (
                     <div 
-                      className="opacity-75 cursor-pointer"
+                      className="opacity-75 cursor-pointer h-full"
                       onClick={() => {
                         toast('🚧 Coming Soon!', {
                           icon: '🔜',
@@ -376,95 +376,112 @@ export default function Home() {
 // Enhanced Category Card Component with Progress Indicators
 function CategoryCard({ category }: { category: any }) {
   return (
-    <div className="category-card-3d rounded-3xl p-8 text-center h-full relative overflow-hidden">
-      {/* Badge */}
-      <div className={`absolute top-4 right-4 ${category.badgeType} text-white text-xs font-bold px-3 py-1 rounded-full z-10`}>
-        {category.badge}
+    <div className="category-card-3d rounded-3xl p-8 text-center h-full relative overflow-hidden flex flex-col justify-between">
+      {/* Badge - Only show for available categories, not for Coming Soon */}
+      {/* Removed from top-right, will be shown below tagline */}
+      
+      {/* Popularity Meter - Show for all cards to fill empty space */}
+      <div className="absolute top-4 left-4 z-10">
+        <div className="bg-black/40 backdrop-blur-sm rounded-lg p-2">
+          {category.available && category.popularity > 0 ? (
+            <>
+              <div className="flex items-center gap-2 mb-1">
+                <span className="text-xs text-green-400 font-medium">🔥 {category.popularity}%</span>
+              </div>
+              <div className="w-16 h-1 bg-gray-600 rounded-full overflow-hidden">
+                <motion.div
+                  className="h-full bg-gradient-to-r from-green-400 to-cyan-400 rounded-full"
+                  initial={{ width: 0 }}
+                  whileInView={{ width: `${category.popularity}%` }}
+                  transition={{ duration: 1.5, delay: 0.5 }}
+                  viewport={{ once: true }}
+                />
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="flex items-center gap-2 mb-1">
+                <span className="text-xs text-blue-400 font-medium">⏳ Coming</span>
+              </div>
+              <div className="w-16 h-1 bg-gray-600 rounded-full overflow-hidden">
+                <motion.div
+                  className="h-full bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"
+                  initial={{ width: 0 }}
+                  whileInView={{ width: "100%" }}
+                  transition={{ duration: 1.5, delay: 0.5 }}
+                  viewport={{ once: true }}
+                />
+              </div>
+            </>
+          )}
+        </div>
       </div>
       
-      {/* Popularity Meter (only for available categories) */}
-      {category.available && category.popularity > 0 && (
-        <div className="absolute top-4 left-4 z-10">
-          <div className="bg-black/40 backdrop-blur-sm rounded-lg p-2">
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-xs text-green-400 font-medium">🔥 {category.popularity}%</span>
+      {/* Top Section */}
+      <div className="flex-1 flex flex-col items-center justify-start min-h-[200px]">
+        {/* Icon Section */}
+        <div className="mb-6 flex items-center justify-center">
+          <div className="text-6xl category-icon-glow transform group-hover:scale-110 transition-transform duration-300">
+            {category.emoji}
+          </div>
+        </div>
+        
+        {/* Title and Tagline */}
+        <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+          {category.name}
+        </h3>
+        
+        <p className="text-gray-400 text-sm mb-4 group-hover:text-gray-300 transition-colors">
+          {category.tagline}
+        </p>
+        
+        {/* Badge below tagline for available categories */}
+        {category.available && (
+          <div className={`${category.badgeType} text-white text-xs font-bold px-3 py-1 rounded-full mb-4`}>
+            {category.badge}
+          </div>
+        )}
+      </div>
+      
+      {/* Bottom Section */}
+      <div className="flex flex-col justify-end min-h-[120px]">
+        {/* Analytics Stats - Only for available categories */}
+        {category.available && (
+          <div className="mb-6 space-y-2">
+            <div className="flex justify-between text-xs text-gray-400">
+              <span>{category.dealCount} deals</span>
+              <span>{category.totalViews.toLocaleString()} views</span>
             </div>
-            <div className="w-16 h-1 bg-gray-600 rounded-full overflow-hidden">
+            
+            {/* Deal Activity Bar */}
+            <div className="w-full h-1 bg-gray-700 rounded-full overflow-hidden">
               <motion.div
-                className="h-full bg-gradient-to-r from-green-400 to-cyan-400 rounded-full"
+                className="h-full bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"
                 initial={{ width: 0 }}
-                whileInView={{ width: `${category.popularity}%` }}
-                transition={{ duration: 1.5, delay: 0.5 }}
+                whileInView={{ width: `${Math.min((category.totalViews / 3500) * 100, 100)}%` }}
+                transition={{ duration: 2, delay: 0.8 }}
                 viewport={{ once: true }}
               />
             </div>
           </div>
-        </div>
-      )}
-      
-      {/* Stock Counter (only for available categories with low stock) */}
-      {category.available && category.stock > 0 && category.stock <= 15 && (
-        <motion.div
-          className="absolute bottom-4 left-4 bg-red-500/90 text-white text-xs font-bold px-2 py-1 rounded-full z-10"
-          animate={{ 
-            scale: category.stock <= 5 ? [1, 1.1, 1] : 1,
-            opacity: category.stock <= 5 ? [1, 0.7, 1] : 1
-          }}
-          transition={{ duration: 1, repeat: category.stock <= 5 ? Infinity : 0 }}
-        >
-          Only {category.stock} left!
-        </motion.div>
-      )}
-      
-      {/* Category Icon */}
-      <div className="mb-6">
-        <div className="text-6xl category-icon-glow transform group-hover:scale-110 transition-transform duration-300">
-          {category.emoji}
-        </div>
-      </div>
-      
-      {/* Category Info */}
-      <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-        {category.name}
-      </h3>
-      
-      <p className="text-gray-400 text-sm mb-4 group-hover:text-gray-300 transition-colors">
-        {category.tagline}
-      </p>
-      
-      {/* Analytics Stats (for available categories) */}
-      {category.available && (
-        <div className="mb-6 space-y-2">
-          <div className="flex justify-between text-xs text-gray-400">
-            <span>{category.dealCount} deals</span>
-            <span>{category.totalViews.toLocaleString()} views</span>
-          </div>
-          
-          {/* Deal Activity Bar */}
-          <div className="w-full h-1 bg-gray-700 rounded-full overflow-hidden">
-            <motion.div
-              className="h-full bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"
-              initial={{ width: 0 }}
-              whileInView={{ width: `${Math.min((category.totalViews / 3500) * 100, 100)}%` }}
-              transition={{ duration: 2, delay: 0.8 }}
-              viewport={{ once: true }}
-            />
-          </div>
-        </div>
-      )}
-      
-      {/* Action Indicator */}
-      <div className="flex items-center justify-center text-gray-500 group-hover:text-indigo-400 transition-colors">
-        {category.available ? (
-          <>
-            <span className="text-sm font-medium mr-2">Explore</span>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </>
-        ) : (
-          <span className="text-sm font-medium">Coming Soon</span>
         )}
+        
+        {/* Useful content for Coming Soon cards */}
+        {/* Removed random text, keeping only Coming Soon */}
+        
+        {/* Action Indicator */}
+        <div className="flex items-center justify-center text-gray-500 group-hover:text-indigo-400 transition-colors">
+          {category.available ? (
+            <>
+              <span className="text-sm font-medium mr-2">Explore</span>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </>
+          ) : (
+            <span className="text-sm font-medium">Coming Soon</span>
+          )}
+        </div>
       </div>
       
       {/* Hover Glow Effect */}
