@@ -117,6 +117,9 @@ export default function HeadphonesPage5() {
   };
 
   const handleBuyClick = (link: string, productName: string) => {
+    // Extract only the first valid Amazon link from the concatenated string
+    const firstLink = link.split(' ')[0];
+    
     toast(`🛒 Redirecting to Amazon for ${productName}...`, {
       icon: '🚀',
       style: {
@@ -133,7 +136,7 @@ export default function HeadphonesPage5() {
     });
     
     setTimeout(() => {
-      window.open(link, '_blank', 'noopener,noreferrer');
+      window.open(firstLink, '_blank', 'noopener,noreferrer');
     }, 1000);
   };
 
