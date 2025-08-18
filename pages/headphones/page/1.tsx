@@ -136,8 +136,21 @@ export default function HeadphonesPage1() {
       position: 'bottom-center'
     });
     
+    // Use a more browser-friendly redirect method
     setTimeout(() => {
-      window.open(firstLink, '_blank', 'noopener,noreferrer');
+      try {
+        // Try to open in new tab first
+        const newWindow = window.open(firstLink, '_blank');
+        
+        // If popup is blocked, redirect in same tab
+        if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+          // Fallback: redirect in same tab
+          window.location.href = firstLink;
+        }
+      } catch (error) {
+        // Final fallback: redirect in same tab
+        window.location.href = firstLink;
+      }
     }, 1000);
   };
 
