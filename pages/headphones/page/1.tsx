@@ -2,6 +2,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { addToWishlist } from "../../../lib/wishlistUtils";
 
 export default function HeadphonesPage1() {
   const headphones = [
@@ -73,56 +74,47 @@ export default function HeadphonesPage1() {
 
   const pages = Array.from({ length: 10 }, (_, i) => i + 1);
 
-  const handleAddToWishlist = (headphone: any) => {
-    const wishlistItem = {
-      id: `headphone-${Date.now()}`,
-      name: headphone.title === "nan" ? "Premium Headphones" : headphone.title,
-      price: headphone.price,
-      image: headphone.image,
+    const handleAddToWishlist = (headphone: any) => {
+    const result = addToWishlist({
+      name: headphone.title === "nan" ? "Premium Headphones" : headphone.title.split(' ').slice(0, 8).join(' '),
+      price: headphone.price.split(' ')[0], // Take first price only
+      image: headphone.image.split(' ')[0], // Take first image only
       category: "Headphones",
-      addedDate: new Date().toISOString(),
-      link: headphone.link
-    };
+      link: headphone.link.split(' ')[0] // Take first link only
+    });
 
-    const existingWishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
-    const isAlreadyInWishlist = existingWishlist.some((item: any) => 
-      item.name === wishlistItem.name && item.category === wishlistItem.category
-    );
-
-    if (isAlreadyInWishlist) {
-      toast('Already in wishlist!', {
-        icon: '💔',
+    if (result.success) {
+      toast(result.message, {
+        icon: '🎉',
         style: {
-          background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
+          background: 'linear-gradient(135deg, #ec4899 0%, #be185d 100%)',
+          color: 'white',
+          borderRadius: '16px',
+          padding: '12px 20px',
+          fontSize: '14px',
+          fontWeight: '600',
+          boxShadow: '0 10px 25px rgba(236, 72, 153, 0.3)'
+        },
+        duration: 3000,
+        position: 'bottom-center'
+      });
+    } else {
+      toast(result.message, {
+        icon: result.message.includes('limit') ? '⚠️' : '💔',
+        style: {
+          background: result.message.includes('limit') 
+            ? 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)'
+            : 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
           color: 'white',
           borderRadius: '16px',
           padding: '12px 20px',
           fontSize: '14px',
           fontWeight: '600'
         },
-        duration: 2000,
+        duration: 3000,
         position: 'bottom-center'
       });
-      return;
     }
-
-    const updatedWishlist = [...existingWishlist, wishlistItem];
-    localStorage.setItem('wishlist', JSON.stringify(updatedWishlist));
-
-    toast(`❤️ Added to wishlist!`, {
-      icon: '🎉',
-      style: {
-        background: 'linear-gradient(135deg, #ec4899 0%, #be185d 100%)',
-        color: 'white',
-        borderRadius: '16px',
-        padding: '12px 20px',
-        fontSize: '14px',
-        fontWeight: '600',
-        boxShadow: '0 10px 25px rgba(236, 72, 153, 0.3)'
-      },
-      duration: 3000,
-      position: 'bottom-center'
-    });
   };
 
   const handleBuyClick = (link: string, productName: string) => {

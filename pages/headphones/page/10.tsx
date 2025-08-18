@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
+import { addToWishlist } from "../../../lib/wishlistUtils";
 
 export default function HeadphonesPage10() {
   const headphones = [
@@ -72,21 +73,47 @@ export default function HeadphonesPage10() {
 
   const pages = Array.from({ length: 10 }, (_, i) => i + 1);
 
-  const handleAddToWishlist = (productName: string) => {
-    toast(`❤️ ${productName} added to wishlist!`, {
-      icon: '🎉',
-      style: {
-        background: 'linear-gradient(135deg, #ec4899 0%, #be185d 100%)',
-        color: 'white',
-        borderRadius: '16px',
-        padding: '12px 20px',
-        fontSize: '14px',
-        fontWeight: '600',
-        boxShadow: '0 10px 25px rgba(236, 72, 153, 0.3)'
-      },
-      duration: 3000,
-      position: 'bottom-center'
+          const handleAddToWishlist = (headphone: any) => {
+    const result = addToWishlist({
+      name: headphone.title === "nan" ? "Premium Headphones" : headphone.title.split(' ').slice(0, 8).join(' '),
+      price: headphone.price.split(' ')[0], // Take first price only
+      image: headphone.image.split(' ')[0], // Take first image only
+      category: "Headphones",
+      link: headphone.link.split(' ')[0] // Take first link only
     });
+
+    if (result.success) {
+      toast(result.message, {
+        icon: '🎉',
+        style: {
+          background: 'linear-gradient(135deg, #ec4899 0%, #be185d 100%)',
+          color: 'white',
+          borderRadius: '16px',
+          padding: '12px 20px',
+          fontSize: '14px',
+          fontWeight: '600',
+          boxShadow: '0 10px 25px rgba(236, 72, 153, 0.3)'
+        },
+        duration: 3000,
+        position: 'bottom-center'
+      });
+    } else {
+      toast(result.message, {
+        icon: result.message.includes('limit') ? '⚠️' : '💔',
+        style: {
+          background: result.message.includes('limit') 
+            ? 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)'
+            : 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
+          color: 'white',
+          borderRadius: '16px',
+          padding: '12px 20px',
+          fontSize: '14px',
+          fontWeight: '600'
+        },
+        duration: 3000,
+        position: 'bottom-center'
+      });
+    }
   };
 
   const handleBuyClick = (link: string, productName: string) => {
