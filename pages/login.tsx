@@ -34,6 +34,7 @@ const LoginPage = () => {
 
   const handleGoogleSignIn = async () => {
     if (typeof window === "undefined") return;
+    if (isLoading) return; // Prevent multiple calls
     
     setIsLoading(true);
     try {
@@ -44,7 +45,7 @@ const LoginPage = () => {
       
       console.log('Attempting Google sign-in...');
       const result = await auth.signInWithPopup(provider);
-      console.log('Google sign-in successful:', result);
+      console.log('Google sign-in successful:', result.user?.email);
       toast.success("Welcome back!");
       
       // Redirect to home page after successful login
@@ -54,7 +55,7 @@ const LoginPage = () => {
     } catch (err: any) {
       console.error('Google sign-in error:', err);
       setError(err.message || "Failed to sign in with Google");
-      toast.error("Failed to sign in with Google");
+      toast.error("Google login failed");
     } finally {
       setIsLoading(false);
     }
