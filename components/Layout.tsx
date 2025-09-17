@@ -107,7 +107,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
             <div className="flex items-center">
               <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
                 <Image 
-                  src="/Vibrics Deals Logo.png" 
+                  src="/Vibrics Deals Logo.png?v=2" 
                   alt="Vibrics Deals" 
                   width={80}
                   height={80}
@@ -686,7 +686,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
             <div className="text-center">
               <div className="flex items-center justify-center space-x-3 mb-4">
                 <Image 
-                  src="/Vibrics Deals Logo.png" 
+                  src="/Vibrics Deals Logo.png?v=2" 
                   alt="Vibrics Deals" 
                   width={64}
                   height={64}
