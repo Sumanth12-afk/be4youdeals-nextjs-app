@@ -105,15 +105,15 @@ const Layout = ({ children }: { children: ReactNode }) => {
           <div className="flex items-center justify-between">
             {/* Left - Logo */}
             <div className="flex items-center">
-              <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+              <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
                 <Image 
                   src="/Vibrics Deals Logo.png?v=2" 
                   alt="Vibrics Deals" 
-                  width={80}
-                  height={80}
+                  width={48}
+                  height={48}
                   className="object-contain drop-shadow-lg"
                 />
-                <span className="text-2xl font-black text-white">
+                <span className="text-lg font-bold text-white hidden sm:block">
                   Vibrics Deals
                 </span>
               </Link>
@@ -463,14 +463,14 @@ const Layout = ({ children }: { children: ReactNode }) => {
               {user ? (
                 <div className="flex items-center space-x-3">
                   <span 
-                    className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20 text-sm font-medium max-w-32 lg:max-w-48 xl:max-w-56 truncate"
+                    className="bg-white/10 text-white px-2 py-1 rounded-full border border-white/20 text-xs font-medium max-w-24 md:max-w-32 lg:max-w-48 xl:max-w-56 truncate"
                     title={user.email || user.phoneNumber}
                   >
                     {user.email || user.phoneNumber}
                   </span>
                   <button
                     onClick={handleLogout}
-                    className="bg-gradient-to-r from-pink-500 to-rose-500 text-white px-4 py-1 rounded-full shadow text-sm font-semibold hover:from-pink-600 hover:to-rose-600 transition-all duration-300"
+                    className="bg-gradient-to-r from-pink-500 to-rose-500 text-white px-3 py-1 rounded-full shadow text-xs font-semibold hover:from-pink-600 hover:to-rose-600 transition-all duration-300"
                   >
                     Logout
                   </button>
