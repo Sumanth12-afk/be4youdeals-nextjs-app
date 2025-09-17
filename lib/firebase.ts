@@ -4,7 +4,7 @@ import "firebase/compat/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBA0pPDn51vk_ZyyKnBZV0w9tOKXG1lniw",
-  authDomain: "be4youdeals.firebaseapp.com",
+  authDomain: "vibricsdeals.netlify.app",
   projectId: "be4youdeals",
   storageBucket: "be4youdeals.appspot.com",
   messagingSenderId: "941415178206",
