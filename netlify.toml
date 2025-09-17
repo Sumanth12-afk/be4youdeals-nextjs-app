@@ -5,10 +5,45 @@
 [build.environment]
   NODE_VERSION = "18"
 
-# Redirect rules for static export
+# Redirect rules for static export - handle clean URLs
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/about"
+  to = "/about/"
+  status = 200
+
+[[redirects]]
+  from = "/deals"
+  to = "/deals/"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact/"
+  status = 200
+
+[[redirects]]
+  from = "/login"
+  to = "/login/"
+  status = 200
+
+[[redirects]]
+  from = "/signup"
+  to = "/signup/"
+  status = 200
+
+[[redirects]]
+  from = "/wishlist"
+  to = "/wishlist/"
+  status = 200
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy/"
+  status = 200
+
+[[redirects]]
+  from = "/disclosure"
+  to = "/disclosure/"
   status = 200
 
 [[headers]]
