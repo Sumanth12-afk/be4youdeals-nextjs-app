@@ -462,7 +462,10 @@ const Layout = ({ children }: { children: ReactNode }) => {
             <div className="hidden md:flex items-center space-x-4">
               {user ? (
                 <div className="flex items-center space-x-3">
-                  <span className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20 text-sm font-medium">
+                  <span 
+                    className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20 text-sm font-medium max-w-32 lg:max-w-48 xl:max-w-56 truncate"
+                    title={user.email || user.phoneNumber}
+                  >
                     {user.email || user.phoneNumber}
                   </span>
                   <button
@@ -640,7 +643,10 @@ const Layout = ({ children }: { children: ReactNode }) => {
                 <div className="pt-4 border-t border-white/10">
                   {user ? (
                     <div className="space-y-3">
-                      <div className="bg-white/10 text-white px-3 py-2 rounded-full border border-white/20 text-sm font-medium text-center">
+                      <div 
+                        className="bg-white/10 text-white px-3 py-2 rounded-full border border-white/20 text-sm font-medium text-center max-w-full truncate"
+                        title={user.email || user.phoneNumber}
+                      >
                         {user.email || user.phoneNumber}
                       </div>
                       <button
