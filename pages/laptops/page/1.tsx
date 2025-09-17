@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Head from "next/head";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 import { addToWishlist } from "../../../lib/wishlistUtils";
@@ -73,7 +75,14 @@ export default function LaptopPage1() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 relative overflow-hidden">
+    <>
+      <Head>
+        <title>Laptops - Vibrics Deals</title>
+        <meta name="description" content="Discover the best laptop deals with massive savings. Premium laptops at unbeatable prices." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/Vibrics Deals Logo.png" />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500 rounded-full opacity-10 blur-3xl floating-3d"></div>
@@ -197,6 +206,7 @@ export default function LaptopPage1() {
           ))}
         </motion.div>
       </main>
-    </div>
+      </div>
+    </>
   );
 }

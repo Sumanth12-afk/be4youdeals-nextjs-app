@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState, ReactNode } from "react";
 import { useRouter } from "next/router";
 import { auth } from "../lib/firebase";
@@ -99,13 +100,22 @@ const Layout = ({ children }: { children: ReactNode }) => {
 
   return (
     <div>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-slate-900 to-slate-800 backdrop-blur-sm">
+      <header className="fixed top-0 left-0 right-0 z-50 glass-dark border-b border-white/10">
         <div className="w-full px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Left - Logo */}
             <div className="flex items-center">
-              <Link href="/" className="text-2xl font-black text-white hover:text-cyan-400 transition-colors">
-                be4youdeals
+              <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+                <Image 
+                  src="/Vibrics Deals Logo.png" 
+                  alt="Vibrics Deals" 
+                  width={80}
+                  height={80}
+                  className="object-contain drop-shadow-lg"
+                />
+                <span className="text-2xl font-black text-white">
+                  Vibrics Deals
+                </span>
               </Link>
             </div>
 
@@ -669,12 +679,21 @@ const Layout = ({ children }: { children: ReactNode }) => {
         />
       </main>
 
-      <footer className="bg-gradient-to-r from-slate-900 to-slate-800 border-t border-white/10 text-gray-300 py-8">
+      <footer className="glass-dark border-t border-white/10 text-gray-300 py-8">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col items-center space-y-4">
             {/* Brand Info */}
             <div className="text-center">
-              <h3 className="text-xl font-bold text-white mb-2">be4youdeals</h3>
+              <div className="flex items-center justify-center space-x-3 mb-4">
+                <Image 
+                  src="/Vibrics Deals Logo.png" 
+                  alt="Vibrics Deals" 
+                  width={64}
+                  height={64}
+                  className="object-contain drop-shadow-md"
+                />
+                <h3 className="text-xl font-bold text-white">Vibrics Deals</h3>
+              </div>
               <p className="text-sm text-gray-400 max-w-md">
                 Your trusted destination for the best deals on tech and home essentials. 
                 Discover quality products at unbeatable prices.
@@ -693,7 +712,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
             
             {/* Copyright */}
             <div className="text-center text-xs text-gray-500 pt-2 border-t border-white/10 w-full">
-              © 2024 be4youdeals. All rights reserved. | Made with ❤️ for deal hunters
+              © 2024 Vibrics Deals. All rights reserved. | Made with ❤️ for deal hunters
             </div>
           </div>
         </div>

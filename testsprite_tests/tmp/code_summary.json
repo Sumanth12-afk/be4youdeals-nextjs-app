@@ -1,0 +1,93 @@
+{
+  "tech_stack": [
+    "TypeScript",
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Firebase",
+    "React Hot Toast"
+  ],
+  "features": [
+    {
+      "name": "Homepage",
+      "description": "Main landing page with hero section, animated logo, deal ticker, and category grid with 3D effects",
+      "files": ["pages/index.tsx"]
+    },
+    {
+      "name": "Layout Component",
+      "description": "Main layout wrapper with navbar, footer, and floating action button",
+      "files": ["components/Layout.tsx"]
+    },
+    {
+      "name": "Deals Page",
+      "description": "Hot deals showcase with countdown timers, featured products, and coming soon sections",
+      "files": ["pages/deals.tsx"]
+    },
+    {
+      "name": "About Page",
+      "description": "Company information page with mission, values, and team sections",
+      "files": ["pages/about.tsx"]
+    },
+    {
+      "name": "Contact Page",
+      "description": "Contact form with social media links and company information",
+      "files": ["pages/contact.tsx"]
+    },
+    {
+      "name": "Laptop Pages",
+      "description": "Product listing pages for laptops with pagination and wishlist functionality",
+      "files": ["pages/laptops/index.tsx", "pages/laptops/page/1.tsx", "pages/laptops/page/2.tsx", "pages/laptops/page/3.tsx", "pages/laptops/page/4.tsx", "pages/laptops/page/5.tsx", "pages/laptops/page/6.tsx", "pages/laptops/page/7.tsx", "pages/laptops/page/8.tsx", "pages/laptops/page/9.tsx", "pages/laptops/page/10.tsx"]
+    },
+    {
+      "name": "Mobile Pages",
+      "description": "Product pages for mobile devices",
+      "files": ["pages/mobiles/mobile1.tsx", "pages/mobiles/mobile2.tsx", "pages/mobiles/mobile3.tsx", "pages/mobiles/mobile4.tsx", "pages/mobiles/mobile5.tsx", "pages/mobiles/mobile6.tsx", "pages/mobiles/mobile7.tsx", "pages/mobiles/mobile8.tsx", "pages/mobiles/mobile9.tsx", "pages/mobiles/mobile10.tsx"]
+    },
+    {
+      "name": "Headphone Pages",
+      "description": "Product pages for headphones with pagination",
+      "files": ["pages/headphones/index.tsx", "pages/headphones/page/1.tsx", "pages/headphones/page/2.tsx", "pages/headphones/page/3.tsx", "pages/headphones/page/4.tsx", "pages/headphones/page/5.tsx", "pages/headphones/page/6.tsx", "pages/headphones/page/7.tsx", "pages/headphones/page/8.tsx", "pages/headphones/page/9.tsx", "pages/headphones/page/10.tsx"]
+    },
+    {
+      "name": "Household Pages",
+      "description": "Product pages for household items",
+      "files": ["pages/household/item1.tsx", "pages/household/item2.tsx", "pages/household/item3.tsx", "pages/household/item4.tsx", "pages/household/item5.tsx", "pages/household/item6.tsx", "pages/household/item7.tsx", "pages/household/item8.tsx", "pages/household/item9.tsx", "pages/household/item10.tsx"]
+    },
+    {
+      "name": "Authentication",
+      "description": "User login and signup functionality with Firebase",
+      "files": ["pages/login.tsx", "pages/signup.tsx", "lib/withAuth.tsx"]
+    },
+    {
+      "name": "Wishlist",
+      "description": "User wishlist functionality with local storage",
+      "files": ["pages/wishlist.tsx", "lib/wishlistUtils.ts"]
+    },
+    {
+      "name": "Firebase Integration",
+      "description": "Firebase configuration and authentication setup",
+      "files": ["lib/firebase.ts", "lib/firebaseui.d.ts"]
+    },
+    {
+      "name": "Laptop Utilities",
+      "description": "Utility functions for laptop data management and pagination",
+      "files": ["lib/laptopUtils.ts"]
+    },
+    {
+      "name": "Global Styles",
+      "description": "Modern CSS with glassmorphism, animations, and responsive design",
+      "files": ["styles/globals.css"]
+    },
+    {
+      "name": "Data Files",
+      "description": "Product data and configuration files",
+      "files": ["all-laptops-data.js", "laptop-data-temp.js"]
+    },
+    {
+      "name": "Privacy and Legal",
+      "description": "Privacy policy and disclosure pages",
+      "files": ["pages/privacy.tsx", "pages/disclosure.tsx"]
+    }
+  ]
+}

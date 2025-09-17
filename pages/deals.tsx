@@ -1,11 +1,19 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import Head from "next/head";
+import Image from "next/image";
+import { useState, useEffect, useRef } from "react";
 import { allLaptops } from "../all-laptops-data.js";
 import toast from "react-hot-toast";
 
 export default function DealsWall() {
   const [isLoading, setIsLoading] = useState(true);
+  const [showBackToTop, setShowBackToTop] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   // Simulate loading state
   useEffect(() => {
@@ -13,8 +21,26 @@ export default function DealsWall() {
       setIsLoading(false);
     }, 2000);
 
-    return () => clearTimeout(timer);
+    // Scroll progress and back to top button
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      setScrollProgress(scrollPercent);
+      setShowBackToTop(scrollTop > 300);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   // Helpers to build a laptop-based featured deal in USD
   const formatUSD = (price: string): string => {
@@ -129,7 +155,53 @@ export default function DealsWall() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 relative overflow-hidden">
+    <>
+      <Head>
+        <title>Hot Deals - Vibrics Deals</title>
+        <meta name="description" content="Discover the hottest deals on tech, fashion, and more. Limited time offers with massive savings!" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/Vibrics Deals Logo.png" />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 relative overflow-hidden pt-24">
+      {/* Enhanced Background with Gradient and Patterns */}
+      <motion.div 
+        style={{ y, opacity }}
+        className="absolute inset-0 z-0"
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+        {/* Animated Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/20 via-purple-900/20 to-cyan-900/20 animate-gradient"></div>
+        {/* Subtle Pattern Overlay */}
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: `radial-gradient(circle at 25% 25%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
+                          radial-gradient(circle at 75% 75%, rgba(6, 182, 212, 0.3) 0%, transparent 50%)`
+        }}></div>
+      </motion.div>
+
+      {/* Floating Particles - Optimized */}
+      <div className="absolute inset-0 z-5 pointer-events-none">
+        {[...Array(6)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1.5 h-1.5 bg-gradient-to-r from-indigo-400 to-cyan-400 rounded-full opacity-40"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -20, 0],
+              opacity: [0.4, 0.8, 0.4],
+            }}
+            transition={{
+              duration: 4 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+              ease: "easeInOut"
+            }}
+          />
+        ))}
+      </div>
+
       {/* Dynamic Particle Background */}
       <div className="absolute inset-0 z-0">
         {/* Animated Orbs */}
@@ -258,9 +330,151 @@ export default function DealsWall() {
                 <SkeletonFeaturedCard />
               </>
             ) : (
-              featuredDeals.map((deal, index) => (
-                <FeaturedDealCard key={deal.id} deal={deal} index={index} />
-              ))
+              <>
+                {/* Laptop Product Card */}
+                <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                  viewport={{ once: true }}
+                  whileHover={{ 
+                    scale: 1.02, 
+                    y: -5,
+                    transition: { duration: 0.3 }
+                  }}
+                  className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 backdrop-blur-sm border border-blue-500/30 rounded-2xl p-6 hover:border-blue-400/50 transition-all duration-300 relative h-full flex flex-col group"
+                >
+                  {/* Category Badge */}
+                  <div className="flex items-center mb-4">
+                    <span className="text-blue-400 text-lg mr-2">💻</span>
+                    <span className="text-blue-400 text-sm font-medium">Laptops</span>
+                  </div>
+                  
+                  {/* Product Image */}
+                  <div className="mb-4 flex justify-center flex-shrink-0">
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.3 }}
+                      className="relative overflow-hidden rounded-xl"
+                    >
+                      <Image
+                        src="https://m.media-amazon.com/images/I/61iRboRcXzL._AC_SX466_.jpg"
+                        alt="Blackview Laptop 2025"
+                        width={250}
+                        height={200}
+                        className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
+                        priority
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </motion.div>
+                  </div>
+                  
+                  <div className="flex-grow flex flex-col">
+                    <h3 className="text-lg font-bold text-white mb-2 line-clamp-2 group-hover:text-blue-300 transition-colors duration-300">Blackview Laptop 2025, Laptops Computer for Business Student, Quad-Core N150</h3>
+                    <p className="text-gray-300 text-sm mb-4 group-hover:text-gray-200 transition-colors duration-300">Performance meets portability</p>
+                    
+                    {/* Rating */}
+                    <div className="flex items-center mb-4">
+                      <span className="text-yellow-400 text-sm">⭐</span>
+                      <span className="text-white text-sm ml-1">4.55 (73)</span>
+                    </div>
+                    
+                    <div className="mt-auto">
+                      <div className="flex items-center justify-between mb-4">
+                        <div>
+                          <span className="text-2xl font-black text-green-400 group-hover:text-green-300 transition-colors duration-300">$339.99</span>
+                          <span className="text-gray-400 line-through ml-2">$453.32</span>
+                          <div className="text-green-400 text-sm mt-1">You save: $113</div>
+                        </div>
+                        <div className="flex flex-col items-end">
+                          <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold mb-2 group-hover:bg-green-400 transition-colors duration-300">25% OFF</span>
+                          <motion.button 
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="text-red-400 hover:text-red-300 transition-colors duration-300"
+                          >
+                            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
+                            </svg>
+                          </motion.button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Headphone Product Card */}
+                <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  viewport={{ once: true }}
+                  whileHover={{ 
+                    scale: 1.02, 
+                    y: -5,
+                    transition: { duration: 0.3 }
+                  }}
+                  className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-6 hover:border-purple-400/50 transition-all duration-300 relative h-full flex flex-col group"
+                >
+                  {/* Category Badge */}
+                  <div className="flex items-center mb-4">
+                    <span className="text-purple-400 text-lg mr-2">🎧</span>
+                    <span className="text-purple-400 text-sm font-medium">Headphones</span>
+                  </div>
+                  
+                  {/* Product Image */}
+                  <div className="mb-4 flex justify-center flex-shrink-0">
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.3 }}
+                      className="relative overflow-hidden rounded-xl"
+                    >
+                      <Image
+                        src="https://m.media-amazon.com/images/I/61kFL7ywsZS.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                        alt="JBL Tune 510BT"
+                        width={250}
+                        height={200}
+                        className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
+                        priority
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </motion.div>
+                  </div>
+                  
+                  <div className="flex-grow flex flex-col">
+                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-purple-300 transition-colors duration-300">JBL Tune 510BT</h3>
+                    <p className="text-gray-300 text-sm mb-4 group-hover:text-gray-200 transition-colors duration-300">40H battery, ultra-comfy</p>
+                    
+                    {/* Rating */}
+                    <div className="flex items-center mb-4">
+                      <span className="text-yellow-400 text-sm">⭐</span>
+                      <span className="text-white text-sm ml-1">4.5 (12,500)</span>
+                    </div>
+                    
+                    <div className="mt-auto">
+                      <div className="flex items-center justify-between mb-4">
+                        <div>
+                          <span className="text-2xl font-black text-green-400 group-hover:text-green-300 transition-colors duration-300">$49.95</span>
+                          <span className="text-gray-400 line-through ml-2">$70.00</span>
+                          <div className="text-green-400 text-sm mt-1">You save: $20</div>
+                        </div>
+                        <div className="flex flex-col items-end">
+                          <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold mb-2 group-hover:bg-green-400 transition-colors duration-300">30% OFF</span>
+                          <motion.button 
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="text-red-400 hover:text-red-300 transition-colors duration-300"
+                          >
+                            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
+                            </svg>
+                          </motion.button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </>
             )}
           </div>
         </div>
@@ -296,7 +510,37 @@ export default function DealsWall() {
           </div>
         </motion.div>
       </div>
-    </div>
+
+      {/* Scroll Progress Indicator */}
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-1 bg-gray-800 z-50"
+        initial={{ scaleX: 0 }}
+        style={{ scaleX: scrollYProgress }}
+      >
+        <motion.div
+          className="h-full bg-gradient-to-r from-indigo-400 to-cyan-400 origin-left"
+          style={{ scaleX: scrollYProgress }}
+        />
+      </motion.div>
+
+      {/* Back to Top Button */}
+      <motion.button
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ 
+          opacity: showBackToTop ? 1 : 0, 
+          scale: showBackToTop ? 1 : 0 
+        }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        onClick={scrollToTop}
+        className="fixed bottom-8 right-8 z-50 bg-gradient-to-r from-indigo-500 to-cyan-500 text-white p-4 rounded-full shadow-2xl hover:shadow-indigo-500/25 transition-all duration-300"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+      </motion.button>
+      </div>
+    </>
   );
 }
 

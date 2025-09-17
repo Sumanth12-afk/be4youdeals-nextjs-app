@@ -1,9 +1,85 @@
-import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import Head from "next/head";
+import Image from "next/image";
+import { useState, useEffect, useRef } from "react";
 
 export default function About() {
+  const [showBackToTop, setShowBackToTop] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+
+  useEffect(() => {
+    // Scroll progress and back to top button
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      setScrollProgress(scrollPercent);
+      setShowBackToTop(scrollTop > 300);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 relative overflow-hidden">
+    <>
+      <Head>
+        <title>About Us - Vibrics Deals</title>
+        <meta name="description" content="Learn about Vibrics Deals - your trusted destination for the best deals on tech and home essentials." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/Vibrics Deals Logo.png" />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 relative overflow-hidden pt-24">
+      {/* Enhanced Background with Gradient and Patterns */}
+      <motion.div 
+        style={{ y, opacity }}
+        className="absolute inset-0 z-0"
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+        {/* Animated Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/20 via-purple-900/20 to-cyan-900/20 animate-gradient"></div>
+        {/* Subtle Pattern Overlay */}
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: `radial-gradient(circle at 25% 25%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
+                          radial-gradient(circle at 75% 75%, rgba(6, 182, 212, 0.3) 0%, transparent 50%)`
+        }}></div>
+      </motion.div>
+
+      {/* Floating Particles - Optimized */}
+      <div className="absolute inset-0 z-5 pointer-events-none">
+        {[...Array(5)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1.5 h-1.5 bg-gradient-to-r from-indigo-400 to-cyan-400 rounded-full opacity-40"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -20, 0],
+              opacity: [0.4, 0.8, 0.4],
+            }}
+            transition={{
+              duration: 4 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+              ease: "easeInOut"
+            }}
+          />
+        ))}
+      </div>
+
       {/* Floating Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-500 rounded-full opacity-10 blur-3xl floating-3d"></div>
@@ -26,7 +102,7 @@ export default function About() {
             className="text-center mb-20"
           >
             <h1 className="text-5xl md:text-7xl font-black text-white mb-6">
-              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400 neon-glow">Be4YouDeals</span>
+              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400 neon-glow">Vibrics Deals</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Discover the story behind your trusted destination for curated everyday deals
@@ -60,10 +136,10 @@ export default function About() {
                   viewport={{ once: true }}
                 >
                   <p className="text-lg text-gray-200 leading-relaxed mb-6">
-                    At Be4YouDeals, we believe that everyone deserves access to amazing products at unbeatable prices. Our mission is to curate the best deals across all categories — from cutting-edge technology to everyday essentials.
+                    At Vibrics Deals, we're your dedicated deal hunting partner, committed to finding you the most incredible savings on tech, fashion, and lifestyle essentials. Our mission is to transform how you shop by bringing you expertly curated deals that deliver maximum value.
                   </p>
                   <p className="text-lg text-gray-200 leading-relaxed mb-6">
-                    We spend countless hours researching, testing, and negotiating to bring you exclusive discounts that you won't find anywhere else. Every deal on our platform is handpicked by our expert team.
+                    We leverage advanced deal tracking technology and our extensive network of retail partnerships to uncover exclusive discounts and limited-time offers. Every product we feature is carefully vetted for quality, authenticity, and genuine savings potential.
                   </p>
                   <motion.div
                     whileHover={{ scale: 1.02 }}
@@ -72,7 +148,7 @@ export default function About() {
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
-                    Quality guaranteed, savings maximized
+                    Your deal hunting partner for life
                   </motion.div>
                 </motion.div>
                 
@@ -137,7 +213,7 @@ export default function About() {
                   <div className="relative overflow-hidden rounded-2xl">
         <img
           src="/about-banner.png"
-                      alt="Be4YouDeals Team"
+                      alt="Vibrics Deals Team"
                       className="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl"></div>
@@ -203,7 +279,7 @@ export default function About() {
             <div className="bg-gradient-to-r from-indigo-500/20 to-cyan-500/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
               <h3 className="text-3xl font-black text-white mb-4">Ready to Start Saving?</h3>
               <p className="text-gray-200 mb-6 max-w-2xl mx-auto">
-                Join thousands of smart shoppers who trust Be4YouDeals to find the best deals across all categories.
+                Join thousands of smart shoppers who trust Vibrics Deals to find the best deals across all categories.
               </p>
               <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}
@@ -222,6 +298,36 @@ export default function About() {
           </motion.div>
         </div>
       </div>
-    </div>
+
+      {/* Scroll Progress Indicator */}
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-1 bg-gray-800 z-50"
+        initial={{ scaleX: 0 }}
+        style={{ scaleX: scrollYProgress }}
+      >
+        <motion.div
+          className="h-full bg-gradient-to-r from-indigo-400 to-cyan-400 origin-left"
+          style={{ scaleX: scrollYProgress }}
+        />
+      </motion.div>
+
+      {/* Back to Top Button */}
+      <motion.button
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ 
+          opacity: showBackToTop ? 1 : 0, 
+          scale: showBackToTop ? 1 : 0 
+        }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        onClick={scrollToTop}
+        className="fixed bottom-8 right-8 z-50 bg-gradient-to-r from-indigo-500 to-cyan-500 text-white p-4 rounded-full shadow-2xl hover:shadow-indigo-500/25 transition-all duration-300"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+      </motion.button>
+      </div>
+    </>
   );
 }
