@@ -44,6 +44,9 @@ const SignupPage = () => {
       const provider = new firebase.auth.GoogleAuthProvider();
       provider.addScope('email');
       provider.addScope('profile');
+      provider.setCustomParameters({
+        prompt: 'select_account'
+      });
       
       console.log('Attempting Google sign-in...');
       const result = await auth.signInWithPopup(provider);
