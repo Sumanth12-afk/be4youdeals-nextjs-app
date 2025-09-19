@@ -782,6 +782,135 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.section>
+
+      {/* Upcoming Features Section */}
+      <motion.section 
+        className="py-16 px-6 relative z-20"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
+                Coming Soon
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Exciting new features and categories are on the way. Stay tuned for the ultimate deal hunting experience!
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Smart Search Feature */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-6 hover:border-purple-400/50 transition-all duration-300"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">🔍 Smart Search</span>
+                <span className="text-yellow-400 text-sm font-medium">🚀 Coming Soon</span>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">AI-Powered Search</h3>
+              <p className="text-gray-300 text-sm mb-4">Find exactly what you're looking for with our intelligent search that understands your needs and preferences.</p>
+              <div className="flex items-center text-purple-400 text-sm font-medium">
+                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                Advanced filtering & recommendations
+              </div>
+            </motion.div>
+
+            {/* Price Alerts Feature */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm border border-green-500/30 rounded-2xl p-6 hover:border-green-400/50 transition-all duration-300"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">🔔 Price Alerts</span>
+                <span className="text-yellow-400 text-sm font-medium">📱 Mobile Ready</span>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Never Miss a Deal</h3>
+              <p className="text-gray-300 text-sm mb-4">Set price alerts for your favorite products and get notified instantly when prices drop to your target.</p>
+              <div className="flex items-center text-green-400 text-sm font-medium">
+                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-5 5v-5zM4 19h6v-6H4v6z" />
+                </svg>
+                Real-time notifications & tracking
+              </div>
+            </motion.div>
+
+            {/* Wishlist Feature */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-2xl p-6 hover:border-blue-400/50 transition-all duration-300"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">❤️ Wishlist</span>
+                <span className="text-yellow-400 text-sm font-medium">✨ Enhanced</span>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Smart Wishlist</h3>
+              <p className="text-gray-300 text-sm mb-4">Save your favorite deals and get personalized recommendations based on your interests and browsing history.</p>
+              <div className="flex items-center text-blue-400 text-sm font-medium">
+                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+                Personalized recommendations
+              </div>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <p className="text-gray-400 text-sm mb-4">
+              Want to be the first to know when these features launch?
+            </p>
+            <button 
+              onClick={() => {
+                toast('🚀 Coming Soon!', {
+                  icon: '🔜',
+                  style: {
+                    background: 'linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%)',
+                    color: 'white',
+                    borderRadius: '16px',
+                    padding: '12px 20px',
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    boxShadow: '0 10px 25px rgba(139, 92, 246, 0.3)'
+                  },
+                  duration: 3000,
+                  position: 'bottom-center'
+                });
+              }}
+              className="bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 text-white px-8 py-3 rounded-2xl font-bold text-lg hover:scale-105 transition-all duration-300 shadow-2xl"
+            >
+              Get Early Access
+            </button>
+          </motion.div>
+        </div>
+      </motion.section>
       </div>
 
       {/* Scroll Progress Indicator */}
@@ -806,7 +935,7 @@ export default function Home() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={scrollToTop}
-        className="fixed bottom-8 right-8 z-50 bg-gradient-to-r from-indigo-500 to-cyan-500 text-white p-4 rounded-full shadow-2xl hover:shadow-indigo-500/25 transition-all duration-300"
+        className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 bg-gradient-to-r from-indigo-500 to-cyan-500 text-white p-4 rounded-full shadow-2xl hover:shadow-indigo-500/25 transition-all duration-300"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />

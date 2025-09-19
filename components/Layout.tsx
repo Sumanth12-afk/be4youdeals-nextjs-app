@@ -51,6 +51,23 @@ const Layout = ({ children }: { children: ReactNode }) => {
   
   const router = useRouter();
 
+  // Centralized navigation helper for all search-related navigation
+  const handleSearchNavigate = (path: string) => {
+    router.push(path);
+    setShowSearch(false);
+    setSearchQuery("");
+  };
+
+  // Auto-focus search input when it opens
+  useEffect(() => {
+    if (showSearch) {
+      const searchInput = document.querySelector('input[placeholder="Search deals, products..."]') as HTMLInputElement;
+      if (searchInput) {
+        setTimeout(() => searchInput.focus(), 100);
+      }
+    }
+  }, [showSearch]);
+
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((u) => {
       setUser(u);
@@ -95,7 +112,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
 
   const handleDealsClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    router.push('/deals');
+    handleSearchNavigate('/deals');
   };
 
   return (
@@ -112,6 +129,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
                   width={48}
                   height={48}
                   className="object-contain drop-shadow-lg"
+                  priority
                 />
                 <span className="text-lg font-bold text-white hidden sm:block">
                   Vibrics Deals
@@ -189,13 +207,9 @@ const Layout = ({ children }: { children: ReactNode }) => {
                         if (searchQuery.trim()) {
                           const query = searchQuery.toLowerCase();
                           if (query.includes('laptop')) {
-                            router.push('/laptops');
-                            setShowSearch(false);
-                            setSearchQuery('');
+                            handleSearchNavigate('/laptops');
                           } else if (query.includes('headphone')) {
-                            router.push('/headphones');
-                            setShowSearch(false);
-                            setSearchQuery('');
+                            handleSearchNavigate('/headphones');
                           } else {
                             toast(`🔍 Searching for "${searchQuery}"...`, {
                               icon: '⚡',
@@ -260,9 +274,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
                               key={filter.name}
                               onClick={() => {
                                 if (filter.available && filter.redirect) {
-                                  router.push(filter.redirect);
-                                  setShowSearch(false);
-                                  setSearchQuery('');
+                                  handleSearchNavigate(filter.redirect);
                                 } else if (!filter.available) {
                                   toast('🚧 Coming Soon!', {
                                     icon: '🔜',
@@ -279,23 +291,6 @@ const Layout = ({ children }: { children: ReactNode }) => {
                                     position: 'bottom-center'
                                   });
                                   setShowSearch(false);
-                                } else {
-                                  toast(`🔍 Filtering by "${filter.name}"...`, {
-                                    icon: '📂',
-                                    style: {
-                                      background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
-                                      color: 'white',
-                                      borderRadius: '16px',
-                                      padding: '12px 20px',
-                                      fontSize: '14px',
-                                      fontWeight: '600',
-                                      boxShadow: '0 10px 25px rgba(16, 185, 129, 0.3)'
-                                    },
-                                    duration: 3000,
-                                    position: 'bottom-center'
-                                  });
-                                  setShowSearch(false);
-                                  setSearchQuery('');
                                 }
                               }}
                               className={`px-3 py-1 text-sm rounded-full border transition-all duration-200 ${
@@ -337,9 +332,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
                                   }`}
                                   onClick={() => {
                                     if (item.available && item.redirect) {
-                                      router.push(item.redirect);
-                                      setShowSearch(false);
-                                      setSearchQuery('');
+                                      handleSearchNavigate(item.redirect);
                                     } else if (!item.available) {
                                       toast('🚧 Coming Soon!', {
                                         icon: '🔜',
@@ -356,24 +349,6 @@ const Layout = ({ children }: { children: ReactNode }) => {
                                         position: 'bottom-center'
                                       });
                                       setShowSearch(false);
-                                      setSearchQuery('');
-                                    } else {
-                                      toast(`🔍 Searching for "${item.name}"...`, {
-                                        icon: '⚡',
-                                        style: {
-                                          background: 'linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%)',
-                                          color: 'white',
-                                          borderRadius: '16px',
-                                          padding: '12px 20px',
-                                          fontSize: '14px',
-                                          fontWeight: '600',
-                                          boxShadow: '0 10px 25px rgba(79, 70, 229, 0.3)'
-                                        },
-                                        duration: 3000,
-                                        position: 'bottom-center'
-                                      });
-                                      setShowSearch(false);
-                                      setSearchQuery('');
                                     }
                                   }}
                                 >
@@ -406,13 +381,9 @@ const Layout = ({ children }: { children: ReactNode }) => {
                             if (searchQuery.trim()) {
                               const query = searchQuery.toLowerCase();
                               if (query.includes('laptop')) {
-                                router.push('/laptops');
-                                setShowSearch(false);
-                                setSearchQuery('');
+                                handleSearchNavigate('/laptops');
                               } else if (query.includes('headphone')) {
-                                router.push('/headphones');
-                                setShowSearch(false);
-                                setSearchQuery('');
+                                handleSearchNavigate('/headphones');
                               } else {
                                 toast(`🔍 Searching for "${searchQuery}"...`, {
                                   icon: '⚡',
@@ -517,55 +488,296 @@ const Layout = ({ children }: { children: ReactNode }) => {
 
           {/* Mobile Search */}
           {showSearch && (
-            <div className="md:hidden mt-4 pb-4 border-t border-white/10">
-              <div className="pt-4">
-                <input
-                  type="text"
-                  placeholder="Search deals, products..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter') {
-                      if (searchQuery.trim()) {
-                        const query = searchQuery.toLowerCase();
-                        if (query.includes('laptop')) {
-                          router.push('/laptops');
-                          setShowSearch(false);
-                          setSearchQuery('');
-                        } else if (query.includes('headphone')) {
-                          router.push('/headphones');
-                          setShowSearch(false);
-                          setSearchQuery('');
-                        } else {
-                          toast(`🔍 Searching for "${searchQuery}"...`, {
-                            icon: '⚡',
-                            style: {
-                              background: 'linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%)',
-                              color: 'white',
-                              borderRadius: '16px',
-                              padding: '12px 20px',
-                              fontSize: '14px',
-                              fontWeight: '600',
-                              boxShadow: '0 10px 25px rgba(79, 70, 229, 0.3)'
-                            },
-                            duration: 3000,
-                            position: 'bottom-center'
-                          });
-                          setShowSearch(false);
-                          setSearchQuery('');
+            <div className="md:hidden mt-4 pb-4 border-t border-white/10 relative z-[60]">
+              <div className="pt-4" onClick={(e) => e.stopPropagation()}>
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="flex-1 relative min-w-0">
+                    <input
+                      type="text"
+                      placeholder="Search deals, products..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          console.log('Search Enter pressed, query:', searchQuery);
+                          
+                          if (searchQuery.trim()) {
+                            const query = searchQuery.toLowerCase();
+                            console.log('Processed query:', query);
+                            
+                            if (query.includes('laptop')) {
+                              console.log('Navigating to laptops page');
+                              handleSearchNavigate('/laptops');
+                            } else if (query.includes('headphone')) {
+                              console.log('Navigating to headphones page');
+                              handleSearchNavigate('/headphones');
+                            } else {
+                              console.log('Showing search toast for:', searchQuery);
+                              toast(`🔍 Searching for "${searchQuery}"...`, {
+                                icon: '⚡',
+                                style: {
+                                  background: 'linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%)',
+                                  color: 'white',
+                                  borderRadius: '16px',
+                                  padding: '12px 20px',
+                                  fontSize: '14px',
+                                  fontWeight: '600',
+                                  boxShadow: '0 10px 25px rgba(79, 70, 229, 0.3)'
+                                },
+                                duration: 3000,
+                                position: 'bottom-center'
+                              });
+                              setShowSearch(false);
+                            }
+                          }
                         }
+                      }}
+                      autoFocus
+                      className="w-full bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-3 pl-10 pr-4 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300 text-sm sm:text-base"
+                    />
+                    <svg className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                  </div>
+                  <button
+                    onClick={() => {
+                      setShowSearch(false);
+                      setSearchQuery('');
+                    }}
+                    className="text-white hover:text-cyan-400 transition-colors p-2 flex-shrink-0"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+
+                {/* Quick Filters */}
+                <div className="mb-4">
+                  <div className="flex flex-wrap gap-2">
+                    <button
+                      onClick={() => handleSearchNavigate('/deals')}
+                      className="px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-white/10 text-white hover:bg-white/20 border border-white/20 transition-all duration-300 cursor-pointer whitespace-nowrap active:scale-95 active:bg-white/30"
+                      style={{ touchAction: 'manipulation' }}
+                    >
+                      All
+                    </button>
+                    <button
+                      onClick={() => handleSearchNavigate('/laptops')}
+                      className="px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-white/10 text-white hover:bg-white/20 border border-white/20 transition-all duration-300 cursor-pointer whitespace-nowrap active:scale-95 active:bg-white/30"
+                      style={{ touchAction: 'manipulation' }}
+                    >
+                      Laptops
+                    </button>
+                    <button
+                      onClick={() => handleSearchNavigate('/headphones')}
+                      className="px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-white/10 text-white hover:bg-white/20 border border-white/20 transition-all duration-300 cursor-pointer whitespace-nowrap active:scale-95 active:bg-white/30"
+                      style={{ touchAction: 'manipulation' }}
+                    >
+                      Headphones
+                    </button>
+                    <button
+                      onClick={() => {
+                        toast('🚧 Coming Soon!', {
+                          icon: '🔜',
+                          style: {
+                            background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+                            color: 'white',
+                            borderRadius: '16px',
+                            padding: '12px 20px',
+                            fontSize: '14px',
+                            fontWeight: '600',
+                            boxShadow: '0 10px 25px rgba(99, 102, 241, 0.3)'
+                          },
+                          duration: 3000,
+                          position: 'bottom-center'
+                        });
+                        setShowSearch(false);
+                      }}
+                      className="px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-gray-600/50 text-gray-400 border border-gray-600/50 transition-all duration-300 whitespace-nowrap"
+                    >
+                      <svg className="w-3 h-3 inline mr-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+                      </svg>
+                      Mobiles
+                    </button>
+                    <button
+                      onClick={() => {
+                        toast('🚧 Coming Soon!', {
+                          icon: '🔜',
+                          style: {
+                            background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+                            color: 'white',
+                            borderRadius: '16px',
+                            padding: '12px 20px',
+                            fontSize: '14px',
+                            fontWeight: '600',
+                            boxShadow: '0 10px 25px rgba(99, 102, 241, 0.3)'
+                          },
+                          duration: 3000,
+                          position: 'bottom-center'
+                        });
+                        setShowSearch(false);
+                      }}
+                      className="px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-gray-600/50 text-gray-400 border border-gray-600/50 transition-all duration-300 whitespace-nowrap"
+                    >
+                      <svg className="w-3 h-3 inline mr-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+                      </svg>
+                      Under $100
+                    </button>
+                  </div>
+                </div>
+
+                {/* Categories */}
+                <div className="mb-4">
+                  <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">CATEGORIES</h3>
+                  <div className="space-y-2">
+                    <button
+                      onClick={() => handleSearchNavigate('/laptops')}
+                      className="w-full flex items-center justify-between p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300 cursor-pointer"
+                    >
+                      <div className="flex items-center gap-3">
+                        <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                        <span className="text-white font-medium">Laptops</span>
+                      </div>
+                      <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
+                    <button
+                      onClick={() => handleSearchNavigate('/headphones')}
+                      className="w-full flex items-center justify-between p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300 cursor-pointer"
+                    >
+                      <div className="flex items-center gap-3">
+                        <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                        <span className="text-white font-medium">Headphones</span>
+                      </div>
+                      <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
+                    <button
+                      onClick={() => {
+                        toast('🚧 Coming Soon!', {
+                          icon: '🔜',
+                          style: {
+                            background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+                            color: 'white',
+                            borderRadius: '16px',
+                            padding: '12px 20px',
+                            fontSize: '14px',
+                            fontWeight: '600',
+                            boxShadow: '0 10px 25px rgba(99, 102, 241, 0.3)'
+                          },
+                          duration: 3000,
+                          position: 'bottom-center'
+                        });
+                        setShowSearch(false);
+                      }}
+                      className="w-full flex items-center justify-between p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300"
+                    >
+                      <div className="flex items-center gap-3">
+                        <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                        <span className="text-white font-medium">Mobiles</span>
+                      </div>
+                      <span className="text-gray-500 text-xs bg-gray-700/50 px-2 py-1 rounded-full">Soon</span>
+                    </button>
+                    <button
+                      onClick={() => {
+                        toast('🚧 Coming Soon!', {
+                          icon: '🔜',
+                          style: {
+                            background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+                            color: 'white',
+                            borderRadius: '16px',
+                            padding: '12px 20px',
+                            fontSize: '14px',
+                            fontWeight: '600',
+                            boxShadow: '0 10px 25px rgba(99, 102, 241, 0.3)'
+                          },
+                          duration: 3000,
+                          position: 'bottom-center'
+                        });
+                        setShowSearch(false);
+                      }}
+                      className="w-full flex items-center justify-between p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300"
+                    >
+                      <div className="flex items-center gap-3">
+                        <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                        <span className="text-white font-medium">Home Essentials</span>
+                      </div>
+                      <span className="text-gray-500 text-xs bg-gray-700/50 px-2 py-1 rounded-full">Soon</span>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Search Button */}
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Search button clicked, query:', searchQuery);
+                    
+                    if (searchQuery.trim()) {
+                      const query = searchQuery.toLowerCase();
+                      console.log('Processed query:', query);
+                      
+                      if (query.includes('laptop')) {
+                        console.log('Navigating to laptops page');
+                        handleSearchNavigate('/laptops');
+                      } else if (query.includes('headphone')) {
+                        console.log('Navigating to headphones page');
+                        handleSearchNavigate('/headphones');
+                      } else {
+                        console.log('Showing search toast for:', searchQuery);
+                        toast(`🔍 Searching for "${searchQuery}"...`, {
+                          icon: '⚡',
+                          style: {
+                            background: 'linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%)',
+                            color: 'white',
+                            borderRadius: '16px',
+                            padding: '12px 20px',
+                            fontSize: '14px',
+                            fontWeight: '600',
+                            boxShadow: '0 10px 25px rgba(79, 70, 229, 0.3)'
+                          },
+                          duration: 3000,
+                          position: 'bottom-center'
+                        });
+                        setShowSearch(false);
                       }
                     }
                   }}
-                  className="w-full bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
-                />
+                  className="w-full bg-gradient-to-r from-indigo-500 to-cyan-500 text-white py-3 rounded-xl font-semibold hover:from-indigo-600 hover:to-cyan-600 transition-all duration-300 shadow-lg"
+                >
+                  Search for '{searchQuery || 'all deals'}'
+                </button>
               </div>
             </div>
           )}
 
           {/* Mobile Navigation Menu */}
           {mobileMenuOpen && (
-            <div className="md:hidden mt-4 pb-4 border-t border-white/10">
+            <>
+              {/* Overlay */}
+              <div 
+                className="fixed inset-0 bg-black/50 z-40 md:hidden"
+                onClick={() => setMobileMenuOpen(false)}
+              />
+              
+              {/* Menu Panel */}
+              <div className="md:hidden mt-4 pb-4 border-t border-white/10 relative z-50">
               <nav className="flex flex-col space-y-4 pt-4">
                 <Link 
                   href="/" 
@@ -668,6 +880,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
                 </div>
           </nav>
             </div>
+            </>
           )}
         </div>
       </header>
@@ -675,8 +888,8 @@ const Layout = ({ children }: { children: ReactNode }) => {
       <main className="pt-24">
         {children}
         
-        {/* Floating Action Button */}
-        <FloatingActionButton 
+        {/* Floating Action Buttons */}
+        <FloatingActionButtons 
           wishlistCount={wishlistCount}
           notifications={notifications}
           showNotifications={showNotifications}
@@ -697,6 +910,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
                   width={64}
                   height={64}
                   className="object-contain drop-shadow-md"
+                  priority
                 />
                 <h3 className="text-xl font-bold text-white">Vibrics Deals</h3>
               </div>
@@ -727,21 +941,19 @@ const Layout = ({ children }: { children: ReactNode }) => {
   );
 };
 
-// Floating Action Button Component
-function FloatingActionButton({ 
+// Separated Floating Action Buttons Component
+function FloatingActionButtons({ 
   wishlistCount, 
   notifications, 
   showNotifications, 
   setShowNotifications, 
   user 
 }: any) {
-  const [isExpanded, setIsExpanded] = useState(false);
   const router = useRouter();
-  
   const unreadCount = notifications.filter((n: any) => n.unread).length;
   
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+    <>
       {/* Notification Panel */}
       <AnimatePresence>
         {showNotifications && (
@@ -749,7 +961,7 @@ function FloatingActionButton({
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            className="mb-4 w-80 bg-slate-900/95 backdrop-blur-xl rounded-2xl border border-white/20 p-4 shadow-2xl"
+            className="fixed top-20 right-6 z-50 w-80 bg-slate-900/95 backdrop-blur-xl rounded-2xl border border-white/20 p-4 shadow-2xl"
           >
             <h3 className="text-white font-bold mb-3 flex items-center gap-2">
               <span>🔔</span>
@@ -781,23 +993,12 @@ function FloatingActionButton({
         )}
       </AnimatePresence>
 
-      {/* FAB Menu */}
-      <AnimatePresence>
-        {isExpanded && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            className="mb-4 flex flex-col gap-3 items-end"
-          >
-            {/* Wishlist Button */}
+      {/* Wishlist Button - Bottom Left */}
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              onClick={() => {
-                router.push('/wishlist');
-              }}
-              className="relative bg-gradient-to-r from-pink-500 to-rose-500 text-white p-4 rounded-full shadow-lg"
+        onClick={() => router.push('/wishlist')}
+        className="fixed bottom-6 left-6 z-50 relative bg-gradient-to-r from-pink-500 to-rose-500 text-white p-4 rounded-full shadow-2xl"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
@@ -809,7 +1010,7 @@ function FloatingActionButton({
               )}
             </motion.button>
 
-            {/* Search Button */}
+      {/* Search Button - Bottom Right (Higher) */}
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -829,94 +1030,30 @@ function FloatingActionButton({
                   position: 'bottom-center'
                 });
               }}
-              className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white p-4 rounded-full shadow-lg"
+        className="fixed bottom-20 right-6 z-50 bg-gradient-to-r from-purple-500 to-indigo-500 text-white p-3 rounded-full shadow-2xl"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </motion.button>
 
-            {/* Comparison Button */}
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={() => {
-                toast('📊 Comparison Tool Coming Soon!', {
-                  icon: '🛠️',
-                  style: {
-                    background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
-                    color: 'white',
-                    borderRadius: '16px',
-                    padding: '12px 20px',
-                    fontSize: '14px',
-                    fontWeight: '600',
-                    boxShadow: '0 10px 25px rgba(16, 185, 129, 0.3)'
-                  },
-                  duration: 3000,
-                  position: 'bottom-center'
-                });
-              }}
-              className="bg-gradient-to-r from-green-500 to-emerald-500 text-white p-4 rounded-full shadow-lg"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-              </svg>
-            </motion.button>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Main FAB Button */}
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        onClick={() => setIsExpanded(!isExpanded)}
-        className="relative bg-gradient-to-r from-indigo-600 to-cyan-600 text-white p-5 rounded-full shadow-2xl"
-      >
-        <motion.div
-          animate={{ rotate: isExpanded ? 45 : 0 }}
-          transition={{ duration: 0.2 }}
-        >
-          {isExpanded ? (
-            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-            </svg>
-          )}
-        </motion.div>
-        
-        {/* Notification Badge */}
-        {unreadCount > 0 && (
-          <motion.span
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center font-bold"
-          >
-            {unreadCount}
-          </motion.span>
-        )}
-      </motion.button>
-
-      {/* Notification Bell */}
+      {/* Notification Bell - Top Right */}
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setShowNotifications(!showNotifications)}
-        className="mb-4 bg-gradient-to-r from-orange-500 to-yellow-500 text-white p-3 rounded-full shadow-lg"
+        className="fixed top-20 right-6 z-50 relative bg-gradient-to-r from-orange-500 to-yellow-500 text-white p-3 rounded-full shadow-2xl"
       >
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
           <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
         </svg>
         {unreadCount > 0 && (
-          <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
+          <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold text-xs">
             {unreadCount}
           </span>
         )}
       </motion.button>
-    </div>
+    </>
   );
 }
 
