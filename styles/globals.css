@@ -580,23 +580,7 @@ body {
   100% { background-position: -200% 0; }
 }
 
-/* Enhanced Card Hover Effects */
-.category-card-3d {
-  transform-style: preserve-3d;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  background: rgba(30, 41, 59, 0.8);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-}
-
-.category-card-3d:hover {
-  transform: translateY(-8px) rotateX(5deg) rotateY(5deg);
-  box-shadow: 
-    0 20px 40px rgba(0, 0, 0, 0.4),
-    0 0 20px rgba(139, 92, 246, 0.3);
-  border-color: rgba(139, 92, 246, 0.4);
-}
+/* Enhanced Card Hover Effects - merged with existing styles */
 
 /* Enhanced Button Styles */
 .cta-button-gradient {
@@ -628,20 +612,9 @@ body {
   left: 100%;
 }
 
-/* Enhanced Icon Glow */
-.category-icon-glow {
-  filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.5));
-  transition: all 0.3s ease;
-}
+/* Enhanced Icon Glow - merged with existing styles */
 
-.category-icon-glow:hover {
-  filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.8));
-}
-
-/* Deal Ticker Animation */
-.deal-ticker {
-  animation: scroll-left 30s linear infinite;
-}
+/* Deal Ticker Animation - merged with existing styles */
 
 @keyframes scroll-left {
   0% { transform: translateX(100%); }

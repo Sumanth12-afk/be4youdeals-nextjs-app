@@ -347,10 +347,11 @@ const SignupPage = () => {
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.8, duration: 0.6 }}
                 >
-                  <label className="block text-sm font-semibold text-gray-700 mb-3">
+                  <label htmlFor="signup-email" className="block text-sm font-semibold text-gray-700 mb-3">
                     Email Address
                   </label>
                   <motion.input
+                    id="signup-email"
                     type="email"
                     required
                     placeholder="Enter your email"
@@ -367,10 +368,11 @@ const SignupPage = () => {
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.9, duration: 0.6 }}
                 >
-                  <label className="block text-sm font-semibold text-gray-700 mb-3">
+                  <label htmlFor="signup-password" className="block text-sm font-semibold text-gray-700 mb-3">
                     Password
                   </label>
                   <motion.input
+                    id="signup-password"
                     type="password"
                     required
                     placeholder="Create a strong password"

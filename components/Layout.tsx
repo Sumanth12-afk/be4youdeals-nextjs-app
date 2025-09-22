@@ -13,7 +13,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
   const [showSearch, setShowSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [wishlistCount, setWishlistCount] = useState(0);
-  const [notifications, setNotifications] = useState([
+  const [notifications] = useState([
     { id: 1, type: 'deal', message: 'New laptop deals available!', time: '2m ago', unread: true },
     { id: 2, type: 'price', message: 'Price dropped on JBL Headphones', time: '1h ago', unread: true },
     { id: 3, type: 'stock', message: 'Limited stock: HP Laptop', time: '3h ago', unread: false }
@@ -311,7 +311,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
                       {/* Search Suggestions */}
                       <div className="max-h-64 overflow-y-auto">
                         {searchSuggestions.map((section, i) => (
-                          <div key={i} className="p-4 border-b border-white/5 last:border-b-0">
+                          <div key={`section-${i}`} className="p-4 border-b border-white/5 last:border-b-0">
                             <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
                               {section.category}
                             </h4>
@@ -323,7 +323,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
                                 )
                                 .map((item, j) => (
                                 <motion.button
-                                  key={j}
+                                  key={`item-${i}-${j}`}
                                   whileHover={{ scale: 1.02, x: 4 }}
                                   className={`block w-full text-left px-3 py-2 rounded-lg transition-all duration-200 ${
                                     item.available 
@@ -464,6 +464,9 @@ const Layout = ({ children }: { children: ReactNode }) => {
               <button 
                 onClick={() => setShowSearch(!showSearch)}
                 className="text-white hover:text-cyan-400 transition-colors"
+                aria-label="Toggle search"
+                role="button"
+                tabIndex={0}
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -474,6 +477,9 @@ const Layout = ({ children }: { children: ReactNode }) => {
               <button 
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="text-white hover:text-cyan-400 transition-colors"
+                aria-label="Toggle mobile menu"
+                role="button"
+                tabIndex={0}
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   {mobileMenuOpen ? (

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import toast from 'react-hot-toast';
-import { addToWishlist } from '../lib/wishlistUtils';
+// import toast from 'react-hot-toast';
+// import { addToWishlist } from '../lib/wishlistUtils';
 import { getComparisonItems, removeFromComparison, clearComparison as clearComparisonUtil } from '../lib/comparisonUtils';
 import OptimizedImage from './OptimizedImage';
 
@@ -180,7 +180,7 @@ export default function ProductComparison({ products, category }: ProductCompari
           <h4 className="text-lg font-semibold text-white mb-4">Selected for Comparison ({selectedProducts.length}/{maxComparisonItems})</h4>
           <div className="flex flex-wrap gap-3">
             {selectedProducts.map((product, index) => (
-              <div key={index} className="flex items-center gap-2 bg-white/10 rounded-lg p-2">
+              <div key={`selected-${product.title}-${index}`} className="flex items-center gap-2 bg-white/10 rounded-lg p-2">
                 <OptimizedImage
                   src={product.image}
                   alt={product.title}
@@ -240,7 +240,7 @@ export default function ProductComparison({ products, category }: ProductCompari
                     <tr className="border-b border-white/20">
                       <th className="text-left p-2 sm:p-4 sticky left-0 bg-slate-900 z-10">Feature</th>
                       {getComparisonData().map((product, index) => (
-                        <th key={index} className="text-center p-2 sm:p-4 min-w-[150px] sm:min-w-[200px]">
+                        <th key={`header-${product.title}-${index}`} className="text-center p-2 sm:p-4 min-w-[150px] sm:min-w-[200px]">
                           <div className="space-y-2">
                             <OptimizedImage
                               src={product.image}
@@ -257,7 +257,7 @@ export default function ProductComparison({ products, category }: ProductCompari
                     <tr className="border-b border-white/10">
                       <td className="p-2 sm:p-4 font-semibold sticky left-0 bg-slate-900 z-10">Price</td>
                       {getComparisonData().map((product, index) => (
-                        <td key={index} className="p-2 sm:p-4 text-center text-green-400 font-bold">
+                        <td key={`price-${product.title}-${index}`} className="p-2 sm:p-4 text-center text-green-400 font-bold">
                           {product.price}
                         </td>
                       ))}
@@ -265,7 +265,7 @@ export default function ProductComparison({ products, category }: ProductCompari
                     <tr className="border-b border-white/10">
                       <td className="p-2 sm:p-4 font-semibold sticky left-0 bg-slate-900 z-10">Rating</td>
                       {getComparisonData().map((product, index) => (
-                        <td key={index} className="p-2 sm:p-4 text-center">
+                        <td key={`rating-${product.title}-${index}`} className="p-2 sm:p-4 text-center">
                           <div className="flex items-center justify-center gap-1">
                             <span className="text-yellow-400">⭐</span>
                             <span className="text-sm sm:text-base">{product.rating}</span>
@@ -276,7 +276,7 @@ export default function ProductComparison({ products, category }: ProductCompari
                     <tr className="border-b border-white/10">
                       <td className="p-2 sm:p-4 font-semibold sticky left-0 bg-slate-900 z-10">Reviews</td>
                       {getComparisonData().map((product, index) => (
-                        <td key={index} className="p-2 sm:p-4 text-center text-gray-300 text-sm sm:text-base">
+                        <td key={`reviews-${product.title}-${index}`} className="p-2 sm:p-4 text-center text-gray-300 text-sm sm:text-base">
                           {product.reviewCount}
                         </td>
                       ))}
@@ -286,7 +286,7 @@ export default function ProductComparison({ products, category }: ProductCompari
                         <tr className="border-b border-white/10">
                           <td className="p-2 sm:p-4 font-semibold sticky left-0 bg-slate-900 z-10">RAM</td>
                           {getComparisonData().map((product, index) => (
-                            <td key={index} className="p-2 sm:p-4 text-center text-gray-300 text-sm sm:text-base">
+                            <td key={`ram-${product.title}-${index}`} className="p-2 sm:p-4 text-center text-gray-300 text-sm sm:text-base">
                               {product.specs.ram || 'N/A'}
                             </td>
                           ))}
@@ -294,7 +294,7 @@ export default function ProductComparison({ products, category }: ProductCompari
                         <tr className="border-b border-white/10">
                           <td className="p-2 sm:p-4 font-semibold sticky left-0 bg-slate-900 z-10">Storage</td>
                           {getComparisonData().map((product, index) => (
-                            <td key={index} className="p-2 sm:p-4 text-center text-gray-300 text-sm sm:text-base">
+                            <td key={`storage-${product.title}-${index}`} className="p-2 sm:p-4 text-center text-gray-300 text-sm sm:text-base">
                               {product.specs.storage || 'N/A'}
                             </td>
                           ))}
@@ -302,7 +302,7 @@ export default function ProductComparison({ products, category }: ProductCompari
                         <tr className="border-b border-white/10">
                           <td className="p-2 sm:p-4 font-semibold sticky left-0 bg-slate-900 z-10">Screen Size</td>
                           {getComparisonData().map((product, index) => (
-                            <td key={index} className="p-2 sm:p-4 text-center text-gray-300 text-sm sm:text-base">
+                            <td key={`screen-${product.title}-${index}`} className="p-2 sm:p-4 text-center text-gray-300 text-sm sm:text-base">
                               {product.specs.screenSize || 'N/A'}
                             </td>
                           ))}
@@ -310,7 +310,7 @@ export default function ProductComparison({ products, category }: ProductCompari
                         <tr className="border-b border-white/10">
                           <td className="p-2 sm:p-4 font-semibold sticky left-0 bg-slate-900 z-10">Processor</td>
                           {getComparisonData().map((product, index) => (
-                            <td key={index} className="p-2 sm:p-4 text-center text-gray-300 text-sm sm:text-base">
+                            <td key={`processor-${product.title}-${index}`} className="p-2 sm:p-4 text-center text-gray-300 text-sm sm:text-base">
                               {product.specs.processor || 'N/A'}
                             </td>
                           ))}
@@ -322,7 +322,7 @@ export default function ProductComparison({ products, category }: ProductCompari
                         <tr className="border-b border-white/10">
                           <td className="p-2 sm:p-4 font-semibold sticky left-0 bg-slate-900 z-10">Battery Life</td>
                           {getComparisonData().map((product, index) => (
-                            <td key={index} className="p-2 sm:p-4 text-center text-gray-300 text-sm sm:text-base">
+                            <td key={`battery-${product.title}-${index}`} className="p-2 sm:p-4 text-center text-gray-300 text-sm sm:text-base">
                               {product.specs.batteryLife || 'N/A'}
                             </td>
                           ))}
@@ -330,7 +330,7 @@ export default function ProductComparison({ products, category }: ProductCompari
                         <tr className="border-b border-white/10">
                           <td className="p-2 sm:p-4 font-semibold sticky left-0 bg-slate-900 z-10">Type</td>
                           {getComparisonData().map((product, index) => (
-                            <td key={index} className="p-2 sm:p-4 text-center text-gray-300 text-sm sm:text-base">
+                            <td key={`type-${product.title}-${index}`} className="p-2 sm:p-4 text-center text-gray-300 text-sm sm:text-base">
                               {product.specs.type || 'N/A'}
                             </td>
                           ))}
@@ -338,7 +338,7 @@ export default function ProductComparison({ products, category }: ProductCompari
                         <tr className="border-b border-white/10">
                           <td className="p-2 sm:p-4 font-semibold sticky left-0 bg-slate-900 z-10">Noise Cancellation</td>
                           {getComparisonData().map((product, index) => (
-                            <td key={index} className="p-2 sm:p-4 text-center text-gray-300 text-sm sm:text-base">
+                            <td key={`noise-${product.title}-${index}`} className="p-2 sm:p-4 text-center text-gray-300 text-sm sm:text-base">
                               {product.specs.noiseCancellation || 'N/A'}
                             </td>
                           ))}

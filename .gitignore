@@ -26,3 +26,6 @@ testsprite_tests/
 # OS files
 Thumbs.db
 .DS_Store
+# Sentry Config Files
+.env.sentry-build-plugin
+.sentryclirc

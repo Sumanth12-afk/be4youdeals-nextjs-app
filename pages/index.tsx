@@ -6,11 +6,8 @@ import { useState, useEffect, useRef } from "react";
 import toast from "react-hot-toast";
 
 export default function Home() {
-  const [currentDeal, setCurrentDeal] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const [showBackToTop, setShowBackToTop] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
-  const [showLogo, setShowLogo] = useState(false);
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], [0, -10]);
@@ -31,10 +28,6 @@ export default function Home() {
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentDeal((prev) => (prev + 1) % deals.length);
-    }, 3000);
-    
     // Simulate loading for categories
     const loadingTimer = setTimeout(() => {
       setIsLoading(false);
@@ -43,21 +36,16 @@ export default function Home() {
     // Scroll progress and back to top button
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = (scrollTop / docHeight) * 100;
-      setScrollProgress(scrollPercent);
       setShowBackToTop(scrollTop > 300);
-      setShowLogo(scrollTop > 20); // Show logo after scrolling 20px
     };
 
     window.addEventListener('scroll', handleScroll);
     
     return () => {
-      clearInterval(interval);
       clearTimeout(loadingTimer);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [deals.length]);
+  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -342,7 +330,7 @@ export default function Home() {
         <div className="absolute inset-0 z-5 pointer-events-none">
           {[...Array(8)].map((_, i) => (
             <motion.div
-              key={i}
+              key={`particle-${i}`}
               className="absolute w-1.5 h-1.5 bg-gradient-to-r from-indigo-400 to-cyan-400 rounded-full opacity-40"
               style={{
                 left: `${Math.random() * 100}%`,
@@ -366,7 +354,7 @@ export default function Home() {
         <div className="absolute inset-0 z-5 pointer-events-none">
           {[...Array(4)].map((_, i) => (
             <motion.div
-              key={i}
+              key={`shape-${i}`}
               className="absolute border border-indigo-400/20"
               style={{
                 left: `${Math.random() * 100}%`,
@@ -741,9 +729,9 @@ export default function Home() {
                       <CategoryCard category={category} />
                     </Link>
                   ) : (
-                    <div 
-                      className="opacity-75 cursor-pointer h-full"
-                      onClick={() => {
+                    <ComingSoonCard 
+                      category={category}
+                      onToast={() => {
                         toast('🚧 Coming Soon!', {
                           icon: '🔜',
                           style: {
@@ -759,9 +747,7 @@ export default function Home() {
                           position: 'bottom-center'
                         });
                       }}
-                    >
-                      <CategoryCard category={category} />
-                    </div>
+                    />
                   )}
                 </motion.div>
               ))
@@ -942,6 +928,18 @@ export default function Home() {
         </svg>
       </motion.button>
     </>
+  );
+}
+
+// Coming Soon Card Component
+function ComingSoonCard({ category, onToast }: { category: any; onToast: () => void }) {
+  return (
+    <div 
+      className="opacity-75 cursor-pointer h-full"
+      onClick={onToast}
+    >
+      <CategoryCard category={category} />
+    </div>
   );
 }
 

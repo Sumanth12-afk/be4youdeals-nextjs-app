@@ -17,6 +17,7 @@
     "docker:compose:dev": "docker-compose -f docker-compose.dev.yml up -d"
   },
   "dependencies": {
+    "@sentry/nextjs": "10.12.0",
     "autoprefixer": "^10.4.14",
     "firebase": "^10.14.1",
     "firebaseui": "^6.1.0",

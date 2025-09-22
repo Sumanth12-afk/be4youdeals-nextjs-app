@@ -10,9 +10,9 @@ interface FilterCriteria {
 }
 
 interface AdvancedFiltersProps {
-  products: any[];
-  onFiltersChange: (filteredProducts: any[]) => void;
-  category: 'laptops' | 'headphones';
+  readonly products: any[];
+  readonly onFiltersChange: (filteredProducts: any[]) => void;
+  readonly category: 'laptops' | 'headphones';
 }
 
 export default function AdvancedFilters({ products, onFiltersChange, category }: AdvancedFiltersProps) {
@@ -26,43 +26,55 @@ export default function AdvancedFilters({ products, onFiltersChange, category }:
 
   const [isExpanded, setIsExpanded] = useState(false);
 
+  // Helper function to extract brand from product title
+  const extractBrand = (title: string, category: string): string | null => {
+    const lowerTitle = title.toLowerCase();
+    
+    const laptopBrands = [
+      { keywords: ['hp'], brand: 'HP' },
+      { keywords: ['dell'], brand: 'Dell' },
+      { keywords: ['lenovo'], brand: 'Lenovo' },
+      { keywords: ['asus'], brand: 'ASUS' },
+      { keywords: ['acer'], brand: 'Acer' },
+      { keywords: ['apple', 'macbook'], brand: 'Apple' },
+      { keywords: ['msi'], brand: 'MSI' },
+      { keywords: ['blackview'], brand: 'Blackview' },
+      { keywords: ['eyy'], brand: 'EYY' },
+      { keywords: ['coolby'], brand: 'Coolby' },
+      { keywords: ['acemagic'], brand: 'ACEMAGIC' },
+      { keywords: ['trygood'], brand: 'Trygood' },
+      { keywords: ['uowamou'], brand: 'UOWAMOU' },
+      { keywords: ['wendbo'], brand: 'Wendbo' },
+      { keywords: ['rack'], brand: 'RackSolutions' }
+    ];
+    
+    const headphoneBrands = [
+      { keywords: ['beats'], brand: 'Beats' },
+      { keywords: ['sony'], brand: 'Sony' },
+      { keywords: ['jbl'], brand: 'JBL' },
+      { keywords: ['beribes'], brand: 'BERIBES' },
+      { keywords: ['soundcore', 'anker'], brand: 'Soundcore' },
+      { keywords: ['zzu'], brand: 'ZZU' }
+    ];
+    
+    const brandMappings = category === 'laptops' ? laptopBrands : headphoneBrands;
+    
+    for (const mapping of brandMappings) {
+      if (mapping.keywords.some(keyword => lowerTitle.includes(keyword))) {
+        return mapping.brand;
+      }
+    }
+    
+    return null;
+  };
+
   // Extract unique brands from products using useMemo
   const availableBrands = useMemo(() => {
-    return Array.from(
-      new Set(
-        products
-          .map(product => {
-            const title = product.title.toLowerCase();
-            if (category === 'laptops') {
-              if (title.includes('hp')) return 'HP';
-              if (title.includes('dell')) return 'Dell';
-              if (title.includes('lenovo')) return 'Lenovo';
-              if (title.includes('asus')) return 'ASUS';
-              if (title.includes('acer')) return 'Acer';
-              if (title.includes('apple') || title.includes('macbook')) return 'Apple';
-              if (title.includes('msi')) return 'MSI';
-              if (title.includes('blackview')) return 'Blackview';
-              if (title.includes('eyy')) return 'EYY';
-              if (title.includes('coolby')) return 'Coolby';
-              if (title.includes('acemagic')) return 'ACEMAGIC';
-              if (title.includes('trygood')) return 'Trygood';
-              if (title.includes('uowamou')) return 'UOWAMOU';
-              if (title.includes('wendbo')) return 'Wendbo';
-              if (title.includes('rack')) return 'RackSolutions';
-              return null;
-            } else {
-              if (title.includes('beats')) return 'Beats';
-              if (title.includes('sony')) return 'Sony';
-              if (title.includes('jbl')) return 'JBL';
-              if (title.includes('beribes')) return 'BERIBES';
-              if (title.includes('soundcore') || title.includes('anker')) return 'Soundcore';
-              if (title.includes('zzu')) return 'ZZU';
-              return null;
-            }
-          })
-          .filter(Boolean)
-      )
-    ).sort();
+    const brands = products
+      .map(product => extractBrand(product.title, category))
+      .filter(Boolean) as string[];
+    
+    return Array.from(new Set(brands)).sort((a, b) => a.localeCompare(b));
   }, [products, category]);
 
   // Get price range from products using useMemo to prevent infinite loops
@@ -207,11 +219,12 @@ export default function AdvancedFilters({ products, onFiltersChange, category }:
           >
             {/* Price Range */}
             <div>
-              <label className="block text-white font-semibold mb-3">
+              <label htmlFor="price-range-min" className="block text-white font-semibold mb-3">
                 Price Range: ${filters.priceRange[0]} - ${filters.priceRange[1]}
               </label>
               <div className="relative">
                 <input
+                  id="price-range-min"
                   type="range"
                   min={Math.floor(priceRange.min)}
                   max={Math.ceil(priceRange.max)}
@@ -223,6 +236,7 @@ export default function AdvancedFilters({ products, onFiltersChange, category }:
                   className="w-full h-2 bg-white/20 rounded-lg appearance-none cursor-pointer slider"
                 />
                 <input
+                  id="price-range-max"
                   type="range"
                   min={Math.floor(priceRange.min)}
                   max={Math.ceil(priceRange.max)}
@@ -238,7 +252,7 @@ export default function AdvancedFilters({ products, onFiltersChange, category }:
 
             {/* Brands */}
             <div>
-              <label className="block text-white font-semibold mb-3">Brands</label>
+              <label htmlFor="brand-filters" className="block text-white font-semibold mb-3">Brands</label>
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
                 {availableBrands.map(brand => (
                   <button
@@ -258,7 +272,7 @@ export default function AdvancedFilters({ products, onFiltersChange, category }:
 
             {/* Rating */}
             <div>
-              <label className="block text-white font-semibold mb-3">
+              <label htmlFor="rating-filters" className="block text-white font-semibold mb-3">
                 Minimum Rating: {filters.minRating > 0 ? `${filters.minRating}+ ⭐` : 'Any'}
               </label>
               <div className="flex gap-2">
@@ -280,7 +294,7 @@ export default function AdvancedFilters({ products, onFiltersChange, category }:
 
             {/* Availability */}
             <div>
-              <label className="block text-white font-semibold mb-3">Availability</label>
+              <label htmlFor="availability-filters" className="block text-white font-semibold mb-3">Availability</label>
               <div className="flex gap-2">
                 {[
                   { value: 'all', label: 'All Products' },
@@ -304,7 +318,7 @@ export default function AdvancedFilters({ products, onFiltersChange, category }:
 
             {/* Sort By */}
             <div>
-              <label className="block text-white font-semibold mb-3">Sort By</label>
+              <label htmlFor="sort-filters" className="block text-white font-semibold mb-3">Sort By</label>
               <div className="flex gap-2 flex-wrap">
                 {[
                   { value: 'newest', label: 'Newest First' },

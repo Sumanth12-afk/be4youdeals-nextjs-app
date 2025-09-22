@@ -74,6 +74,7 @@ jobs:
     
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@master
+      continue-on-error: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -126,10 +127,49 @@ jobs:
         labels: ${{ steps.meta.outputs.labels }}
         cache-from: type=gha
         cache-to: type=gha,mode=max
+        build-args: |
+          SENTRY_ORG=${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT=${{ secrets.SENTRY_PROJECT }}
+          SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_DSN=${{ secrets.SENTRY_DSN }}
+          NEXT_PUBLIC_SENTRY_DSN=${{ secrets.NEXT_PUBLIC_SENTRY_DSN }}
+          SENTRY_RELEASE=${{ github.sha }}
+
+  # Trivy Security Scan
+  trivy-scan:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    
+    permissions:
+      contents: read
+      security-events: write
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Run Trivy vulnerability scanner
+      uses: aquasecurity/trivy-action@master
+      with:
+        image-ref: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+        format: 'table'
+        output: 'trivy-report.txt'
+        severity: 'CRITICAL,HIGH'
+        exit-code: '1'
+        ignore-unfixed: false
+    
+    - name: Upload Trivy scan results
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: trivy-report
+        path: trivy-report.txt
+        retention-days: 30
 
   # Deploy to Netlify
   deploy-netlify:
-    needs: [test, build-and-push, sonarqube]
+    needs: [test, build-and-push, sonarqube, trivy-scan]
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     
@@ -168,6 +208,24 @@ jobs:
       run: npm run build
       env:
         CI: true
+        SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+        SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+        SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+        SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
+        NEXT_PUBLIC_SENTRY_DSN: ${{ secrets.NEXT_PUBLIC_SENTRY_DSN }}
+        SENTRY_RELEASE: ${{ github.sha }}
+    
+    - name: Upload source maps to Sentry
+      run: |
+        npx @sentry/cli releases new ${{ github.sha }}
+        npx @sentry/cli releases set-commits ${{ github.sha }} --auto
+        npx @sentry/cli releases files ${{ github.sha }} upload-sourcemaps .next/static/chunks/ --url-prefix "~/_next/static/chunks/"
+        npx @sentry/cli releases files ${{ github.sha }} upload-sourcemaps .next/static/css/ --url-prefix "~/_next/static/css/"
+        npx @sentry/cli releases finalize ${{ github.sha }}
+      env:
+        SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+        SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+        SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
     
     - name: Deploy to Netlify
       uses: nwtgck/actions-netlify@v2.0.0

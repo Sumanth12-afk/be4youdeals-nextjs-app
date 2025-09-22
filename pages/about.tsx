@@ -1,23 +1,20 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import Head from "next/head";
-import Image from "next/image";
+// import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 
 export default function About() {
   const [showBackToTop, setShowBackToTop] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
-  const heroRef = useRef(null);
+  // const [scrollProgress, setScrollProgress] = useState(0);
+  // const heroRef = useRef(null);
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   useEffect(() => {
-    // Scroll progress and back to top button
+    // Back to top button
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = (scrollTop / docHeight) * 100;
-      setScrollProgress(scrollPercent);
       setShowBackToTop(scrollTop > 300);
     };
 

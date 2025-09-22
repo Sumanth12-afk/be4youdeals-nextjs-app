@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import toast from 'react-hot-toast';
 import { addToWishlist } from '../lib/wishlistUtils';
 import { addToComparison } from '../lib/comparisonUtils';
-import OptimizedImage from './OptimizedImage';
+// import OptimizedImage from './OptimizedImage';
 import ProductImageGallery from './ProductImageGallery';
 
 interface Product {
