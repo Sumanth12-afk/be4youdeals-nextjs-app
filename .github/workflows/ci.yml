@@ -152,6 +152,11 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
     
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+    
     - name: Set image reference
       run: echo "IMAGE_REF=${{ env.REGISTRY }}/${IMAGE_NAME,,}:latest" >> $GITHUB_ENV
     
@@ -159,20 +164,29 @@ jobs:
       uses: aquasecurity/trivy-action@master
       with:
         image-ref: ${{ env.IMAGE_REF }}
-        format: table
+        format: table,json
         exit-code: 1
         vuln-type: 'os,library'
         severity: CRITICAL
         output: trivy-report.txt
+        cache: true
     
-    - name: Run Trivy SARIF scan
+    - name: Run Trivy scan for HIGH vulnerabilities (SARIF)
       uses: aquasecurity/trivy-action@master
       with:
         image-ref: ${{ env.IMAGE_REF }}
-        format: sarif
+        format: json
         vuln-type: 'os,library'
-        severity: CRITICAL,HIGH
-        output: trivy-results.sarif
+        severity: HIGH
+        output: trivy-high.json
+        cache: true
+    
+    - name: Convert Trivy JSON to SARIF
+      run: |
+        # Extract JSON from the combined output
+        tail -n +$(grep -n "{" trivy-report.txt | head -1 | cut -d: -f1) trivy-report.txt > trivy-critical.json
+        # Convert to SARIF format (includes both CRITICAL and HIGH)
+        npx @github/trivy-to-sarif trivy-critical.json trivy-high.json trivy-results.sarif
     
     - name: Upload Trivy scan report
       uses: actions/upload-artifact@v4
