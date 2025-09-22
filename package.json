@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "docker:build": "docker build -t be4youdeals .",
+    "docker:run": "docker run -p 3000:3000 be4youdeals",
+    "docker:compose": "docker-compose up -d",
+    "docker:compose:dev": "docker-compose -f docker-compose.dev.yml up -d"
   },
   "dependencies": {
     "autoprefixer": "^10.4.14",
