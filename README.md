@@ -241,12 +241,7 @@ Ready for deployment on:
 - **Azure**: Container Instances
 - **Self-hosted**: Any Docker-compatible server
 
-### 3. Vercel
-```bash
-npx vercel --prod
-```
-
-### 4. Traditional Hosting
+### 3. Traditional Hosting
 ```bash
 npm run build
 # Upload 'out' folder to any static hosting

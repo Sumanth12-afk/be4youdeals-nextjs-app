@@ -10,10 +10,6 @@ const nextConfig = {
       'images.amazon.com'
     ],
   },
-  // Enable experimental features for better performance
-  experimental: {
-    optimizeCss: true,
-  },
   // Compress images and optimize bundle
   compress: true,
   // Enable SWC minification
