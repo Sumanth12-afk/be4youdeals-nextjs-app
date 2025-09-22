@@ -4,3 +4,25 @@ out/
 .env
 .DS_Store
 *.log
+
+# Unused files
+laptop-data-temp.js
+fix-laptop-data.js
+git_filter_repo.py
+20250919-163612_Amazon.com headphones.xlsx
+scripts/
+testsprite_tests/
+
+# Build artifacts
+*.tgz
+*.tar.gz
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+Thumbs.db
+.DS_Store
