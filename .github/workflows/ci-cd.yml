@@ -77,6 +77,9 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      with:
+        projectKey: Sumanth12-afk_be4youdeals-nextjs-app
+        organization: sumanth12-afk
 
   # Build and push Docker image
   build-and-push:
