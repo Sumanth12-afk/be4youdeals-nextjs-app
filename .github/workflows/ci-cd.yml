@@ -13,6 +13,7 @@ env:
 jobs:
   # Test job
   test:
+    name: "🧪 Run Tests & Build"
     runs-on: ubuntu-latest
     
     strategy:
@@ -48,6 +49,7 @@ jobs:
 
   # SonarQube Analysis
   sonarqube:
+    name: "🔍 SonarQube Code Quality"
     runs-on: ubuntu-latest
     needs: test
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
@@ -84,6 +86,7 @@ jobs:
 
   # Build and push Docker image
   build-and-push:
+    name: "🐳 Build & Push Docker Image"
     needs: sonarqube
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
@@ -137,6 +140,7 @@ jobs:
 
   # Trivy Security Scan
   trivy-scan:
+    name: "🛡️ Trivy Security Scan"
     needs: build-and-push
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
@@ -170,6 +174,7 @@ jobs:
 
   # Deploy to Netlify
   deploy-netlify:
+    name: "🚀 Deploy to Netlify"
     needs: trivy-scan
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
