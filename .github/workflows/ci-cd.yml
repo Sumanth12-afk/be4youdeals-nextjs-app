@@ -89,37 +89,61 @@ jobs:
         cache-from: type=gha
         cache-to: type=gha,mode=max
 
-  # Deploy job (placeholder - customize based on your deployment target)
-  deploy:
-    needs: [test, build-and-push]
+  # Deploy to Netlify
+  deploy-netlify:
+    needs: test
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     
     environment:
       name: production
-      url: ${{ steps.deploy.outputs.webapp-url }}
+      url: https://vibricsdeals.netlify.app
     
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
     
-    - name: Deploy to production
-      id: deploy
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Configure Next.js for Netlify
       run: |
-        echo "🐳 Docker image built and pushed successfully!"
-        echo "📦 Image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest"
-        echo "webapp-url=https://vibricsdeals.netlify.app" >> $GITHUB_OUTPUT
-        
-        # Docker image is ready for deployment on any container platform:
-        echo "Docker image ready for deployment on:"
-        echo "• AWS ECS/Fargate"
-        echo "• Google Cloud Run" 
-        echo "• DigitalOcean App Platform"
-        echo "• Azure Container Instances"
-        echo "• Self-hosted servers"
-        
+        # Temporarily switch to export mode for Netlify
+        sed -i 's/output: '\''standalone'\''/output: '\''export'\''/' next.config.js
+        sed -i '/images: {/,/},/c\
+          images: {\
+            unoptimized: true,\
+            domains: [\
+              '\''m.media-amazon.com'\'',\
+              '\''images-na.ssl-images-amazon.com'\'',\
+              '\''images.amazon.com'\''\
+            ],\
+          },' next.config.js
+    
+    - name: Build for Netlify
+      run: npm run build
+      env:
+        CI: true
+    
+    - name: Deploy to Netlify
+      uses: nwtgck/actions-netlify@v2.0.0
+      with:
+        publish-dir: ./out
+        production-deploy: true
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        deploy-message: "Automated deployment from GitHub Actions"
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+    
     - name: Post deployment notification
       if: success()
       run: |
-        echo "✅ Deployment successful!"
-        echo "🚀 Application is live at: ${{ steps.deploy.outputs.webapp-url }}"
+        echo "✅ Netlify deployment successful!"
+        echo "🚀 Application is live at: https://vibricsdeals.netlify.app"
