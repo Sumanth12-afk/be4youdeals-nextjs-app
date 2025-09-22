@@ -84,7 +84,7 @@ jobs:
 
   # Build and push Docker image
   build-and-push:
-    needs: test
+    needs: sonarqube
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     
@@ -170,7 +170,7 @@ jobs:
 
   # Deploy to Netlify
   deploy-netlify:
-    needs: [test, build-and-push, trivy-scan]
+    needs: trivy-scan
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     
