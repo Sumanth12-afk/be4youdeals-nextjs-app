@@ -47,7 +47,7 @@ jobs:
       env:
         CI: true
 
-  # SonarQube Analysis
+  # SonarQube Analysis (SonarCloud)
   sonarqube:
     name: "🔍 SonarQube Code Quality"
     runs-on: ubuntu-latest
@@ -74,14 +74,11 @@ jobs:
         CI: true
     
     - name: SonarCloud Scan
-      uses: SonarSource/sonarcloud-github-action@master
+      uses: SonarSource/sonarqube-scan-action@v5.0.0
       continue-on-error: true
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      with:
-        projectKey: Sumanth12-afk_be4youdeals-nextjs-app
-        organization: sumanth12-afk
+        SONAR_HOST_URL: "https://sonarcloud.io"
 
   # Build and push Docker image
   build-and-push:
@@ -165,7 +162,6 @@ jobs:
         vuln-type: 'os,library'
         severity: CRITICAL
         output: trivy-report.txt
-        cache: true
     
     - name: Run Trivy scan for SARIF (CRITICAL + HIGH)
       uses: aquasecurity/trivy-action@master
@@ -175,7 +171,6 @@ jobs:
         vuln-type: 'os,library'
         severity: CRITICAL,HIGH
         output: trivy-results.sarif
-        cache: true
     
     - name: Upload Trivy scan report
       uses: actions/upload-artifact@v4
