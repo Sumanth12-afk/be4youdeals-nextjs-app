@@ -20,7 +20,7 @@ interface Product {
 
 interface ProductComparisonProps {
   products: Product[];
-  category: 'laptops' | 'headphones' | 'mobiles' | 'home-essentials' | 'self-care' | 'fashion' | 'stationery';
+  category: 'laptops' | 'headphones' | 'mobiles' | 'home-essentials' | 'self-care' | 'fashion' | 'stationery' | 'gadgets';
 }
 
 export default function ProductComparison({ products, category }: ProductComparisonProps) {

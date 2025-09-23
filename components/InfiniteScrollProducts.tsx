@@ -21,7 +21,7 @@ interface Product {
 
 interface InfiniteScrollProductsProps {
   products: Product[];
-  category: 'laptops' | 'headphones' | 'mobiles' | 'home-essentials' | 'self-care' | 'fashion' | 'stationery';
+  category: 'laptops' | 'headphones' | 'mobiles' | 'home-essentials' | 'self-care' | 'fashion' | 'stationery' | 'gadgets';
   itemsPerPage?: number;
 }
 

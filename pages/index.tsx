@@ -174,22 +174,6 @@ export default function Home() {
     },
     {
       id: 5,
-      name: "Gadgets",
-      emoji: "🔌",
-      tagline: "Next-gen gadgets on the way",
-      badge: "Hot",
-      badgeType: "badge-hot", 
-      link: "#",
-      available: false,
-      popularity: 0,
-      stock: 0,
-      totalViews: 0,
-      dealCount: 0,
-      previewImage: "/laptop.png",
-      hoverText: "Gaming mice, keyboards, smart devices"
-    },
-    {
-      id: 6,
       name: "Self-Care",
       emoji: "🧴",
       tagline: "Wellness made simple",
@@ -205,7 +189,7 @@ export default function Home() {
       hoverText: "Skincare, wellness, beauty products"
     },
     {
-      id: 7,
+      id: 6,
       name: "Fashion",
       emoji: "👗",
       tagline: "Style upgrade for everyone",
@@ -221,7 +205,7 @@ export default function Home() {
       hoverText: "Clothing, accessories, style essentials"
     },
     {
-      id: 8,
+      id: 7,
       name: "Stationery",
       emoji: "📝",
       tagline: "Creativity gets a new look", 
@@ -235,6 +219,22 @@ export default function Home() {
       dealCount: 28,
       previewImage: "/household.png",
       hoverText: "Notebooks, pens, office supplies"
+    },
+    {
+      id: 8,
+      name: "Gadgets",
+      emoji: "🔧",
+      tagline: "Tech that makes life easier",
+      badge: "Hot",
+      badgeType: "badge-hot",
+      link: "/gadgets",
+      available: true,
+      popularity: 88,
+      stock: 150,
+      totalViews: 11200,
+      dealCount: 65,
+      previewImage: "/household.png",
+      hoverText: "Kitchen gadgets, tech accessories, smart devices"
     }
   ];
 

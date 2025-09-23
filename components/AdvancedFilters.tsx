@@ -12,7 +12,7 @@ interface FilterCriteria {
 interface AdvancedFiltersProps {
   readonly products: any[];
   readonly onFiltersChange: (filteredProducts: any[]) => void;
-  readonly category: 'laptops' | 'headphones' | 'mobiles' | 'home-essentials' | 'self-care' | 'fashion' | 'stationery';
+  readonly category: 'laptops' | 'headphones' | 'mobiles' | 'home-essentials' | 'self-care' | 'fashion' | 'stationery' | 'gadgets';
 }
 
 export default function AdvancedFilters({ products, onFiltersChange, category }: AdvancedFiltersProps) {
@@ -100,14 +100,24 @@ export default function AdvancedFilters({ products, onFiltersChange, category }:
       { keywords: ['keoouure'], brand: 'Keoouure' }
     ];
     
-    const stationeryBrands = [
-      { keywords: ['pilot'], brand: 'Pilot' },
-      { keywords: ['moleskine'], brand: 'Moleskine' },
-      { keywords: ['amazon basics'], brand: 'Amazon Basics' },
-      { keywords: ['mr. pen'], brand: 'Mr. Pen' },
-      { keywords: ['eacyart'], brand: 'EACYART' },
-      { keywords: ['xxinmoh'], brand: 'XXINMOH' }
-    ];
+          const stationeryBrands = [
+            { keywords: ['pilot'], brand: 'Pilot' },
+            { keywords: ['moleskine'], brand: 'Moleskine' },
+            { keywords: ['amazon basics'], brand: 'Amazon Basics' },
+            { keywords: ['mr. pen'], brand: 'Mr. Pen' },
+            { keywords: ['eacyart'], brand: 'EACYART' },
+            { keywords: ['xxinmoh'], brand: 'XXINMOH' }
+          ];
+          const gadgetsBrands = [
+            { keywords: ['meatstick'], brand: 'MeatStick' },
+            { keywords: ['trendplain'], brand: 'TrendPlain' },
+            { keywords: ['compressed air'], brand: 'Compressed Air' },
+            { keywords: ['magsafe'], brand: 'MagSafe' },
+            { keywords: ['professional'], brand: 'Professional' },
+            { keywords: ['wireless'], brand: 'Wireless' },
+            { keywords: ['bluetooth'], brand: 'Bluetooth' },
+            { keywords: ['digital'], brand: 'Digital' }
+          ];
     
     let brandMappings: Array<{ keywords: string[]; brand: string }> = [];
     switch (category) {
@@ -131,6 +141,9 @@ export default function AdvancedFilters({ products, onFiltersChange, category }:
         break;
       case 'stationery':
         brandMappings = stationeryBrands;
+        break;
+      case 'gadgets':
+        brandMappings = gadgetsBrands;
         break;
       default:
         brandMappings = [];

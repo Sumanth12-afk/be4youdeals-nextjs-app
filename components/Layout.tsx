@@ -30,7 +30,8 @@ const Layout = ({ children }: { children: ReactNode }) => {
         { name: 'Home Essentials', redirect: '/home-essentials', available: true },
         { name: 'Self-Care', redirect: '/self-care', available: true },
         { name: 'Fashion', redirect: '/fashion', available: true },
-        { name: 'Stationery', redirect: '/stationery', available: true }
+        { name: 'Stationery', redirect: '/stationery', available: true },
+        { name: 'Gadgets', redirect: '/gadgets', available: true }
       ]
     },
     { 
@@ -225,6 +226,8 @@ const Layout = ({ children }: { children: ReactNode }) => {
                             handleSearchNavigate('/fashion');
                           } else if (query.includes('stationery') || query.includes('office') || query.includes('pen') || query.includes('notebook')) {
                             handleSearchNavigate('/stationery');
+                          } else if (query.includes('gadget') || query.includes('tech') || query.includes('accessory') || query.includes('kitchen')) {
+                            handleSearchNavigate('/gadgets');
                           } else {
                             toast(`🔍 Searching for "${searchQuery}"...`, {
                               icon: '⚡',
@@ -286,7 +289,8 @@ const Layout = ({ children }: { children: ReactNode }) => {
                             { name: 'Home Essentials', redirect: '/home-essentials', available: true },
                             { name: 'Self-Care', redirect: '/self-care', available: true },
                             { name: 'Fashion', redirect: '/fashion', available: true },
-                            { name: 'Stationery', redirect: '/stationery', available: true }
+                            { name: 'Stationery', redirect: '/stationery', available: true },
+                            { name: 'Gadgets', redirect: '/gadgets', available: true }
                           ].map((filter) => (
                             <button
                               key={filter.name}
@@ -412,6 +416,8 @@ const Layout = ({ children }: { children: ReactNode }) => {
                                 handleSearchNavigate('/fashion');
                               } else if (query.includes('stationery') || query.includes('office') || query.includes('pen') || query.includes('notebook')) {
                                 handleSearchNavigate('/stationery');
+                              } else if (query.includes('gadget') || query.includes('tech') || query.includes('accessory') || query.includes('kitchen')) {
+                                handleSearchNavigate('/gadgets');
                               } else {
                                 toast(`🔍 Searching for "${searchQuery}"...`, {
                                   icon: '⚡',
@@ -562,6 +568,9 @@ const Layout = ({ children }: { children: ReactNode }) => {
                             } else if (query.includes('stationery') || query.includes('office') || query.includes('pen') || query.includes('notebook')) {
                               console.log('Navigating to stationery page');
                               handleSearchNavigate('/stationery');
+                            } else if (query.includes('gadget') || query.includes('tech') || query.includes('accessory') || query.includes('kitchen')) {
+                              console.log('Navigating to gadgets page');
+                              handleSearchNavigate('/gadgets');
                             } else {
                               console.log('Showing search toast for:', searchQuery);
                               toast(`🔍 Searching for "${searchQuery}"...`, {
@@ -661,6 +670,13 @@ const Layout = ({ children }: { children: ReactNode }) => {
                       style={{ touchAction: 'manipulation' }}
                     >
                       Stationery
+                    </button>
+                    <button
+                      onClick={() => handleSearchNavigate('/gadgets')}
+                      className="px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-white/10 text-white hover:bg-white/20 border border-white/20 transition-all duration-300 cursor-pointer whitespace-nowrap active:scale-95 active:bg-white/30"
+                      style={{ touchAction: 'manipulation' }}
+                    >
+                      Gadgets
                     </button>
                   </div>
                 </div>
@@ -788,6 +804,9 @@ const Layout = ({ children }: { children: ReactNode }) => {
                       } else if (query.includes('stationery') || query.includes('office') || query.includes('pen') || query.includes('notebook')) {
                         console.log('Navigating to stationery page');
                         handleSearchNavigate('/stationery');
+                      } else if (query.includes('gadget') || query.includes('tech') || query.includes('accessory') || query.includes('kitchen')) {
+                        console.log('Navigating to gadgets page');
+                        handleSearchNavigate('/gadgets');
                       } else {
                         console.log('Showing search toast for:', searchQuery);
                         toast(`🔍 Searching for "${searchQuery}"...`, {
