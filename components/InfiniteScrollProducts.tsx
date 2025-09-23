@@ -10,14 +10,18 @@ interface Product {
   title: string;
   price: string;
   rating: string;
-  count: string;
-  image: string;
-  link: string;
+  count?: string;
+  image?: string;
+  link?: string;
+  productLink?: string;
+  imageLink?: string;
+  asin?: string;
+  availability?: string;
 }
 
 interface InfiniteScrollProductsProps {
   products: Product[];
-  category: 'laptops' | 'headphones';
+  category: 'laptops' | 'headphones' | 'mobiles' | 'home-essentials' | 'self-care' | 'fashion' | 'stationery';
   itemsPerPage?: number;
 }
 
@@ -108,14 +112,15 @@ export default function InfiniteScrollProducts({
     const result = addToWishlist({
       name: product.title === "nan" ? `Premium ${category}` : product.title.split(' ').slice(0, 8).join(' '),
       price: formatPrice(product.price),
-      image: product.image,
+      image: product.image || product.imageLink || '',
       category: category.charAt(0).toUpperCase() + category.slice(1),
-      link: product.link
+      link: product.link || product.productLink || ''
     });
 
     if (result.success) {
       toast(result.message, {
         icon: '🎉',
+        duration: 3000,
         style: {
           background: 'linear-gradient(135deg, #ec4899 0%, #be185d 100%)',
           color: 'white',
@@ -128,6 +133,7 @@ export default function InfiniteScrollProducts({
     } else {
       toast(result.message, {
         icon: result.message.includes('limit') ? '⚠️' : '💔',
+        duration: 3000,
         style: {
           background: result.message.includes('limit') 
             ? 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)'
@@ -145,6 +151,7 @@ export default function InfiniteScrollProducts({
   const handleBuyClick = (link: string, title: string) => {
     window.open(link, '_blank');
     toast(`Opening ${title} on Amazon... 🚀`, {
+      duration: 2000,
       style: {
         background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
         color: 'white',
@@ -161,6 +168,7 @@ export default function InfiniteScrollProducts({
     
     if (result.success) {
       toast(result.message, {
+        duration: 3000,
         style: {
           background: 'linear-gradient(135deg, #06b6d4 0%, #0891b2 100%)',
           color: 'white',
@@ -172,6 +180,7 @@ export default function InfiniteScrollProducts({
       });
     } else {
       toast(result.message, {
+        duration: 3000,
         style: {
           background: result.message.includes('limit') 
             ? 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)'
@@ -229,7 +238,7 @@ export default function InfiniteScrollProducts({
             {/* Product Image with Gallery */}
             <div className="relative mb-6 h-48 bg-white/5 rounded-2xl overflow-hidden">
               <ProductImageGallery
-                images={[product.image]}
+                images={[product.image || product.imageLink || '']}
                 title={product.title === "nan" ? `${category} Product` : product.title}
                 className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-300"
               />
@@ -267,7 +276,7 @@ export default function InfiniteScrollProducts({
             {/* Buy Button */}
             <div className="mt-auto">
               <button
-                onClick={() => handleBuyClick(product.link, product.title === "nan" ? `${category} Product` : product.title.substring(0, 30) + "...")}
+                onClick={() => handleBuyClick(product.link || product.productLink || '', product.title === "nan" ? `${category} Product` : product.title.substring(0, 30) + "...")}
                 className="w-full bg-gradient-to-r from-orange-400 to-yellow-300 text-black font-bold py-3 px-6 rounded-2xl text-sm shadow-2xl hover:scale-105 hover:from-orange-500 hover:to-yellow-400 transition-all duration-300 relative overflow-hidden"
               >
                 <span className="flex items-center justify-center gap-2">

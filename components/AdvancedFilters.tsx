@@ -12,7 +12,7 @@ interface FilterCriteria {
 interface AdvancedFiltersProps {
   readonly products: any[];
   readonly onFiltersChange: (filteredProducts: any[]) => void;
-  readonly category: 'laptops' | 'headphones';
+  readonly category: 'laptops' | 'headphones' | 'mobiles' | 'home-essentials' | 'self-care' | 'fashion' | 'stationery';
 }
 
 export default function AdvancedFilters({ products, onFiltersChange, category }: AdvancedFiltersProps) {
@@ -57,7 +57,84 @@ export default function AdvancedFilters({ products, onFiltersChange, category }:
       { keywords: ['zzu'], brand: 'ZZU' }
     ];
     
-    const brandMappings = category === 'laptops' ? laptopBrands : headphoneBrands;
+    const mobileBrands = [
+      { keywords: ['apple', 'iphone'], brand: 'Apple' },
+      { keywords: ['samsung', 'galaxy'], brand: 'Samsung' },
+      { keywords: ['google', 'pixel'], brand: 'Google' },
+      { keywords: ['oneplus'], brand: 'OnePlus' },
+      { keywords: ['motorola', 'moto'], brand: 'Motorola' },
+      { keywords: ['nokia'], brand: 'Nokia' },
+      { keywords: ['xiaomi', 'redmi'], brand: 'Xiaomi' },
+      { keywords: ['huawei'], brand: 'Huawei' },
+      { keywords: ['oppo'], brand: 'Oppo' },
+      { keywords: ['vivo'], brand: 'Vivo' }
+    ];
+    
+    const homeEssentialsBrands = [
+      { keywords: ['clorox'], brand: 'Clorox' },
+      { keywords: ['homedics'], brand: 'Homedics' },
+      { keywords: ['oxo'], brand: 'OXO' },
+      { keywords: ['bissell'], brand: 'Bissell' },
+      { keywords: ['cisily'], brand: 'Cisily' },
+      { keywords: ['chushiji'], brand: 'CHUSHIJI' },
+      { keywords: ['vewior'], brand: 'VEWIOR' }
+    ];
+    
+    const selfCareBrands = [
+      { keywords: ['grace', 'stella'], brand: 'Grace & Stella' },
+      { keywords: ['biodance'], brand: 'BIODANCE' },
+      { keywords: ['clean skin club'], brand: 'Clean Skin Club' },
+      { keywords: ['swcandy'], brand: 'SWCANDY' },
+      { keywords: ['the ordinary'], brand: 'The Ordinary' },
+      { keywords: ['cerave'], brand: 'CeraVe' },
+      { keywords: ['neutrogena'], brand: 'Neutrogena' }
+    ];
+    
+    const fashionBrands = [
+      { keywords: ['nike'], brand: 'Nike' },
+      { keywords: ['adidas'], brand: 'Adidas' },
+      { keywords: ['levi', 'levis'], brand: 'Levi\'s' },
+      { keywords: ['trendy queen'], brand: 'Trendy Queen' },
+      { keywords: ['dearmay'], brand: 'DEARMAY' },
+      { keywords: ['sojos'], brand: 'SOJOS' },
+      { keywords: ['keoouure'], brand: 'Keoouure' }
+    ];
+    
+    const stationeryBrands = [
+      { keywords: ['pilot'], brand: 'Pilot' },
+      { keywords: ['moleskine'], brand: 'Moleskine' },
+      { keywords: ['amazon basics'], brand: 'Amazon Basics' },
+      { keywords: ['mr. pen'], brand: 'Mr. Pen' },
+      { keywords: ['eacyart'], brand: 'EACYART' },
+      { keywords: ['xxinmoh'], brand: 'XXINMOH' }
+    ];
+    
+    let brandMappings: Array<{ keywords: string[]; brand: string }> = [];
+    switch (category) {
+      case 'laptops':
+        brandMappings = laptopBrands;
+        break;
+      case 'headphones':
+        brandMappings = headphoneBrands;
+        break;
+      case 'mobiles':
+        brandMappings = mobileBrands;
+        break;
+      case 'home-essentials':
+        brandMappings = homeEssentialsBrands;
+        break;
+      case 'self-care':
+        brandMappings = selfCareBrands;
+        break;
+      case 'fashion':
+        brandMappings = fashionBrands;
+        break;
+      case 'stationery':
+        brandMappings = stationeryBrands;
+        break;
+      default:
+        brandMappings = [];
+    }
     
     for (const mapping of brandMappings) {
       if (mapping.keywords.some(keyword => lowerTitle.includes(keyword))) {

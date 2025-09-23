@@ -9,14 +9,18 @@ interface Product {
   title: string;
   price: string;
   rating: string;
-  count: string;
-  image: string;
-  link: string;
+  count?: string;
+  image?: string;
+  link?: string;
+  productLink?: string;
+  imageLink?: string;
+  asin?: string;
+  availability?: string;
 }
 
 interface ProductComparisonProps {
   products: Product[];
-  category: 'laptops' | 'headphones';
+  category: 'laptops' | 'headphones' | 'mobiles' | 'home-essentials' | 'self-care' | 'fashion' | 'stationery';
 }
 
 export default function ProductComparison({ products, category }: ProductComparisonProps) {
@@ -80,8 +84,10 @@ export default function ProductComparison({ products, category }: ProductCompari
       reviewCount: product.count && product.count.includes("(") 
         ? product.count.match(/\(([^)]+)\)/)?.[1] || "N/A"
         : "N/A",
-      image: product.image,
-      link: product.link,
+      image: product.image || product.imageLink || '',
+      link: product.link || product.productLink || '',
+      imageLink: product.imageLink || product.image || '',
+      productLink: product.productLink || product.link || '',
       // Extract specs based on category
       specs: category === 'laptops' ? extractLaptopSpecs(product.title) : extractHeadphoneSpecs(product.title)
     }));
@@ -182,7 +188,7 @@ export default function ProductComparison({ products, category }: ProductCompari
             {selectedProducts.map((product, index) => (
               <div key={`selected-${product.title}-${index}`} className="flex items-center gap-2 bg-white/10 rounded-lg p-2">
                 <OptimizedImage
-                  src={product.image}
+                  src={product.image || product.imageLink || ''}
                   alt={product.title}
                   className="w-8 h-8 object-contain rounded"
                 />
@@ -243,7 +249,7 @@ export default function ProductComparison({ products, category }: ProductCompari
                         <th key={`header-${product.title}-${index}`} className="text-center p-2 sm:p-4 min-w-[150px] sm:min-w-[200px]">
                           <div className="space-y-2">
                             <OptimizedImage
-                              src={product.image}
+                              src={product.image || product.imageLink || ''}
                               alt={product.title}
                               className="w-12 h-12 sm:w-16 sm:h-16 object-contain mx-auto rounded-lg"
                             />

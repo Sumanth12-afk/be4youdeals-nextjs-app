@@ -26,8 +26,11 @@ const Layout = ({ children }: { children: ReactNode }) => {
       items: [
         { name: 'Laptops', redirect: '/laptops', available: true },
         { name: 'Headphones', redirect: '/headphones', available: true },
-        { name: 'Mobiles', redirect: null, available: false },
-        { name: 'Home Essentials', redirect: null, available: false }
+        { name: 'Mobiles', redirect: '/mobiles', available: true },
+        { name: 'Home Essentials', redirect: '/home-essentials', available: true },
+        { name: 'Self-Care', redirect: '/self-care', available: true },
+        { name: 'Fashion', redirect: '/fashion', available: true },
+        { name: 'Stationery', redirect: '/stationery', available: true }
       ]
     },
     { 
@@ -35,8 +38,10 @@ const Layout = ({ children }: { children: ReactNode }) => {
       items: [
         { name: 'MacBook Air', redirect: '/laptops', available: true },
         { name: 'JBL Headphones', redirect: '/headphones', available: true },
-        { name: 'iPhone 15 Pro', redirect: null, available: false },
-        { name: 'Gaming Mouse', redirect: null, available: false }
+        { name: 'iPhone 15 Pro', redirect: '/mobiles', available: true },
+        { name: 'Samsung Galaxy S25', redirect: '/mobiles', available: true },
+        { name: 'Skincare Set', redirect: '/self-care', available: true },
+        { name: 'Fashion Accessories', redirect: '/fashion', available: true }
       ]
     },
     { 
@@ -198,7 +203,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
                 <div className="relative">
                   <input
                     type="text"
-                    placeholder="Search deals, products..."
+                    placeholder="Search laptops, phones, fashion, home essentials..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     onFocus={() => setShowSearch(true)}
@@ -210,6 +215,16 @@ const Layout = ({ children }: { children: ReactNode }) => {
                             handleSearchNavigate('/laptops');
                           } else if (query.includes('headphone')) {
                             handleSearchNavigate('/headphones');
+                          } else if (query.includes('mobile') || query.includes('phone') || query.includes('smartphone')) {
+                            handleSearchNavigate('/mobiles');
+                          } else if (query.includes('home') || query.includes('essential') || query.includes('household')) {
+                            handleSearchNavigate('/home-essentials');
+                          } else if (query.includes('self') || query.includes('care') || query.includes('skincare') || query.includes('beauty')) {
+                            handleSearchNavigate('/self-care');
+                          } else if (query.includes('fashion') || query.includes('clothing') || query.includes('apparel') || query.includes('wear')) {
+                            handleSearchNavigate('/fashion');
+                          } else if (query.includes('stationery') || query.includes('office') || query.includes('pen') || query.includes('notebook')) {
+                            handleSearchNavigate('/stationery');
                           } else {
                             toast(`🔍 Searching for "${searchQuery}"...`, {
                               icon: '⚡',
@@ -267,8 +282,11 @@ const Layout = ({ children }: { children: ReactNode }) => {
                             { name: 'All', redirect: '/deals', available: true },
                             { name: 'Laptops', redirect: '/laptops', available: true },
                             { name: 'Headphones', redirect: '/headphones', available: true },
-                            { name: 'Mobiles', redirect: null, available: false },
-                            { name: 'Under $100', redirect: null, available: false }
+                            { name: 'Mobiles', redirect: '/mobiles', available: true },
+                            { name: 'Home Essentials', redirect: '/home-essentials', available: true },
+                            { name: 'Self-Care', redirect: '/self-care', available: true },
+                            { name: 'Fashion', redirect: '/fashion', available: true },
+                            { name: 'Stationery', redirect: '/stationery', available: true }
                           ].map((filter) => (
                             <button
                               key={filter.name}
@@ -384,6 +402,16 @@ const Layout = ({ children }: { children: ReactNode }) => {
                                 handleSearchNavigate('/laptops');
                               } else if (query.includes('headphone')) {
                                 handleSearchNavigate('/headphones');
+                              } else if (query.includes('mobile') || query.includes('phone') || query.includes('smartphone')) {
+                                handleSearchNavigate('/mobiles');
+                              } else if (query.includes('home') || query.includes('essential') || query.includes('household')) {
+                                handleSearchNavigate('/home-essentials');
+                              } else if (query.includes('self') || query.includes('care') || query.includes('skincare') || query.includes('beauty')) {
+                                handleSearchNavigate('/self-care');
+                              } else if (query.includes('fashion') || query.includes('clothing') || query.includes('apparel') || query.includes('wear')) {
+                                handleSearchNavigate('/fashion');
+                              } else if (query.includes('stationery') || query.includes('office') || query.includes('pen') || query.includes('notebook')) {
+                                handleSearchNavigate('/stationery');
                               } else {
                                 toast(`🔍 Searching for "${searchQuery}"...`, {
                                   icon: '⚡',
@@ -500,7 +528,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
                   <div className="flex-1 relative min-w-0">
                     <input
                       type="text"
-                      placeholder="Search deals, products..."
+                      placeholder="Search laptops, phones, fashion, home essentials..."
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       onKeyDown={(e) => {
@@ -519,6 +547,21 @@ const Layout = ({ children }: { children: ReactNode }) => {
                             } else if (query.includes('headphone')) {
                               console.log('Navigating to headphones page');
                               handleSearchNavigate('/headphones');
+                            } else if (query.includes('mobile') || query.includes('phone') || query.includes('smartphone')) {
+                              console.log('Navigating to mobiles page');
+                              handleSearchNavigate('/mobiles');
+                            } else if (query.includes('home') || query.includes('essential') || query.includes('household')) {
+                              console.log('Navigating to home essentials page');
+                              handleSearchNavigate('/home-essentials');
+                            } else if (query.includes('self') || query.includes('care') || query.includes('skincare') || query.includes('beauty')) {
+                              console.log('Navigating to self-care page');
+                              handleSearchNavigate('/self-care');
+                            } else if (query.includes('fashion') || query.includes('clothing') || query.includes('apparel') || query.includes('wear')) {
+                              console.log('Navigating to fashion page');
+                              handleSearchNavigate('/fashion');
+                            } else if (query.includes('stationery') || query.includes('office') || query.includes('pen') || query.includes('notebook')) {
+                              console.log('Navigating to stationery page');
+                              handleSearchNavigate('/stationery');
                             } else {
                               console.log('Showing search toast for:', searchQuery);
                               toast(`🔍 Searching for "${searchQuery}"...`, {
@@ -585,54 +628,39 @@ const Layout = ({ children }: { children: ReactNode }) => {
                       Headphones
                     </button>
                     <button
-                      onClick={() => {
-                        toast('🚧 Coming Soon!', {
-                          icon: '🔜',
-                          style: {
-                            background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
-                            color: 'white',
-                            borderRadius: '16px',
-                            padding: '12px 20px',
-                            fontSize: '14px',
-                            fontWeight: '600',
-                            boxShadow: '0 10px 25px rgba(99, 102, 241, 0.3)'
-                          },
-                          duration: 3000,
-                          position: 'bottom-center'
-                        });
-                        setShowSearch(false);
-                      }}
-                      className="px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-gray-600/50 text-gray-400 border border-gray-600/50 transition-all duration-300 whitespace-nowrap"
+                      onClick={() => handleSearchNavigate('/mobiles')}
+                      className="px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-white/10 text-white hover:bg-white/20 border border-white/20 transition-all duration-300 cursor-pointer whitespace-nowrap active:scale-95 active:bg-white/30"
+                      style={{ touchAction: 'manipulation' }}
                     >
-                      <svg className="w-3 h-3 inline mr-1" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
-                      </svg>
                       Mobiles
                     </button>
                     <button
-                      onClick={() => {
-                        toast('🚧 Coming Soon!', {
-                          icon: '🔜',
-                          style: {
-                            background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
-                            color: 'white',
-                            borderRadius: '16px',
-                            padding: '12px 20px',
-                            fontSize: '14px',
-                            fontWeight: '600',
-                            boxShadow: '0 10px 25px rgba(99, 102, 241, 0.3)'
-                          },
-                          duration: 3000,
-                          position: 'bottom-center'
-                        });
-                        setShowSearch(false);
-                      }}
-                      className="px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-gray-600/50 text-gray-400 border border-gray-600/50 transition-all duration-300 whitespace-nowrap"
+                      onClick={() => handleSearchNavigate('/home-essentials')}
+                      className="px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-white/10 text-white hover:bg-white/20 border border-white/20 transition-all duration-300 cursor-pointer whitespace-nowrap active:scale-95 active:bg-white/30"
+                      style={{ touchAction: 'manipulation' }}
                     >
-                      <svg className="w-3 h-3 inline mr-1" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
-                      </svg>
-                      Under $100
+                      Home Essentials
+                    </button>
+                    <button
+                      onClick={() => handleSearchNavigate('/self-care')}
+                      className="px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-white/10 text-white hover:bg-white/20 border border-white/20 transition-all duration-300 cursor-pointer whitespace-nowrap active:scale-95 active:bg-white/30"
+                      style={{ touchAction: 'manipulation' }}
+                    >
+                      Self-Care
+                    </button>
+                    <button
+                      onClick={() => handleSearchNavigate('/fashion')}
+                      className="px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-white/10 text-white hover:bg-white/20 border border-white/20 transition-all duration-300 cursor-pointer whitespace-nowrap active:scale-95 active:bg-white/30"
+                      style={{ touchAction: 'manipulation' }}
+                    >
+                      Fashion
+                    </button>
+                    <button
+                      onClick={() => handleSearchNavigate('/stationery')}
+                      className="px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-white/10 text-white hover:bg-white/20 border border-white/20 transition-all duration-300 cursor-pointer whitespace-nowrap active:scale-95 active:bg-white/30"
+                      style={{ touchAction: 'manipulation' }}
+                    >
+                      Stationery
                     </button>
                   </div>
                 </div>
@@ -745,6 +773,21 @@ const Layout = ({ children }: { children: ReactNode }) => {
                       } else if (query.includes('headphone')) {
                         console.log('Navigating to headphones page');
                         handleSearchNavigate('/headphones');
+                      } else if (query.includes('mobile') || query.includes('phone') || query.includes('smartphone')) {
+                        console.log('Navigating to mobiles page');
+                        handleSearchNavigate('/mobiles');
+                      } else if (query.includes('home') || query.includes('essential') || query.includes('household')) {
+                        console.log('Navigating to home essentials page');
+                        handleSearchNavigate('/home-essentials');
+                      } else if (query.includes('self') || query.includes('care') || query.includes('skincare') || query.includes('beauty')) {
+                        console.log('Navigating to self-care page');
+                        handleSearchNavigate('/self-care');
+                      } else if (query.includes('fashion') || query.includes('clothing') || query.includes('apparel') || query.includes('wear')) {
+                        console.log('Navigating to fashion page');
+                        handleSearchNavigate('/fashion');
+                      } else if (query.includes('stationery') || query.includes('office') || query.includes('pen') || query.includes('notebook')) {
+                        console.log('Navigating to stationery page');
+                        handleSearchNavigate('/stationery');
                       } else {
                         console.log('Showing search toast for:', searchQuery);
                         toast(`🔍 Searching for "${searchQuery}"...`, {
