@@ -1,5 +1,5 @@
 // fashion products data
-export const allFashion = [
+export const allFashionExtended = [
   {
     "title": "Keoouure",
     "price": "$35.",
@@ -899,14 +899,7 @@ export const allFashion = [
     "imageLink": "https://m.media-amazon.com/images/I/715Sp4opcmL._AC_UL320_.jpg",
     "asin": "",
     "availability": ""
-  }
-];
-
-// Extended fashion data with more products
-export const allFashionExtended = [
-  ...allFashion,
-  // Add more fashion products here to reach 100+ products
-  ...[
+  },
   {
     "title": "DK",
     "price": "",
@@ -1357,5 +1350,4 @@ export const allFashionExtended = [
     "asin": "",
     "availability": ""
   }
-]
 ];

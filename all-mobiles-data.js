@@ -1,5 +1,5 @@
 // mobiles products data
-export const allMobiles = [
+export const allMobilesExtended = [
   {
     "title": "SAMSUNG Galaxy S25+ Mobile Phone, 512GB AI Smartphone, Unlocked Android, AI Camera, Fast Processor, ProScaler Display, Long Battery Life, 2025, US 1 Yr Manufacturer Warranty, Mint",
     "price": "$1,019.",
@@ -899,14 +899,7 @@ export const allMobiles = [
     "imageLink": "https://m.media-amazon.com/images/I/7111-Fyt5KL._AC_UY218_.jpg",
     "asin": "",
     "availability": ""
-  }
-];
-
-// Extended mobiles data with more products
-export const allMobilesExtended = [
-  ...allMobiles,
-  // Add more mobile products here to reach 100+ products
-  ...[
+  },
   {
     "title": "Samsung Galaxy A23 5G SM-A236U Factory Unlocked 64GB Black (Renewed)",
     "price": "$104.",
@@ -1357,5 +1350,4 @@ export const allMobilesExtended = [
     "asin": "",
     "availability": ""
   }
-]
 ];

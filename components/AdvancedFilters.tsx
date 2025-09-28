@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useRegion } from '../contexts/RegionContext';
 
 interface FilterCriteria {
   priceRange: [number, number];
@@ -16,8 +17,13 @@ interface AdvancedFiltersProps {
 }
 
 export default function AdvancedFilters({ products, onFiltersChange, category }: AdvancedFiltersProps) {
+  const { region } = useRegion();
+  
+  // Set appropriate price range based on region
+  const defaultPriceRange: [number, number] = region === 'IN' ? [0, 200000] : [0, 2000];
+  
   const [filters, setFilters] = useState<FilterCriteria>({
-    priceRange: [0, 2000],
+    priceRange: defaultPriceRange,
     brands: [],
     minRating: 0,
     availability: 'all',
@@ -184,13 +190,13 @@ export default function AdvancedFilters({ products, onFiltersChange, category }:
 
   useEffect(() => {
     // Set initial price range only once when component mounts
-    if (priceRange.min !== Infinity && priceRange.max !== 0 && filters.priceRange[0] === 0 && filters.priceRange[1] === 10000) {
+    if (priceRange.min !== Infinity && priceRange.max !== 0 && filters.priceRange[0] === 0 && filters.priceRange[1] === defaultPriceRange[1]) {
       setFilters(prev => ({
         ...prev,
         priceRange: [Math.floor(priceRange.min), Math.ceil(priceRange.max)]
       }));
     }
-  }, [priceRange.min, priceRange.max]); // Only depend on the actual values, not the object
+  }, [priceRange.min, priceRange.max, defaultPriceRange]); // Only depend on the actual values, not the object
 
   const applyFilters = () => {
     let filtered = [...products];
@@ -259,7 +265,7 @@ export default function AdvancedFilters({ products, onFiltersChange, category }:
 
   const clearFilters = () => {
     setFilters({
-      priceRange: [Math.floor(priceRange.min), Math.ceil(priceRange.max)],
+      priceRange: defaultPriceRange,
       brands: [],
       minRating: 0,
       availability: 'all',
@@ -310,7 +316,7 @@ export default function AdvancedFilters({ products, onFiltersChange, category }:
             {/* Price Range */}
             <div>
               <label htmlFor="price-range-min" className="block text-white font-semibold mb-3">
-                Price Range: ${filters.priceRange[0]} - ${filters.priceRange[1]}
+                Price Range: {region === 'IN' ? '₹' : '$'}{filters.priceRange[0]} - {region === 'IN' ? '₹' : '$'}{filters.priceRange[1]}
               </label>
               <div className="relative">
                 <input

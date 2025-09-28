@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 // import toast from 'react-hot-toast';
 // import { addToWishlist } from '../lib/wishlistUtils';
 import { getComparisonItems, removeFromComparison, clearComparison as clearComparisonUtil } from '../lib/comparisonUtils';
+import { useRegion } from '../contexts/RegionContext';
 import OptimizedImage from './OptimizedImage';
 
 interface Product {
@@ -27,6 +28,7 @@ export default function ProductComparison({ products, category }: ProductCompari
   const [selectedProducts, setSelectedProducts] = useState<Product[]>([]);
   const [showComparison, setShowComparison] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
+  const { region } = useRegion();
 
   const maxComparisonItems = 4;
 
@@ -56,12 +58,25 @@ export default function ProductComparison({ products, category }: ProductCompari
 
 
   const formatPrice = (priceString: string) => {
-    if (!priceString || priceString === "nan") return "$0.00";
+    if (!priceString || priceString === "nan") {
+      return region === 'IN' ? "₹0.00" : "$0.00";
+    }
+    
+    // If price already has currency symbol, return as is
+    if (priceString.includes('₹') || priceString.includes('$')) {
+      return priceString;
+    }
+    
     const firstPrice = priceString.split(" ")[0];
     let cleanPrice = firstPrice.replace(/[^\d.]/g, "");
-    if (!cleanPrice.startsWith("$")) {
+    
+    // Add appropriate currency symbol based on region
+    if (region === 'IN') {
+      cleanPrice = "₹" + cleanPrice;
+    } else {
       cleanPrice = "$" + cleanPrice;
     }
+    
     return cleanPrice;
   };
 

@@ -4,21 +4,42 @@ import Head from "next/head";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { allLaptops } from "../all-laptops-data.js";
+import { allLaptopsIndia } from "../all-laptops-india-data.js";
+import { usaTodaysDeals } from "../usa-todays-deals-data.js";
+import { useRegion } from "../contexts/RegionContext";
+import { useLoading } from "../contexts/LoadingContext";
 import toast from "react-hot-toast";
+import GlobalLoader from "../components/GlobalLoader";
 
 export default function DealsWall() {
-  const [isLoading, setIsLoading] = useState(true);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  
+  // Location detection
+  const { region } = useRegion();
+  const { isLoading, showLoader, hideLoader } = useLoading();
+  
+  // Get deals based on region
+  const getDealsData = () => {
+    if (region === 'IN') {
+      return allLaptopsIndia.slice(0, 50); // Show first 50 India deals
+    } else {
+      // Use USA today's deals directly
+      return usaTodaysDeals.slice(0, 50);
+    }
+  };
+  
+  const dealsData = getDealsData();
 
   // Simulate loading state
   useEffect(() => {
+    showLoader('Loading amazing deals...');
     const timer = setTimeout(() => {
-      setIsLoading(false);
+      hideLoader();
     }, 2000);
 
     // Scroll progress and back to top button
@@ -119,7 +140,41 @@ export default function DealsWall() {
     }
   ];
 
-  const comingSoonDeals = [
+  // Generate region-specific coming soon deals
+  const comingSoonDeals = region === 'IN' ? [
+    {
+      id: 3,
+      category: "📱 Mobiles",
+      productName: "Samsung Galaxy S25 Ultra",
+      tagline: "Next-gen AI smartphone",
+      image: "/mobiles.png",
+      available: false
+    },
+    {
+      id: 4,
+      category: "🛋️ Home Essentials", 
+      productName: "Smart Water Purifier",
+      tagline: "Pure water for your family",
+      image: "/household.png",
+      available: false
+    },
+    {
+      id: 5,
+      category: "👗 Fashion",
+      productName: "Ethnic Wear Collection",
+      tagline: "Traditional elegance meets modern style",
+      image: "/fashion.png",
+      available: false
+    },
+    {
+      id: 6,
+      category: "🧴 Self-Care",
+      productName: "Ayurvedic Skincare Set",
+      tagline: "Natural beauty with ancient wisdom",
+      image: "/skincare.jpg", 
+      available: false
+    }
+  ] : [
     {
       id: 3,
       category: "📱 Mobiles",
@@ -155,10 +210,15 @@ export default function DealsWall() {
   ];
 
   return (
+    <GlobalLoader 
+      isLoading={isLoading} 
+      loadingText="Loading amazing deals..." 
+      size="lg"
+    >
     <>
       <Head>
-        <title>Hot Deals - Vibrics Deals</title>
-        <meta name="description" content="Discover the hottest deals on tech, fashion, and more. Limited time offers with massive savings!" />
+        <title>Hot Deals - Vibrics Deals {region === 'IN' ? 'India' : 'US'}</title>
+        <meta name="description" content={`Discover the hottest deals on tech, fashion, and more in ${region === 'IN' ? 'India' : 'US'}. Limited time offers with massive savings!`} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/Vibrics Deals Logo.png" />
       </Head>
@@ -330,151 +390,52 @@ export default function DealsWall() {
                 <SkeletonFeaturedCard />
               </>
             ) : (
-              <>
-                {/* Laptop Product Card */}
-                <motion.div
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.3 }}
-                  viewport={{ once: true }}
-                  whileHover={{ 
-                    scale: 1.02, 
-                    y: -5,
-                    transition: { duration: 0.3 }
-                  }}
-                  className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 backdrop-blur-sm border border-blue-500/30 rounded-2xl p-6 hover:border-blue-400/50 transition-all duration-300 relative h-full flex flex-col group"
-                >
-                  {/* Category Badge */}
-                  <div className="flex items-center mb-4">
-                    <span className="text-blue-400 text-lg mr-2">💻</span>
-                    <span className="text-blue-400 text-sm font-medium">Laptops</span>
-                  </div>
-                  
-                  {/* Product Image */}
-                  <div className="mb-4 flex justify-center flex-shrink-0">
-                    <motion.div
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.3 }}
-                      className="relative overflow-hidden rounded-xl"
-                    >
-                      <Image
-                        src="https://m.media-amazon.com/images/I/61iRboRcXzL._AC_SX466_.jpg"
-                        alt="Blackview Laptop 2025"
-                        width={250}
-                        height={200}
-                        className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
-                        priority
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </motion.div>
-                  </div>
-                  
-                  <div className="flex-grow flex flex-col">
-                    <h3 className="text-lg font-bold text-white mb-2 line-clamp-2 group-hover:text-blue-300 transition-colors duration-300">Blackview Laptop 2025, Laptops Computer for Business Student, Quad-Core N150</h3>
-                    <p className="text-gray-300 text-sm mb-4 group-hover:text-gray-200 transition-colors duration-300">Performance meets portability</p>
-                    
-                    {/* Rating */}
-                    <div className="flex items-center mb-4">
-                      <span className="text-yellow-400 text-sm">⭐</span>
-                      <span className="text-white text-sm ml-1">4.55 (73)</span>
-                    </div>
-                    
-                    <div className="mt-auto">
-                      <div className="flex items-center justify-between mb-4">
-                        <div>
-                          <span className="text-2xl font-black text-green-400 group-hover:text-green-300 transition-colors duration-300">$339.99</span>
-                          <span className="text-gray-400 line-through ml-2">$453.32</span>
-                          <div className="text-green-400 text-sm mt-1">You save: $113</div>
-                        </div>
-                        <div className="flex flex-col items-end">
-                          <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold mb-2 group-hover:bg-green-400 transition-colors duration-300">25% OFF</span>
-                          <motion.button 
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="text-red-400 hover:text-red-300 transition-colors duration-300"
-                          >
-                            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
-                            </svg>
-                          </motion.button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
+              dealsData.slice(0, 2).map((deal, index) => (
+                <FeaturedDealCard
+                  key={(deal as any).id || (deal as any).asin || (deal as any).title || index}
+                  deal={deal}
+                  index={index}
+                />
+              ))
+            )}
+          </div>
+        </div>
 
-                {/* Headphone Product Card */}
-                <motion.div
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                  viewport={{ once: true }}
-                  whileHover={{ 
-                    scale: 1.02, 
-                    y: -5,
-                    transition: { duration: 0.3 }
-                  }}
-                  className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-6 hover:border-purple-400/50 transition-all duration-300 relative h-full flex flex-col group"
-                >
-                  {/* Category Badge */}
-                  <div className="flex items-center mb-4">
-                    <span className="text-purple-400 text-lg mr-2">🎧</span>
-                    <span className="text-purple-400 text-sm font-medium">Headphones</span>
-                  </div>
-                  
-                  {/* Product Image */}
-                  <div className="mb-4 flex justify-center flex-shrink-0">
-                    <motion.div
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.3 }}
-                      className="relative overflow-hidden rounded-xl"
-                    >
-                      <Image
-                        src="https://m.media-amazon.com/images/I/61kFL7ywsZS.__AC_SX300_SY300_QL70_FMwebp_.jpg"
-                        alt="JBL Tune 510BT"
-                        width={250}
-                        height={200}
-                        className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
-                        priority
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </motion.div>
-                  </div>
-                  
-                  <div className="flex-grow flex flex-col">
-                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-purple-300 transition-colors duration-300">JBL Tune 510BT</h3>
-                    <p className="text-gray-300 text-sm mb-4 group-hover:text-gray-200 transition-colors duration-300">40H battery, ultra-comfy</p>
-                    
-                    {/* Rating */}
-                    <div className="flex items-center mb-4">
-                      <span className="text-yellow-400 text-sm">⭐</span>
-                      <span className="text-white text-sm ml-1">4.5 (12,500)</span>
-                    </div>
-                    
-                    <div className="mt-auto">
-                      <div className="flex items-center justify-between mb-4">
-                        <div>
-                          <span className="text-2xl font-black text-green-400 group-hover:text-green-300 transition-colors duration-300">$49.95</span>
-                          <span className="text-gray-400 line-through ml-2">$70.00</span>
-                          <div className="text-green-400 text-sm mt-1">You save: $20</div>
-                        </div>
-                        <div className="flex flex-col items-end">
-                          <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold mb-2 group-hover:bg-green-400 transition-colors duration-300">30% OFF</span>
-                          <motion.button 
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="text-red-400 hover:text-red-300 transition-colors duration-300"
-                          >
-                            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
-                            </svg>
-                          </motion.button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
+        {/* Hot Deals Section */}
+        <div className="max-w-7xl mx-auto mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-black text-white mb-4">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
+                🔥 Hot Deals
+              </span>
+            </h2>
+            <p className="text-gray-300 text-lg">
+              {region === 'IN' ? 'Exclusive deals from India' : 'Today\'s best deals from USA'}
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {isLoading ? (
+              // Skeleton Loading
+              <>
+                {[...Array(8)].map((_, i) => (
+                  <SkeletonFeaturedCard key={i} />
+                ))}
               </>
+            ) : (
+              dealsData.slice(2).map((deal, index) => (
+                <FeaturedDealCard
+                  key={(deal as any).id || (deal as any).asin || (deal as any).title || index + 2}
+                  deal={deal}
+                  index={index + 2}
+                />
+              ))
             )}
           </div>
         </div>
@@ -541,6 +502,7 @@ export default function DealsWall() {
       </motion.button>
       </div>
     </>
+    </GlobalLoader>
   );
 }
 
@@ -608,24 +570,34 @@ function FeaturedDealCard({ deal, index }: { deal: any; index: number }) {
   const [isInWishlist, setIsInWishlist] = useState(false);
 
   const handleAmazonRedirect = () => {
-    // Show toast notification
-    toast('🛒 Redirecting to Amazon...', {
-      icon: '🚀',
-      style: {
-        background: 'linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%)',
-        color: 'white',
-        borderRadius: '16px',
-        padding: '12px 20px',
-        fontSize: '14px',
-        fontWeight: '600'
-      },
-      duration: 2000,
-      position: 'bottom-center'
-    });
-    
-    setTimeout(() => {
-      window.open(deal.link, '_blank', 'noopener,noreferrer');
-    }, 1000);
+    if (deal.link) {
+      // Add your USA affiliate tag to the product link
+      const affiliateLink = deal.link.includes('?') 
+        ? `${deal.link}&tag=beforeyou-20&linkId=b3b134c0f45e2e73d36e027f9b9495a4`
+        : `${deal.link}?tag=beforeyou-20&linkId=b3b134c0f45e2e73d36e027f9b9495a4`;
+      
+      // Show toast notification
+      toast('🛒 Redirecting to Amazon...', {
+        icon: '🚀',
+        style: {
+          background: 'linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%)',
+          color: 'white',
+          borderRadius: '16px',
+          padding: '12px 20px',
+          fontSize: '14px',
+          fontWeight: '600'
+        },
+        duration: 2000,
+        position: 'bottom-center'
+      });
+      
+      setTimeout(() => {
+        console.log('🔗 Affiliate Link:', affiliateLink); // Debug log
+        window.open(affiliateLink, '_blank', 'noopener,noreferrer');
+      }, 1000);
+    } else {
+      toast.error('Product link not available');
+    }
   };
 
   const toggleWishlist = () => {
@@ -726,14 +698,16 @@ function FeaturedDealCard({ deal, index }: { deal: any; index: number }) {
         <div className="flex items-center mb-4">
           <span className="text-yellow-400 text-xl mr-2">⭐</span>
           <span className="text-white font-semibold">{deal.rating}</span>
-          <span className="text-gray-400 ml-2">({deal.reviewCount.toLocaleString()})</span>
+          <span className="text-gray-400 ml-2">({deal.reviewCount?.toLocaleString() || '0'})</span>
         </div>
 
         {/* Price Section with Savings */}
         <div className="mb-6">
           <div className="flex items-center justify-between mb-2">
             {deal.originalPrice && (
-              <span className="text-gray-400 line-through text-sm md:text-lg">{deal.originalPrice}</span>
+              <span className="text-gray-400 line-through text-sm md:text-lg">
+                {deal.originalPrice.endsWith('.') ? deal.originalPrice + '00' : deal.originalPrice}
+              </span>
             )}
             {deal.discount && (
               <span className="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
@@ -742,7 +716,7 @@ function FeaturedDealCard({ deal, index }: { deal: any; index: number }) {
             )}
           </div>
           <span className="text-xl md:text-3xl font-black text-green-400 block">
-            {deal.currentPrice}
+            {deal.currentPrice.endsWith('.') ? deal.currentPrice + '00' : deal.currentPrice}
           </span>
           {deal.originalPrice && deal.discount && (
             <span className="text-green-400 text-xs md:text-sm font-semibold">
@@ -786,10 +760,10 @@ function FeaturedDealCard({ deal, index }: { deal: any; index: number }) {
         {/* Sales and Views Metrics */}
         <div className="absolute bottom-6 right-6 bg-black/40 backdrop-blur-sm rounded-lg p-2 text-xs text-white z-20">
           <div className="flex items-center gap-2 mb-1">
-            <span>👥 {deal.salesCount || 0} sold</span>
+            <span>👥 {deal.salesCount || Math.floor(Math.random() * 500) + 50} sold</span>
           </div>
           <div className="flex items-center gap-2">
-            <span>👁️ {deal.viewCount || 0} views</span>
+            <span>👁️ {deal.viewCount || Math.floor(Math.random() * 2000) + 100} views</span>
           </div>
         </div>
 

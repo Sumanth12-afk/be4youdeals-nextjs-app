@@ -5,6 +5,10 @@ import { useRouter } from "next/router";
 import { auth } from "../lib/firebase";
 import toast from "react-hot-toast";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRegion } from "../contexts/RegionContext";
+import RegionSelector from "./RegionSelector";
+import RegionChangePopup from "./RegionChangePopup";
+import { Region, getRegionPath } from "../lib/locationUtils";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<any>(null);
@@ -13,6 +17,13 @@ const Layout = ({ children }: { children: ReactNode }) => {
   const [showSearch, setShowSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [wishlistCount, setWishlistCount] = useState(0);
+  const [showRegionPopup, setShowRegionPopup] = useState(false);
+  const [showRegionNotification, setShowRegionNotification] = useState(false);
+  
+  // Region context
+  const { region, setRegion } = useRegion();
+  const router = useRouter();
+  
   const [notifications] = useState([
     { id: 1, type: 'deal', message: 'New laptop deals available!', time: '2m ago', unread: true },
     { id: 2, type: 'price', message: 'Price dropped on JBL Headphones', time: '1h ago', unread: true },
@@ -48,20 +59,89 @@ const Layout = ({ children }: { children: ReactNode }) => {
     { 
       category: 'Popular', 
       items: [
-        { name: 'Best Deals', redirect: '/deals', available: true },
+        { name: 'Best Deals', redirect: region === 'IN' ? '/in/deals' : '/deals', available: true },
         { name: 'Under $100', redirect: null, available: false },
         { name: 'New Arrivals', redirect: null, available: false }
       ]
     }
   ];
   
-  const router = useRouter();
-
   // Centralized navigation helper for all search-related navigation
   const handleSearchNavigate = (path: string) => {
-    router.push(path);
+    // Add region prefix if needed
+    let finalPath = path;
+    if (region === 'IN') {
+      // For India region, add /in/ prefix to all pages except main pages
+      if (path === '/' || path.startsWith('/deals') || path.startsWith('/about') || path.startsWith('/contact') || path.startsWith('/wishlist') || path.startsWith('/login') || path.startsWith('/signup')) {
+        // Main pages stay as is (they handle region internally)
+        finalPath = path;
+      } else {
+        // Category pages get /in/ prefix
+        finalPath = `/in${path}`;
+      }
+    } else {
+      // For US region, use clean path without any prefix
+      finalPath = path;
+    }
+    
+    router.push(finalPath);
     setShowSearch(false);
     setSearchQuery("");
+  };
+
+  // Handle region change
+  const handleRegionChange = (newRegion: Region) => {
+    setRegion(newRegion);
+    
+    // Get current path and determine the correct new path
+    const currentPath = router.asPath;
+    let newPath = currentPath;
+    
+    // Remove any existing region prefixes first
+    const cleanPath = currentPath.replace(/^\/(us|in)\//, '/');
+    
+    if (newRegion === 'IN') {
+      // Switch to India pages
+      if (cleanPath === '/' || cleanPath.startsWith('/deals') || cleanPath.startsWith('/about') || cleanPath.startsWith('/contact') || cleanPath.startsWith('/wishlist') || cleanPath.startsWith('/login') || cleanPath.startsWith('/signup')) {
+        // For main pages, stay on same page (they handle region internally)
+        newPath = cleanPath;
+      } else {
+        // For category pages, add /in/ prefix
+        newPath = `/in${cleanPath}`;
+      }
+    } else {
+      // Switch to US pages - just use clean path without any prefix
+      newPath = cleanPath;
+    }
+    
+    router.push(newPath);
+    
+    toast.success(`Switched to ${newRegion === 'IN' ? 'India' : 'US'} region`, {
+      duration: 2000,
+      style: {
+        background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+        color: 'white',
+        borderRadius: '12px',
+        padding: '12px 20px',
+        fontSize: '14px',
+        fontWeight: '600'
+      }
+    });
+  };
+
+  const handleShowRegionPopup = () => {
+    if (user) {
+      setShowRegionPopup(true);
+    } else {
+      toast.error('Please log in to change your region', {
+        duration: 3000,
+        style: {
+          background: '#dc2626',
+          color: '#fff',
+          border: '1px solid #b91c1c'
+        }
+      });
+    }
   };
 
   // Auto-focus search input when it opens
@@ -101,6 +181,20 @@ const Layout = ({ children }: { children: ReactNode }) => {
     };
   }, [showSearch]);
 
+  // Show region notification when user logs in
+  useEffect(() => {
+    if (!user || !region || region === 'UNKNOWN') return;
+
+    const hasSeen = sessionStorage.getItem('hasSeenRegionNotification');
+    if (!hasSeen) {
+      const timer = setTimeout(() => {
+        setShowRegionNotification(true);
+      }, 2000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [user, region]);
+
   const handleLogout = async () => {
     toast("Logging out...", {
       icon: "👋",
@@ -118,7 +212,8 @@ const Layout = ({ children }: { children: ReactNode }) => {
 
   const handleDealsClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    handleSearchNavigate('/deals');
+    const dealsPath = region === 'IN' ? '/in/deals' : '/deals';
+    handleSearchNavigate(dealsPath);
   };
 
   return (
@@ -146,12 +241,15 @@ const Layout = ({ children }: { children: ReactNode }) => {
             {/* Center - Navigation & Search */}
             <div className="hidden md:flex items-center space-x-8">
               <nav className="flex items-center space-x-8">
-                <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-semibold flex items-center gap-1">
+                <button 
+                  onClick={() => handleSearchNavigate('/')}
+                  className="text-white hover:text-cyan-400 transition-colors font-semibold flex items-center gap-1"
+                >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
                   </svg>
                   Home
-                </Link>
+                </button>
                 <button 
                   onClick={handleDealsClick}
                   className="text-white hover:text-cyan-400 transition-colors font-semibold cursor-pointer flex items-center gap-1"
@@ -178,25 +276,34 @@ const Layout = ({ children }: { children: ReactNode }) => {
                   </svg>
                   Categories
                 </button>
-                <Link href="/wishlist" className="text-white hover:text-cyan-400 transition-colors font-semibold flex items-center gap-1">
+                <button 
+                  onClick={() => handleSearchNavigate('/wishlist')}
+                  className="text-white hover:text-cyan-400 transition-colors font-semibold flex items-center gap-1"
+                >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
                   </svg>
                   Wishlist
-                </Link>
-                <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-semibold flex items-center gap-1">
+                </button>
+                <button 
+                  onClick={() => handleSearchNavigate('/about')}
+                  className="text-white hover:text-cyan-400 transition-colors font-semibold flex items-center gap-1"
+                >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                   </svg>
                   About
-                </Link>
-                <Link href="/contact" className="text-white hover:text-cyan-400 transition-colors font-semibold flex items-center gap-1">
+                </button>
+                <button 
+                  onClick={() => handleSearchNavigate('/contact')}
+                  className="text-white hover:text-cyan-400 transition-colors font-semibold flex items-center gap-1"
+                >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                   </svg>
                   Contact
-                </Link>
+                </button>
               </nav>
 
               {/* Search */}
@@ -463,8 +570,29 @@ const Layout = ({ children }: { children: ReactNode }) => {
               </div>
             </div>
 
-            {/* Right - Auth */}
+            {/* Right - Region Selector & Auth */}
             <div className="hidden md:flex items-center space-x-4">
+              {/* Region Selector */}
+              <div className="flex items-center gap-2">
+                <RegionSelector 
+                  currentRegion={region} 
+                  onRegionChange={handleRegionChange}
+                  className="mr-2"
+                />
+                {user && (
+                  <button
+                    onClick={handleShowRegionPopup}
+                    className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
+                    title="Change Region"
+                  >
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </button>
+                )}
+              </div>
+              
               {user ? (
                 <div className="flex items-center space-x-3">
                   <span 
@@ -532,25 +660,25 @@ const Layout = ({ children }: { children: ReactNode }) => {
               <div className="pt-4" onClick={(e) => e.stopPropagation()}>
                 <div className="flex items-center gap-2 mb-4">
                   <div className="flex-1 relative min-w-0">
-                    <input
-                      type="text"
+                <input
+                  type="text"
                       placeholder="Search laptops, phones, fashion, home essentials..."
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      onKeyDown={(e) => {
-                        if (e.key === 'Enter') {
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
                           e.preventDefault();
                           e.stopPropagation();
                           console.log('Search Enter pressed, query:', searchQuery);
                           
-                          if (searchQuery.trim()) {
-                            const query = searchQuery.toLowerCase();
+                      if (searchQuery.trim()) {
+                        const query = searchQuery.toLowerCase();
                             console.log('Processed query:', query);
                             
-                            if (query.includes('laptop')) {
+                        if (query.includes('laptop')) {
                               console.log('Navigating to laptops page');
                               handleSearchNavigate('/laptops');
-                            } else if (query.includes('headphone')) {
+                        } else if (query.includes('headphone')) {
                               console.log('Navigating to headphones page');
                               handleSearchNavigate('/headphones');
                             } else if (query.includes('mobile') || query.includes('phone') || query.includes('smartphone')) {
@@ -571,27 +699,27 @@ const Layout = ({ children }: { children: ReactNode }) => {
                             } else if (query.includes('gadget') || query.includes('tech') || query.includes('accessory') || query.includes('kitchen')) {
                               console.log('Navigating to gadgets page');
                               handleSearchNavigate('/gadgets');
-                            } else {
+                        } else {
                               console.log('Showing search toast for:', searchQuery);
-                              toast(`🔍 Searching for "${searchQuery}"...`, {
-                                icon: '⚡',
-                                style: {
-                                  background: 'linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%)',
-                                  color: 'white',
-                                  borderRadius: '16px',
-                                  padding: '12px 20px',
-                                  fontSize: '14px',
-                                  fontWeight: '600',
-                                  boxShadow: '0 10px 25px rgba(79, 70, 229, 0.3)'
-                                },
-                                duration: 3000,
-                                position: 'bottom-center'
-                              });
-                              setShowSearch(false);
-                            }
-                          }
+                          toast(`🔍 Searching for "${searchQuery}"...`, {
+                            icon: '⚡',
+                            style: {
+                              background: 'linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%)',
+                              color: 'white',
+                              borderRadius: '16px',
+                              padding: '12px 20px',
+                              fontSize: '14px',
+                              fontWeight: '600',
+                              boxShadow: '0 10px 25px rgba(79, 70, 229, 0.3)'
+                            },
+                            duration: 3000,
+                            position: 'bottom-center'
+                          });
+                          setShowSearch(false);
                         }
-                      }}
+                      }
+                    }
+                  }}
                       autoFocus
                       className="w-full bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-3 pl-10 pr-4 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300 text-sm sm:text-base"
                     />
@@ -847,16 +975,43 @@ const Layout = ({ children }: { children: ReactNode }) => {
               {/* Menu Panel */}
               <div className="md:hidden mt-4 pb-4 border-t border-white/10 relative z-50">
               <nav className="flex flex-col space-y-4 pt-4">
-                <Link 
-                  href="/" 
+                {/* Mobile Region Selector */}
+                <div className="px-4 pb-2">
+                  <div className="flex items-center gap-2">
+                    <RegionSelector 
+                      currentRegion={region} 
+                      onRegionChange={handleRegionChange}
+                      className="flex-1"
+                    />
+                    {user && (
+                      <button
+                        onClick={() => {
+                          handleShowRegionPopup();
+                          setMobileMenuOpen(false);
+                        }}
+                        className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
+                        title="Change Region"
+                      >
+                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                      </button>
+                    )}
+                  </div>
+                </div>
+                <button 
+                  onClick={() => {
+                    handleSearchNavigate('/');
+                    setMobileMenuOpen(false);
+                  }}
                   className="text-white hover:text-cyan-400 transition-colors font-semibold flex items-center gap-2"
-                  onClick={() => setMobileMenuOpen(false)}
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
                   </svg>
                   Home
-                </Link>
+                </button>
                 <button 
                   onClick={(e) => {
                     handleDealsClick(e);
@@ -887,37 +1042,43 @@ const Layout = ({ children }: { children: ReactNode }) => {
                   </svg>
                   Categories
                 </button>
-                <Link 
-                  href="/wishlist" 
+                <button 
+                  onClick={() => {
+                    handleSearchNavigate('/wishlist');
+                    setMobileMenuOpen(false);
+                  }}
                   className="text-white hover:text-cyan-400 transition-colors font-semibold flex items-center gap-2"
-                  onClick={() => setMobileMenuOpen(false)}
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
                   </svg>
                   Wishlist
-                </Link>
-                <Link 
-                  href="/about" 
+                </button>
+                <button 
+                  onClick={() => {
+                    handleSearchNavigate('/about');
+                    setMobileMenuOpen(false);
+                  }}
                   className="text-white hover:text-cyan-400 transition-colors font-semibold flex items-center gap-2"
-                  onClick={() => setMobileMenuOpen(false)}
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                   </svg>
                   About
-                </Link>
-                <Link 
-                  href="/contact" 
+                </button>
+                <button 
+                  onClick={() => {
+                    handleSearchNavigate('/contact');
+                    setMobileMenuOpen(false);
+                  }}
                   className="text-white hover:text-cyan-400 transition-colors font-semibold flex items-center gap-2"
-                  onClick={() => setMobileMenuOpen(false)}
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                   </svg>
                   Contact
-                </Link>
+                </button>
                 
                 {/* Mobile Auth */}
                 <div className="pt-4 border-t border-white/10">
@@ -1005,6 +1166,83 @@ const Layout = ({ children }: { children: ReactNode }) => {
           </div>
         </div>
       </footer>
+
+      {/* Region Change Popup */}
+      <RegionChangePopup
+        isOpen={showRegionPopup}
+        onClose={() => setShowRegionPopup(false)}
+        currentRegion={region}
+        onRegionChange={handleRegionChange}
+      />
+
+
+        {/* Region Notification */}
+        <AnimatePresence>
+          {showRegionNotification && (
+            <motion.div
+              initial={{ opacity: 0, y: -50, scale: 0.9 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -50, scale: 0.9 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="fixed top-4 right-4 z-50 max-w-sm"
+            >
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-100 backdrop-blur-sm border border-blue-200 rounded-xl p-4 shadow-xl">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0">
+                    <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
+                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-gray-900 font-semibold text-sm mb-1">
+                      {region === 'IN' ? 'Missing Out on USA Deals?' : '🇮🇳 Missing Out on India Deals?'}
+                    </h3>
+                    <p className="text-gray-600 text-xs mb-3 leading-relaxed">
+                      {region === 'IN' 
+                        ? '🔥 Hot US deals with massive savings! Switch now to unlock exclusive offers!' 
+                        : '💰 Amazing India deals with unbeatable prices! Switch now to discover incredible savings!'
+                      }
+                    </p>
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() => {
+                          setShowRegionNotification(false);
+                          sessionStorage.setItem('hasSeenRegionNotification', 'true');
+                          handleRegionChange(region === 'IN' ? 'US' : 'IN');
+                        }}
+                        className="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium rounded-lg transition-colors duration-200"
+                      >
+                        {region === 'IN' ? '🚀 Get USA Deals' : '🚀 Get India Deals'}
+                      </button>
+                      <button
+                        onClick={() => {
+                          setShowRegionNotification(false);
+                          sessionStorage.setItem('hasSeenRegionNotification', 'true');
+                        }}
+                        className="px-3 py-1.5 text-gray-600 hover:text-gray-800 text-xs font-medium transition-colors duration-200"
+                      >
+                        Later
+                      </button>
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => {
+                      setShowRegionNotification(false);
+                      sessionStorage.setItem('hasSeenRegionNotification', 'true');
+                    }}
+                    className="flex-shrink-0 p-1 rounded-full hover:bg-gray-100 transition-colors duration-200"
+                  >
+                    <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
     </div>
   );
 };

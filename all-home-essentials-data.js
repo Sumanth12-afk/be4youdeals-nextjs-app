@@ -1,5 +1,5 @@
 // home-essentials products data
-export const allHomeessentials = [
+export const allHomeessentialsExtended = [
   {
     "title": "Clorox Disinfecting Wipes Value Pack, Household Essentials, 75 Count, Pack of 3 (Package May Vary)",
     "price": "$12.",
@@ -899,14 +899,7 @@ export const allHomeessentials = [
     "imageLink": "https://m.media-amazon.com/images/I/81Wx3UVgfnL._AC_UL320_.jpg",
     "asin": "",
     "availability": ""
-  }
-];
-
-// Extended home-essentials data with more products
-export const allHomeessentialsExtended = [
-  ...allHomeessentials,
-  // Add more home-essentials products here to reach 100+ products
-  ...[
+  },
   {
     "title": "10Ft Extension Cord with Multiple Outlets, Flat Plug Surge Protector Power Strip 10 Ft Long Cord, 8 Outlets & 4 USB Ports (2 USB C), Desk Charging Station for Home Office, College Dorm Room Essentials",
     "price": "$14.",
@@ -1357,5 +1350,4 @@ export const allHomeessentialsExtended = [
     "asin": "",
     "availability": ""
   }
-]
 ];

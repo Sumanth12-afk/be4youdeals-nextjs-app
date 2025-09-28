@@ -1,5 +1,5 @@
 // gadgets products data
-export const allGadgets = [
+export const allGadgetsExtended = [
   {
     "title": "ProfessionaI Meat Thermometer Digital, 3X Faster 0.5 Sec Instant Read, NIST Certified Accuracy ±0.5°F, 100% Waterproof Probe, Auto-Rotate Bright Indicator, for Candy/Grill/BBQ, Red & Gray",
     "price": "$19.",
@@ -899,14 +899,7 @@ export const allGadgets = [
     "imageLink": "https://m.media-amazon.com/images/I/81Jo+Qtnp+L._AC_UL320_.jpg",
     "asin": "",
     "availability": ""
-  }
-];
-
-// Extended gadgets data with more products
-export const allGadgetsExtended = [
-  ...allGadgets,
-  // Add more gadgets products here to reach 100+ products
-  ...[
+  },
   {
     "title": "Ceptics Universal Travel Adapter Kit – 2 USA sockets, 2 USB-A (1x QC 3.0) and USB-C cable, Surge Protected, Plugs for EU, UK, China, AU, Japan - Use with Laptop, Phones, Cameras - ETL Tested",
     "price": "$34.",
@@ -1357,5 +1350,4 @@ export const allGadgetsExtended = [
     "asin": "",
     "availability": ""
   }
-]
 ];

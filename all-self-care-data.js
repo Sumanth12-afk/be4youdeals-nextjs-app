@@ -1,5 +1,5 @@
 // self-care products data
-export const allSelfcare = [
+export const allSelfcareExtended = [
   {
     "title": "grace & stella Award Winning Under Eye Mask - Reduce Dark Circles, Puffy Eyes, Undereye Bags, Wrinkles - Gel Under Eye Patches - Gifts for Mom - Vegan Cruelty-Free Self Care (Pink, 6 Pairs)",
     "price": "$9.",
@@ -899,14 +899,7 @@ export const allSelfcare = [
     "imageLink": "https://m.media-amazon.com/images/I/71xZZcQy1IL._AC_UL320_.jpg",
     "asin": "",
     "availability": ""
-  }
-];
-
-// Extended self-care data with more products
-export const allSelfcareExtended = [
-  ...allSelfcare,
-  // Add more self-care products here to reach 100+ products
-  ...[
+  },
   {
     "title": "Neutrogena Makeup Remover Wipes Singles, Individually Wrapped, Daily Facial Cleanser Towelettes, Gently Removes Oil & Makeup, Alcohol-Free, 20 ct",
     "price": "$6.",
@@ -1357,5 +1350,4 @@ export const allSelfcareExtended = [
     "asin": "",
     "availability": ""
   }
-]
 ];

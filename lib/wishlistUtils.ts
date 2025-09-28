@@ -49,7 +49,7 @@ export const addToWishlist = (item: Omit<WishlistItem, 'id' | 'addedDate'>): { s
 
     return {
       success: true,
-      message: `Added to wishlist! (${updatedWishlist.length}/${WISHLIST_LIMIT})`,
+      message: '💖 Added to Wishlist. Your favorite deal is saved for later.',
       currentCount: updatedWishlist.length
     };
   } catch (error) {

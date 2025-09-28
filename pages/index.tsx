@@ -4,6 +4,14 @@ import Image from "next/image";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import toast from "react-hot-toast";
+import { useRegion } from "../contexts/RegionContext";
+import { allLaptops } from "../all-laptops-data.js";
+import { allLaptopsIndia } from "../all-laptops-india-data.js";
+import { allMobilesExtended } from "../all-mobiles-data.js";
+import { allMobilesIndia } from "../all-mobiles-india-data.js";
+import { allHeadphonesExtended } from "../all-headphones-data.js";
+import { allHeadphonesIndia } from "../all-headphones-india-data.js";
+import { usaTodaysDeals } from "../usa-todays-deals-data.js";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -12,13 +20,101 @@ export default function Home() {
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], [0, -10]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0.9]);
+  const { region } = useRegion();
 
   const scrollToCategories = () => {
     document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  // Rotating deals for ticker
-  const deals = [
+  // Helper function to add affiliate parameters to Amazon links
+  const addAffiliateParams = (link: string) => {
+    if (!link || !link.includes('amazon.com') && !link.includes('amazon.in')) {
+      return link;
+    }
+    
+    const isIndia = link.includes('amazon.in');
+    const tag = isIndia ? 'vibricsdeals-21' : 'beforeyou-20';
+    const linkId = isIndia ? '960f1a081732c6ae334bba78a8ec3949' : 'b3b134c0f45e2e73d36e027f9b9495a4';
+    
+    return link.includes('?') 
+      ? `${link}&tag=${tag}&linkId=${linkId}`
+      : `${link}?tag=${tag}&linkId=${linkId}`;
+  };
+
+  // Get region-specific deals for "Deal of the Day"
+  const getRegionSpecificDeals = () => {
+    if (region === 'IN') {
+      // India deals - use actual India products
+      const laptop = allLaptopsIndia[Math.floor(Math.random() * allLaptopsIndia.length)];
+      const mobile = allMobilesIndia[Math.floor(Math.random() * allMobilesIndia.length)];
+      const headphone = allHeadphonesIndia[Math.floor(Math.random() * allHeadphonesIndia.length)];
+      
+      return [
+        {
+          id: 1,
+          productName: laptop?.title === "nan" ? "Premium Laptop" : String(laptop?.title || "Premium Laptop").split(' ').slice(0, 8).join(' '),
+          description: "High-performance laptop with latest features",
+          originalPrice: laptop?.price ? `₹${(parseFloat(laptop.price.replace(/[^\d.]/g, "")) * 1.3).toFixed(0)}` : "₹89,999",
+          currentPrice: laptop?.price || "₹69,999",
+          discount: 23,
+          badge: "🔥 Hot Deal",
+          badgeColor: "from-red-500 to-orange-500",
+          link: laptop?.link || "#",
+          category: "💻 Laptops"
+        },
+        {
+          id: 2,
+          productName: mobile?.title === "nan" ? "Smartphone" : String(mobile?.title || "Smartphone").split(' ').slice(0, 8).join(' '),
+          description: "Latest smartphone with advanced features",
+          originalPrice: mobile?.price ? `₹${(parseFloat(mobile.price.replace(/[^\d.]/g, "")) * 1.25).toFixed(0)}` : "₹45,999",
+          currentPrice: mobile?.price || "₹36,999",
+          discount: 20,
+          badge: "⚡ Limited Time",
+          badgeColor: "from-orange-500 to-yellow-500",
+          link: mobile?.link || "#",
+          category: "📱 Mobiles"
+        },
+        {
+          id: 3,
+          productName: headphone?.title === "nan" ? "Wireless Headphones" : String(headphone?.title || "Wireless Headphones").split(' ').slice(0, 8).join(' '),
+          description: "Premium audio experience with noise cancellation",
+          originalPrice: headphone?.price ? `₹${(parseFloat(headphone.price.replace(/[^\d.]/g, "")) * 1.4).toFixed(0)}` : "₹12,999",
+          currentPrice: headphone?.price || "₹9,299",
+          discount: 28,
+          badge: "💎 Steal Deal",
+          badgeColor: "from-green-500 to-emerald-500",
+          link: headphone?.link || "#",
+          category: "🎧 Headphones"
+        }
+      ];
+    } else {
+      // US deals - use today's deals data
+      return usaTodaysDeals.slice(0, 3).map((deal, index) => ({
+        id: index + 1,
+        productName: (deal as any).title || deal.productName || "Product",
+        description: ((deal as any).title || deal.productName || "Product").substring(0, 50) + "...",
+        originalPrice: deal.originalPrice || "$99.99",
+        currentPrice: deal.currentPrice,
+        discount: deal.discount || 20,
+        badge: "🔥 Hot Deal",
+        badgeColor: "from-red-500 to-orange-500",
+        link: deal.link,
+        category: "🛍️ Today's Deals"
+      }));
+    }
+  };
+
+  const featuredDeals = getRegionSpecificDeals();
+
+  // Rotating deals for ticker - region aware
+  const deals = region === 'IN' ? [
+    "MacBook Air – ₹69,999",
+    "Boat Headphones – ₹2,999", 
+    "Diffuser Set – ₹1,299",
+    "Notebook Pack – ₹299",
+    "iPhone 15 Pro – ₹89,999",
+    "Gaming Mouse – ₹1,999"
+  ] : [
     "MacBook Air – $849",
     "Boat Headphones – $34.99", 
     "Diffuser Set – $17.99",
@@ -106,16 +202,23 @@ export default function Home() {
     );
   };
 
-  // Category data with proper links and popularity metrics
+  // Category data with proper links and popularity metrics - region aware
+  const getCategoryLink = (baseLink: string) => {
+    if (region === 'IN') {
+      return `/in${baseLink}/`;
+    }
+    return `${baseLink}/`;
+  };
+
   const categories = [
     {
       id: 1,
       name: "Laptops",
       emoji: "💻",
-      tagline: "Smart picks under $999",
+      tagline: region === 'IN' ? "Smart picks under ₹80,000" : "Smart picks under $999",
       badge: "Hot",
       badgeType: "badge-hot",
-      link: "/laptops",
+      link: getCategoryLink("/laptops"),
       available: true,
       popularity: 89,
       stock: 12,
@@ -131,7 +234,7 @@ export default function Home() {
       tagline: "Latest tech at your fingertips",
       badge: "New",
       badgeType: "badge-new",
-      link: "/mobiles",
+      link: getCategoryLink("/mobiles"),
       available: true,
       popularity: 95,
       stock: 150,
@@ -147,7 +250,7 @@ export default function Home() {
       tagline: "Premium sound quality",
       badge: "Trending",
       badgeType: "badge-trending",
-      link: "/headphones",
+      link: getCategoryLink("/headphones"),
       available: true,
       popularity: 94,
       stock: 3,
@@ -163,7 +266,7 @@ export default function Home() {
       tagline: "Smart essentials for your home",
       badge: "Hot",
       badgeType: "badge-hot",
-      link: "/home-essentials",
+      link: getCategoryLink("/home-essentials"),
       available: true,
       popularity: 88,
       stock: 75,
@@ -179,7 +282,7 @@ export default function Home() {
       tagline: "Wellness made simple",
       badge: "Trending",
       badgeType: "badge-trending",
-      link: "/self-care",
+      link: getCategoryLink("/self-care"),
       available: true,
       popularity: 92,
       stock: 60,
@@ -195,7 +298,7 @@ export default function Home() {
       tagline: "Style upgrade for everyone",
       badge: "Hot", 
       badgeType: "badge-hot",
-      link: "/fashion",
+      link: getCategoryLink("/fashion"),
       available: true,
       popularity: 90,
       stock: 120,
@@ -211,7 +314,7 @@ export default function Home() {
       tagline: "Creativity gets a new look", 
       badge: "New",
       badgeType: "badge-new",
-      link: "/stationery",
+      link: getCategoryLink("/stationery"),
       available: true,
       popularity: 85,
       stock: 200,
@@ -227,7 +330,7 @@ export default function Home() {
       tagline: "Tech that makes life easier",
       badge: "Hot",
       badgeType: "badge-hot",
-      link: "/gadgets",
+      link: getCategoryLink("/gadgets"),
       available: true,
       popularity: 88,
       stock: 150,
@@ -525,95 +628,51 @@ export default function Home() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Featured Deal 1 */}
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm border border-indigo-500/30 rounded-2xl p-6 hover:border-indigo-400/50 transition-all duration-300"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">-43% OFF</span>
-                <span className="text-yellow-400 text-sm font-medium">⚡ Limited Time</span>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Apple MacBook Air 2017</h3>
-              <p className="text-gray-300 text-sm mb-4">13-inch, 8GB RAM, 128GB SSD Storage (Renewed)</p>
-              <div className="flex items-center justify-between">
-                <div>
-                  <span className="text-2xl font-black text-green-400">$171.14</span>
-                  <span className="text-gray-400 line-through ml-2">$299.99</span>
+            {featuredDeals.map((deal, index) => (
+              <motion.div
+                key={deal.id}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 + (index * 0.1) }}
+                viewport={{ once: true }}
+                className={`bg-gradient-to-br ${
+                  index === 0 ? 'from-indigo-600/20 to-purple-600/20 border-indigo-500/30 hover:border-indigo-400/50' :
+                  index === 1 ? 'from-cyan-600/20 to-blue-600/20 border-cyan-500/30 hover:border-cyan-400/50' :
+                  'from-green-600/20 to-emerald-600/20 border-green-500/30 hover:border-green-400/50'
+                } backdrop-blur-sm border rounded-2xl p-6 transition-all duration-300`}
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <span className={`${
+                    index === 0 ? 'bg-red-500' :
+                    index === 1 ? 'bg-orange-500' :
+                    'bg-green-500'
+                  } text-white px-3 py-1 rounded-full text-sm font-bold`}>
+                    -{deal.discount}% OFF
+                  </span>
+                  <span className="text-yellow-400 text-sm font-medium">{deal.badge}</span>
                 </div>
-                <a 
-                  href="https://www.amazon.com/Apple-Macbook-13-inch-Storage-English/dp/B0751N2Y78/ref=sr_1_41?crid=PJACNCTYR2EC&dib=eyJ2IjoiMSJ9.zyWsNH1P7plERDzvCrOhNEXZZ3TEjJfetyk5xVlxdtyJncz-nfWl1OSWKf10KEvMlxKbYoFCppijjprcxV-S7MTqxUFjiVQNT98MDxD3MELcMMDgjSO2FF1FTF5UB1StJqEK3QLro7YQE68Gyh9zhuAwjMZhNURhZiAQ14kbJvQcLAzLcHAjMu6yx2aWN0U5_jnGDnXels9IiTElcTAAzzxotgHV6PeMJOzBcP_bqK0.SA0lB7xqh25FKoqsLzyHwK8U8ipaa6Vk4rdDNoonHCw&dib_tag=se&keywords=laptops&qid=1755441242&sprefix=%2Caps%2C277&sr=8-41&xpid=jzq0nXnpErVmH"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-lg font-semibold hover:scale-105 transition-transform inline-block whitespace-nowrap"
-                >
-                  Shop Now
-                </a>
-              </div>
-            </motion.div>
-
-            {/* Featured Deal 2 */}
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">-31% OFF</span>
-                <span className="text-yellow-400 text-sm font-medium">🔥 Hot Deal</span>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">2025 Gaming Laptop</h3>
-              <p className="text-gray-300 text-sm mb-4">AMD Ryzen 7, 32GB DDR4, 1TB SSD, 16" FHD Display</p>
-              <div className="flex items-center justify-between">
-                <div>
-                  <span className="text-2xl font-black text-green-400">$549.99</span>
-                  <span className="text-gray-400 line-through ml-2">$799.99</span>
+                <h3 className="text-xl font-bold text-white mb-2">{deal.productName}</h3>
+                <p className="text-gray-300 text-sm mb-4">{deal.description}</p>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <span className="text-2xl font-black text-green-400">{deal.currentPrice}</span>
+                    <span className="text-gray-400 line-through ml-2">{deal.originalPrice}</span>
+                  </div>
+                  <a 
+                    href={deal.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`bg-gradient-to-r ${
+                      index === 0 ? 'from-indigo-500 to-purple-500' :
+                      index === 1 ? 'from-cyan-500 to-blue-500' :
+                      'from-green-500 to-emerald-500'
+                    } text-white px-4 py-2 rounded-lg font-semibold hover:scale-105 transition-transform inline-block whitespace-nowrap`}
+                  >
+                    Shop Now
+                  </a>
                 </div>
-                <a 
-                  href="https://www.amazon.com/Computer-Processor-Display-Keyboard-Business/dp/B0F28NMPMP/ref=sr_1_26?crid=PJACNCTYR2EC&dib=eyJ2IjoiMSJ9.LVhSNHxwMBmxjHUO-vbRV7x6IGZkxwujg_oh6UxGBSBdz9XFRT8VhXiuJylvtHNLXWOPrBdnWf3K2hvHCi5qrjmqog1tQBc75FdiLaCpTjcM39FeBy0boQLtUZzZkWbwTDYQJUHldeuQojwFYFJXb-0LiBAEQziaO6K3HuXTfxJ2tpnBCh4z8P2JbqgGDu144pvlFqdaAyS99ZQ5XeE5120i_dMZvEjUX7aexoc6So0.DNiMG_zM_OCH7A6-VDZ4UHbtd2iqjyutdb7qOek-zJ4&dib_tag=se&keywords=laptops&qid=1755440646&sprefix=%2Caps%2C277&sr=8-26&xpid=jzq0nXnpErVmH"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg font-semibold hover:scale-105 transition-transform inline-block whitespace-nowrap"
-                >
-                  Shop Now
-                </a>
-              </div>
-            </motion.div>
-
-            {/* Featured Deal 3 */}
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm border border-green-500/30 rounded-2xl p-6 hover:border-green-400/50 transition-all duration-300"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">-20% OFF</span>
-                <span className="text-yellow-400 text-sm font-medium">💎 Steal Deal</span>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">ASUS ROG Strix G16</h3>
-              <p className="text-gray-300 text-sm mb-4">Gaming Laptop, RTX 4060, Intel i9-14900HX, 16GB DDR5</p>
-              <div className="flex items-center justify-between">
-                <div>
-                  <span className="text-2xl font-black text-green-400">$1,598.99</span>
-                  <span className="text-gray-400 line-through ml-2">$1,999.99</span>
-                </div>
-                <a 
-                  href="https://www.amazon.com/ASUS-Gaming-Laptop-Nebula-Display/dp/B0CRCYJ8YV/ref=sr_1_46?crid=PJACNCTYR2EC&dib=eyJ2IjoiMSJ9.zyWsNH1P7plERDzvCrOhNEXZZ3TEjJfetyk5xVlxdtyJncz-nfWl1OSWKf10KEvMlxKbYoFCppijjprcxV-S7MTqxUFjiVQNT98MDxD3MELcMMDgjSO2FF1FTF5UB1StJqEK3QLro7YQE68Gyh9zhuAwjMZhNURhZiAQ14kbJvQcLAzLcHAjMu6yx2aWN0U5_jnGDnXels9IiTElcTAAzzxotgHV6PeMJOzBcP_bqK0.SA0lB7xqh25FKoqsLzyHwK8U8ipaa6Vk4rdDNoonHCw&dib_tag=se&keywords=laptops&qid=1755441242&sprefix=%2Caps%2C277&sr=8-46&xpid=jzq0nXnpErVmH"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-lg font-semibold hover:scale-105 transition-transform inline-block whitespace-nowrap"
-                >
-                  Shop Now
-                </a>
-              </div>
-            </motion.div>
+              </motion.div>
+            ))}
           </div>
 
           <motion.div
@@ -623,7 +682,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mt-12"
           >
-            <Link href="/deals">
+            <Link href={region === 'IN' ? '/in/deals' : '/deals'}>
               <button className="bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition-all duration-300 shadow-2xl">
                 View All Deals
               </button>

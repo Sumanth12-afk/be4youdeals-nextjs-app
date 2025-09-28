@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import toast from 'react-hot-toast';
 import { addToWishlist } from '../lib/wishlistUtils';
 import { addToComparison } from '../lib/comparisonUtils';
+import { useRegion } from '../contexts/RegionContext';
 // import OptimizedImage from './OptimizedImage';
 import ProductImageGallery from './ProductImageGallery';
 
@@ -36,14 +37,28 @@ export default function InfiniteScrollProducts({
   const [hasMore, setHasMore] = useState(true);
   const observerRef = useRef<IntersectionObserver | null>(null);
   const loadingRef = useRef<HTMLDivElement | null>(null);
+  const { region } = useRegion();
 
   const formatPrice = (priceString: string) => {
-    if (!priceString || priceString === "nan") return "$0.00";
+    if (!priceString || priceString === "nan") {
+      return region === 'IN' ? "₹0.00" : "$0.00";
+    }
+    
+    // If price already has currency symbol, return as is
+    if (priceString.includes('₹') || priceString.includes('$')) {
+      return priceString;
+    }
+    
     const firstPrice = priceString.split(" ")[0];
     let cleanPrice = firstPrice.replace(/[^\d.]/g, "");
-    if (!cleanPrice.startsWith("$")) {
+    
+    // Add appropriate currency symbol based on region
+    if (region === 'IN') {
+      cleanPrice = "₹" + cleanPrice;
+    } else {
       cleanPrice = "$" + cleanPrice;
     }
+    
     return cleanPrice;
   };
 
@@ -119,7 +134,7 @@ export default function InfiniteScrollProducts({
 
     if (result.success) {
       toast(result.message, {
-        icon: '🎉',
+        icon: '💖',
         duration: 3000,
         style: {
           background: 'linear-gradient(135deg, #ec4899 0%, #be185d 100%)',
@@ -149,18 +164,27 @@ export default function InfiniteScrollProducts({
   };
 
   const handleBuyClick = (link: string, title: string) => {
-    window.open(link, '_blank');
-    toast(`Opening ${title} on Amazon... 🚀`, {
-      duration: 2000,
-      style: {
-        background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
-        color: 'white',
-        borderRadius: '16px',
-        padding: '12px 20px',
-        fontSize: '14px',
-        fontWeight: '600'
-      }
-    });
+    if (link) {
+      // Add affiliate parameters based on region
+      const affiliateLink = link.includes('?') 
+        ? `${link}&tag=${region === 'IN' ? 'vibricsdeals-21' : 'beforeyou-20'}&linkId=${region === 'IN' ? '960f1a081732c6ae334bba78a8ec3949' : 'b3b134c0f45e2e73d36e027f9b9495a4'}`
+        : `${link}?tag=${region === 'IN' ? 'vibricsdeals-21' : 'beforeyou-20'}&linkId=${region === 'IN' ? '960f1a081732c6ae334bba78a8ec3949' : 'b3b134c0f45e2e73d36e027f9b9495a4'}`;
+      
+      window.open(affiliateLink, '_blank');
+      toast(`Opening ${title} on Amazon... 🚀`, {
+        duration: 2000,
+        style: {
+          background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+          color: 'white',
+          borderRadius: '16px',
+          padding: '12px 20px',
+          fontSize: '14px',
+          fontWeight: '600'
+        }
+      });
+    } else {
+      toast.error('Product link not available');
+    }
   };
 
   const handleAddToComparison = (product: Product) => {

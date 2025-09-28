@@ -1,5 +1,5 @@
 // stationery products data
-export const allStationery = [
+export const allStationeryExtended = [
   {
     "title": "72 Pieces Stationery Set with Envelopes (48 Paper Sheets + 24 Envelopes) for Letter Writing, Black Border Design Stationery Paper Sheets and Envelope",
     "price": "$8.",
@@ -899,14 +899,7 @@ export const allStationery = [
     "imageLink": "https://m.media-amazon.com/images/I/61iEp2qeS6L._AC_UL320_.jpg",
     "asin": "",
     "availability": ""
-  }
-];
-
-// Extended stationery data with more products
-export const allStationeryExtended = [
-  ...allStationery,
-  // Add more stationery products here to reach 100+ products
-  ...[
+  },
   {
     "title": "Tuhangcc Stationery Writing Paper and Envelopes Set with Jute Rope 4 X 6 for Writing Letter, (20 Best Paper with 10 Heavyweight envelopes),by Better Gift Office Products (Ivory White)",
     "price": "$13.",
@@ -1357,5 +1350,4 @@ export const allStationeryExtended = [
     "asin": "",
     "availability": ""
   }
-]
 ];
