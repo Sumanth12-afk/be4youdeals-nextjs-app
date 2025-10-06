@@ -5,6 +5,11 @@ out/
 .DS_Store
 *.log
 
+# Firebase Admin SDK credentials (SENSITIVE)
+serviceAccountKey.json
+serviceAccountKey.json.json
+*serviceAccountKey*.json
+
 # Unused files
 laptop-data-temp.js
 fix-laptop-data.js
