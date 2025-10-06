@@ -45,7 +45,7 @@
     "tailwindcss-animate": "1.0.7"
   },
   "devDependencies": {
-    "@netlify/plugin-nextjs": "^5.13.3",
+    "@netlify/plugin-nextjs": "5.13.4",
     "@types/node": "24.0.10",
     "@types/react": "19.1.8",
     "firebase-admin": "13.5.0",

@@ -199,32 +199,16 @@ jobs:
     - name: Install dependencies
       run: npm ci
     
-    - name: Configure Next.js for Netlify
-      run: |
-        # Temporarily switch to export mode for Netlify
-        sed -i 's/output: '\''standalone'\''/output: '\''export'\''/' next.config.js
-        sed -i '/images: {/,/},/c\
-          images: {\
-            unoptimized: true,\
-            domains: [\
-              '\''m.media-amazon.com'\'',\
-              '\''images-na.ssl-images-amazon.com'\'',\
-              '\''images.amazon.com'\''\
-            ],\
-          },' next.config.js
-    
-    - name: Build for Netlify
-      run: npm run build
-      env:
-        CI: true
-    
-    - name: Deploy to Netlify
-      uses: nwtgck/actions-netlify@v2.0.0
+    - name: Deploy to Netlify (with Next.js Plugin - supports API routes)
+      uses: nwtgck/actions-netlify@v3.0.0
       with:
-        publish-dir: ./out
+        publish-dir: '.'
         production-deploy: true
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        deploy-message: "Automated deployment from GitHub Actions"
+        deploy-message: "Automated deployment with API routes support"
+        enable-pull-request-comment: true
+        enable-commit-comment: true
+        overwrites-pull-request-comment: true
       env:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

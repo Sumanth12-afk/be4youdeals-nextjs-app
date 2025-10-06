@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Enable standalone output for Docker
-  output: 'standalone',
-  // Enable image optimization for Docker deployment
+  // Remove standalone output for Netlify (it uses its own runtime)
+  // output: 'standalone', // Only needed for Docker deployments
+  
+  // Enable image optimization
   images: {
     domains: [
       'm.media-amazon.com',
@@ -10,10 +11,15 @@ const nextConfig = {
       'images.amazon.com'
     ],
   },
+  
   // Compress images and optimize bundle
   compress: true,
+  
   // Enable SWC minification
   swcMinify: true,
+  
+  // Ensure API routes work on Netlify
+  target: 'server',
 }
 
 module.exports = nextConfig;
