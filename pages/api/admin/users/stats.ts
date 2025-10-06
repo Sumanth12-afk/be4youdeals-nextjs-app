@@ -4,12 +4,16 @@ import admin from 'firebase-admin';
 // Initialize Firebase Admin if not already initialized
 if (!admin.apps.length) {
   try {
-    const serviceAccount = require('../../../../serviceAccountKey.json');
     admin.initializeApp({
-      credential: admin.credential.cert(serviceAccount)
+      credential: admin.credential.cert({
+        projectId: process.env.FIREBASE_ADMIN_PROJECT_ID,
+        clientEmail: process.env.FIREBASE_ADMIN_CLIENT_EMAIL,
+        privateKey: process.env.FIREBASE_ADMIN_PRIVATE_KEY?.replace(/\\n/g, '\n'),
+      })
     });
+    console.log('✅ Firebase Admin initialized from environment variables');
   } catch (error) {
-    console.error('Error initializing Firebase Admin:', error);
+    console.error('❌ Error initializing Firebase Admin:', error);
   }
 }
 
