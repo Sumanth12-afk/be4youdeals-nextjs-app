@@ -8,6 +8,8 @@ import { Toaster } from "react-hot-toast";
 import { RegionProvider } from "../contexts/RegionContext";
 import { LoadingProvider } from "../contexts/LoadingContext";
 import GlobalLoader from "../components/GlobalLoader";
+import ErrorBoundary from "../components/ErrorBoundary";
+import monitoring from "../lib/monitoring";
 import Head from "next/head";
 import type { AppProps } from "next/app";
 

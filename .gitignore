@@ -10,8 +10,13 @@ laptop-data-temp.js
 fix-laptop-data.js
 git_filter_repo.py
 20250919-163612_Amazon.com headphones.xlsx
-scripts/
 testsprite_tests/
+
+# Monitoring data volumes (don't commit Docker data)
+monitoring/prometheus/data/
+monitoring/grafana/data/
+monitoring/elasticsearch/data/
+monitoring/logstash/data/
 
 # Build artifacts
 *.tgz

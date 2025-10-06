@@ -10,6 +10,7 @@ import { useRegion } from "../contexts/RegionContext";
 import { useLoading } from "../contexts/LoadingContext";
 import toast from "react-hot-toast";
 import GlobalLoader from "../components/GlobalLoader";
+import logger from "../lib/logger";
 
 export default function DealsWall() {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -38,6 +39,7 @@ export default function DealsWall() {
   // Simulate loading state
   useEffect(() => {
     showLoader('Loading amazing deals...');
+    logger.logPageView('/deals');
     const timer = setTimeout(() => {
       hideLoader();
     }, 2000);
@@ -395,6 +397,7 @@ export default function DealsWall() {
                   key={(deal as any).id || (deal as any).asin || (deal as any).title || index}
                   deal={deal}
                   index={index}
+                  region={region}
                 />
               ))
             )}
@@ -434,6 +437,7 @@ export default function DealsWall() {
                   key={(deal as any).id || (deal as any).asin || (deal as any).title || index + 2}
                   deal={deal}
                   index={index + 2}
+                  region={region}
                 />
               ))
             )}
@@ -564,7 +568,7 @@ function CountdownTimer({ targetDate }: { targetDate: Date }) {
 }
 
 // Featured Deal Card Component
-function FeaturedDealCard({ deal, index }: { deal: any; index: number }) {
+function FeaturedDealCard({ deal, index, region }: { deal: any; index: number; region: string }) {
   const [isHovered, setIsHovered] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
   const [isInWishlist, setIsInWishlist] = useState(false);
@@ -575,6 +579,14 @@ function FeaturedDealCard({ deal, index }: { deal: any; index: number }) {
       const affiliateLink = deal.link.includes('?') 
         ? `${deal.link}&tag=beforeyou-20&linkId=b3b134c0f45e2e73d36e027f9b9495a4`
         : `${deal.link}?tag=beforeyou-20&linkId=b3b134c0f45e2e73d36e027f9b9495a4`;
+      
+      // Log affiliate click
+      logger.logAffiliateClick(
+        deal.asin || deal.id || 'unknown',
+        deal.category || 'deals',
+        region,
+        undefined // userId - you can add this later
+      );
       
       // Show toast notification
       toast('🛒 Redirecting to Amazon...', {
@@ -587,7 +599,7 @@ function FeaturedDealCard({ deal, index }: { deal: any; index: number }) {
           fontSize: '14px',
           fontWeight: '600'
         },
-        duration: 2000,
+        duration: 1500,
         position: 'bottom-center'
       });
       

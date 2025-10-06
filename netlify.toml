@@ -5,6 +5,10 @@
 [build.environment]
   NODE_VERSION = "18"
 
+# Note: Add these in Netlify Dashboard → Site Settings → Environment Variables
+# NEXT_PUBLIC_LOGSTASH_HOST = "your-server-ip"
+# NEXT_PUBLIC_LOGSTASH_PORT = "5000"
+
 [[headers]]
   for = "/*"
   [headers.values]
