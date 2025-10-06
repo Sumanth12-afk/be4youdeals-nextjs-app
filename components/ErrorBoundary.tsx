@@ -29,7 +29,7 @@ class ErrorBoundary extends Component<Props, State> {
     
     // Log error to monitoring service
     monitoring.captureError(error, {
-      componentStack: errorInfo.componentStack,
+      componentStack: errorInfo.componentStack || undefined,
       errorBoundary: 'ErrorBoundary',
     });
 
@@ -37,7 +37,7 @@ class ErrorBoundary extends Component<Props, State> {
     monitoring.trackEvent('error_boundary_triggered', {
       errorMessage: error.message,
       errorStack: error.stack,
-      componentStack: errorInfo.componentStack,
+      componentStack: errorInfo.componentStack || undefined,
     });
   }
 

@@ -10,6 +10,9 @@ interface ErrorInfo {
   userAgent?: string;
   url?: string;
   timestamp?: string;
+  line?: number;
+  column?: number;
+  type?: string;
 }
 
 class MonitoringService {
