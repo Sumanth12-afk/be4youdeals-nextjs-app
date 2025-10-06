@@ -39,3 +39,4 @@ Thumbs.db
 # Sentry Config Files
 .env.sentry-build-plugin
 .sentryclirc
+.vercel

@@ -1,7 +1,7 @@
 # Netlify Configuration for Next.js with API Routes Support
 
 [build]
-  command = "npm run build"
+  command = "npx next build"
   publish = ".next"
   
 [build.environment]
@@ -11,7 +11,6 @@
 # Enable Next.js Runtime Plugin (Essential for API routes to work)
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-
 # Redirect rules for Next.js
 [[redirects]]
   from = "/*"
@@ -37,3 +36,4 @@
     X-Content-Type-Options = "nosniff"
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
