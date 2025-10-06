@@ -140,7 +140,9 @@ jobs:
     needs: build-and-push
     runs-on: ubuntu-latest
     
+    # Explicit permissions for Code Scanning upload
     permissions:
+      actions: read
       contents: read
       security-events: write
     
@@ -152,7 +154,7 @@ jobs:
       run: echo "IMAGE_REF=${{ env.REGISTRY }}/${IMAGE_NAME,,}:latest" >> $GITHUB_ENV
     
     - name: Run Trivy vulnerability scanner (CRITICAL)
-      uses: aquasecurity/trivy-action@master
+      uses: aquasecurity/trivy-action@0.20.0
       continue-on-error: true
       with:
         image-ref: ${{ env.IMAGE_REF }}
@@ -163,7 +165,7 @@ jobs:
         output: trivy-report.txt
     
     - name: Run Trivy scan for SARIF (CRITICAL + HIGH)
-      uses: aquasecurity/trivy-action@master
+      uses: aquasecurity/trivy-action@0.20.0
       with:
         image-ref: ${{ env.IMAGE_REF }}
         format: sarif
