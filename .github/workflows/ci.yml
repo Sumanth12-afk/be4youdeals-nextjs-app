@@ -80,12 +80,11 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         SONAR_HOST_URL: "https://sonarcloud.io"
 
-  # Build and push Docker image (DISABLED - using Netlify deployment instead)
+  # Build and push Docker image
   build-and-push:
     name: "🐳 Build & Push Docker Image"
     needs: sonarqube
     runs-on: ubuntu-latest
-    if: false  # Disabled - Netlify deployment doesn't need Docker
     
     permissions:
       contents: read
@@ -129,12 +128,11 @@ jobs:
         cache-from: type=gha
         cache-to: type=gha,mode=max
 
-  # Trivy Security Scan (DISABLED - no Docker image to scan)
+  # Trivy Security Scan
   trivy-scan:
     name: "🛡️ Trivy Security Scan"
     needs: build-and-push
     runs-on: ubuntu-latest
-    if: false  # Disabled - requires Docker image
     
     permissions:
       contents: read
@@ -181,7 +179,7 @@ jobs:
   # Deploy to Netlify
   deploy-netlify:
     name: "🚀 Deploy to Netlify"
-    needs: test  # Changed from trivy-scan (Docker disabled)
+    needs: trivy-scan
     runs-on: ubuntu-latest
     
     environment:

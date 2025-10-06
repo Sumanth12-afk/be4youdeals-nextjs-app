@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Remove standalone output for Netlify (it uses its own runtime)
-  // output: 'standalone', // Only needed for Docker deployments
+  // Enable standalone output for Docker (Netlify plugin will handle this automatically)
+  output: 'standalone',
   
   // Enable image optimization
   images: {
@@ -17,9 +17,6 @@ const nextConfig = {
   
   // Enable SWC minification
   swcMinify: true,
-  
-  // Ensure API routes work on Netlify
-  target: 'server',
 }
 
 module.exports = nextConfig;
