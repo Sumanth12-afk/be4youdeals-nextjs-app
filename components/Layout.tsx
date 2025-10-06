@@ -71,12 +71,15 @@ const Layout = ({ children }: { children: ReactNode }) => {
     // Add region prefix if needed
     let finalPath = path;
     if (region === 'IN') {
-      // For India region, add /in/ prefix to all pages except main pages
-      if (path === '/' || path.startsWith('/deals') || path.startsWith('/about') || path.startsWith('/contact') || path.startsWith('/wishlist') || path.startsWith('/login') || path.startsWith('/signup')) {
+      // For India region, add /in/ prefix to category and deals pages
+      if (path === '/' || path.startsWith('/about') || path.startsWith('/contact') || path.startsWith('/wishlist') || path.startsWith('/login') || path.startsWith('/signup')) {
         // Main pages stay as is (they handle region internally)
         finalPath = path;
+      } else if (path.startsWith('/in/')) {
+        // Already has /in/ prefix, use as is
+        finalPath = path;
       } else {
-        // Category pages get /in/ prefix
+        // Category pages and deals get /in/ prefix
         finalPath = `/in${path}`;
       }
     } else {
@@ -212,8 +215,8 @@ const Layout = ({ children }: { children: ReactNode }) => {
 
   const handleDealsClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    const dealsPath = region === 'IN' ? '/in/deals' : '/deals';
-    handleSearchNavigate(dealsPath);
+    // Always pass /deals - handleSearchNavigate will add region prefix if needed
+    handleSearchNavigate('/deals');
   };
 
   return (

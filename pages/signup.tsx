@@ -55,7 +55,9 @@ const SignupPage = () => {
     try {
       const provider = new firebase.auth.GoogleAuthProvider();
       await auth.signInWithPopup(provider);
-      toast.success('🎉 Welcome! You\'re signed in with Google.');
+      toast.success('🎉 Welcome! You\'re signed in with Google.', {
+        duration: 3000,
+      });
       handleAuthSuccess();
     } catch (error: any) {
       console.error('Google sign in error:', error);
