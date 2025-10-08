@@ -577,8 +577,8 @@ function FeaturedDealCard({ deal, index, region }: { deal: any; index: number; r
     if (deal.link) {
       // Add your USA affiliate tag to the product link
       const affiliateLink = deal.link.includes('?') 
-        ? `${deal.link}&tag=beforeyou-20&linkId=b3b134c0f45e2e73d36e027f9b9495a4`
-        : `${deal.link}?tag=beforeyou-20&linkId=b3b134c0f45e2e73d36e027f9b9495a4`;
+        ? `${deal.link}&tag=vibricsdeals-20&linkId=83530867bde80cbdd2939bda07686b35`
+        : `${deal.link}?tag=vibricsdeals-20&linkId=83530867bde80cbdd2939bda07686b35`;
       
       // Log affiliate click
       logger.logAffiliateClick(
@@ -735,6 +735,10 @@ function FeaturedDealCard({ deal, index, region }: { deal: any; index: number; r
               You save: {(deal.currency === 'INR' ? '₹' : '$')}{Math.round((parseFloat(deal.originalPrice.replace(/[^\d.]/g, '')) - parseFloat(deal.currentPrice.replace(/[^\d.]/g, ''))))}
             </span>
           )}
+          {/* Price Disclaimer - Amazon Compliance */}
+          <p className="text-xs text-gray-500 mt-2 italic">
+            *Price and availability subject to change. Check Amazon for current pricing.
+          </p>
         </div>
 
         {/* Countdown Timer */}
@@ -768,6 +772,10 @@ function FeaturedDealCard({ deal, index, region }: { deal: any; index: number; r
             transition={{ duration: 0.3 }}
           />
         </motion.button>
+        {/* Affiliate Disclosure - Amazon Compliance */}
+        <p className="text-xs text-gray-400 mt-3 text-center italic">
+          As an Amazon Associate we earn from qualifying purchases
+        </p>
 
         {/* Sales and Views Metrics */}
         <div className="absolute bottom-6 right-6 bg-black/40 backdrop-blur-sm rounded-lg p-2 text-xs text-white z-20">

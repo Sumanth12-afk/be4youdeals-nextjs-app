@@ -15,8 +15,8 @@
     "audit": "npm audit --audit-level moderate",
     "audit:fix": "npm audit fix",
     "security:check": "npm audit && npm run type-check",
-    "docker:build": "docker build -t be4youdeals .",
-    "docker:run": "docker run -p 3000:3000 be4youdeals",
+    "docker:build": "docker build -t vibricsdeals .",
+    "docker:run": "docker run -p 3000:3000 vibricsdeals",
     "docker:compose": "docker-compose up -d",
     "docker:compose:dev": "docker-compose -f docker-compose.dev.yml up -d"
   },

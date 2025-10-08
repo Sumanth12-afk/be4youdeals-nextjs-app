@@ -1133,6 +1133,15 @@ const Layout = ({ children }: { children: ReactNode }) => {
       <footer className="glass-dark border-t border-white/10 text-gray-300 py-8">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col items-center space-y-4">
+            {/* Amazon Associates Affiliate Disclosure - CRITICAL FOR COMPLIANCE */}
+            <div className="w-full bg-yellow-900/20 border border-yellow-600/30 rounded-xl p-4 mb-4">
+              <p className="text-center text-sm text-yellow-200">
+                <span className="font-bold text-yellow-400">📢 Affiliate Disclosure:</span>{' '}
+                As an Amazon Associate we earn from qualifying purchases. This means when you click on our Amazon links 
+                and make a purchase, we may receive a small commission at no extra cost to you.
+              </p>
+            </div>
+
             {/* Brand Info */}
             <div className="text-center">
               <div className="flex items-center justify-center space-x-3 mb-4">
@@ -1156,6 +1165,8 @@ const Layout = ({ children }: { children: ReactNode }) => {
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <Link href="/about" className="hover:text-cyan-400 transition-colors font-medium">About Us</Link>
               <Link href="/contact" className="hover:text-cyan-400 transition-colors font-medium">Contact</Link>
+              <Link href="/disclosure" className="hover:text-cyan-400 transition-colors font-medium">Disclosure</Link>
+              <Link href="/privacy" className="hover:text-cyan-400 transition-colors font-medium">Privacy</Link>
               <span className="text-gray-500">•</span>
               <span className="text-cyan-400 font-medium">🔥 Daily Deals</span>
               <span className="text-gray-500">•</span>

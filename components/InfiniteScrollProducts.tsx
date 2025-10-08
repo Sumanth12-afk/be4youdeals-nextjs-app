@@ -167,8 +167,8 @@ export default function InfiniteScrollProducts({
     if (link) {
       // Add affiliate parameters based on region
       const affiliateLink = link.includes('?') 
-        ? `${link}&tag=${region === 'IN' ? 'vibricsdeals-21' : 'beforeyou-20'}&linkId=${region === 'IN' ? '960f1a081732c6ae334bba78a8ec3949' : 'b3b134c0f45e2e73d36e027f9b9495a4'}`
-        : `${link}?tag=${region === 'IN' ? 'vibricsdeals-21' : 'beforeyou-20'}&linkId=${region === 'IN' ? '960f1a081732c6ae334bba78a8ec3949' : 'b3b134c0f45e2e73d36e027f9b9495a4'}`;
+        ? `${link}&tag=${region === 'IN' ? 'vibricsdeals-21' : 'vibricsdeals-20'}&linkId=${region === 'IN' ? '960f1a081732c6ae334bba78a8ec3949' : '83530867bde80cbdd2939bda07686b35'}`
+        : `${link}?tag=${region === 'IN' ? 'vibricsdeals-21' : 'vibricsdeals-20'}&linkId=${region === 'IN' ? '960f1a081732c6ae334bba78a8ec3949' : '83530867bde80cbdd2939bda07686b35'}`;
       
       window.open(affiliateLink, '_blank');
       toast(`Opening ${title} on Amazon... 🚀`, {
@@ -295,6 +295,10 @@ export default function InfiniteScrollProducts({
                   {formatPrice(product.price)}
                 </span>
               </div>
+              {/* Price Disclaimer - Amazon Compliance */}
+              <p className="text-xs text-gray-500 mt-2 italic">
+                *Price and availability subject to change. Check Amazon for current pricing.
+              </p>
             </div>
 
             {/* Buy Button */}
@@ -308,6 +312,10 @@ export default function InfiniteScrollProducts({
                   <span>Buy on Amazon</span>
                 </span>
               </button>
+              {/* Affiliate Disclosure - Amazon Compliance */}
+              <p className="text-xs text-gray-400 mt-2 text-center italic">
+                As an Amazon Associate we earn from qualifying purchases
+              </p>
             </div>
           </motion.div>
         ))}

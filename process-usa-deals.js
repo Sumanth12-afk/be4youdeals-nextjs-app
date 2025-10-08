@@ -11,8 +11,8 @@ const processedData = data.map((product, index) => {
   
   // Add affiliate parameters
   const affiliateLink = directLink.includes('?') ? 
-    `${directLink}&tag=beforeyou-20&linkId=b3b134c0f45e2e73d36e027f9b9495a4` :
-    `${directLink}?tag=beforeyou-20&linkId=b3b134c0f45e2e73d36e027f9b9495a4`;
+    `${directLink}&tag=vibricsdeals-20&linkId=83530867bde80cbdd2939bda07686b35` :
+    `${directLink}?tag=vibricsdeals-20&linkId=83530867bde80cbdd2939bda07686b35`;
   
   return {
     id: index + 1,

@@ -1,4 +1,4 @@
-# Be4YouDeals - Next.js Affiliate Site
+# Vibrics Deals - Next.js Affiliate Site
 
 A modern, responsive affiliate deals website built with Next.js, featuring infinite scroll, advanced filters, product comparison, and optimized performance.
 

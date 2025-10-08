@@ -307,7 +307,7 @@ export default function Contact() {
                     icon: "📧",
                     title: "Email Us",
                     desc: "Get a response within 24 hours",
-                    contact: "hello@be4youdeals.com",
+                    contact: "hello@vibricsdeals.com",
                     color: "from-blue-500/20 to-cyan-500/20"
                   },
                   {
@@ -321,7 +321,7 @@ export default function Contact() {
                     icon: "📱",
                     title: "Social Media",
                     desc: "Follow us for the latest deals",
-                    contact: "@be4youdeals",
+                    contact: "@vibricsdeals",
                     color: "from-purple-500/20 to-pink-500/20"
                   }
                 ].map((method, index) => (

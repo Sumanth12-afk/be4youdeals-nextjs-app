@@ -33,8 +33,8 @@ export default function Home() {
     }
     
     const isIndia = link.includes('amazon.in');
-    const tag = isIndia ? 'vibricsdeals-21' : 'beforeyou-20';
-    const linkId = isIndia ? '960f1a081732c6ae334bba78a8ec3949' : 'b3b134c0f45e2e73d36e027f9b9495a4';
+    const tag = isIndia ? 'vibricsdeals-21' : 'vibricsdeals-20';
+    const linkId = isIndia ? '960f1a081732c6ae334bba78a8ec3949' : '83530867bde80cbdd2939bda07686b35';
     
     return link.includes('?') 
       ? `${link}&tag=${tag}&linkId=${linkId}`
