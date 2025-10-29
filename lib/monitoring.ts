@@ -1,5 +1,6 @@
 // lib/monitoring.ts - Enhanced monitoring with Prometheus + Grafana
-import metrics from './metrics';
+// Only import metrics on server-side to avoid webpack issues with prom-client
+const metrics = typeof window === 'undefined' ? require('./metrics').default : null;
 
 interface ErrorInfo {
   message: string;
@@ -48,7 +49,7 @@ class MonitoringService {
           const page = window.location.pathname;
           const region = this.getRegionFromURL();
           
-          metrics.recordPageLoadTime(page, loadTime, region);
+          metrics?.recordPageLoadTime(page, loadTime, region);
         }
       });
     });
@@ -101,12 +102,12 @@ class MonitoringService {
     const page = window.location.pathname;
     const region = this.getRegionFromURL();
     
-    metrics.recordPageView(page, region);
+    metrics?.recordPageView(page, region);
     
     // Track page load performance
     window.addEventListener('load', () => {
       const loadTime = (Date.now() - this.startTime) / 1000;
-      metrics.recordPageLoadTime(page, loadTime, region);
+      metrics?.recordPageLoadTime(page, loadTime, region);
     });
   }
 
@@ -120,7 +121,7 @@ class MonitoringService {
     const component = errorInfo?.errorBoundary || 'Global';
     
     // Record error in Prometheus
-    metrics.recordError(errorType, component);
+    metrics?.recordError(errorType, component);
     
     // Enhanced console logging with context
     console.error('🚨 Error captured:', {
@@ -174,19 +175,19 @@ class MonitoringService {
     // Track specific business events
     switch (eventName) {
       case 'deal_viewed':
-        metrics.recordDealView(properties?.region || 'unknown', properties?.category || 'unknown');
+        metrics?.recordDealView(properties?.region || 'unknown', properties?.category || 'unknown');
         break;
       case 'affiliate_click':
-        metrics.recordAffiliateClick(properties?.region || 'unknown', properties?.category || 'unknown');
+        metrics?.recordAffiliateClick(properties?.region || 'unknown', properties?.category || 'unknown');
         break;
       case 'user_login':
-        metrics.recordAuthEvent('login', properties?.method || 'unknown');
+        metrics?.recordAuthEvent('login', properties?.method || 'unknown');
         break;
       case 'user_signup':
-        metrics.recordAuthEvent('signup', properties?.method || 'unknown');
+        metrics?.recordAuthEvent('signup', properties?.method || 'unknown');
         break;
       case 'user_logout':
-        metrics.recordAuthEvent('logout', 'unknown');
+        metrics?.recordAuthEvent('logout', 'unknown');
         break;
     }
   }
@@ -215,11 +216,11 @@ class MonitoringService {
 
   // Business metrics
   recordConversion(region: string, category: string, value: number) {
-    metrics.setConversionRate(value, region, category);
+    metrics?.setConversionRate(value, region, category);
   }
 
   recordRevenue(amount: number, region: string, category: string) {
-    metrics.recordRevenue(amount, region, category);
+    metrics?.recordRevenue(amount, region, category);
   }
 
   // Health check

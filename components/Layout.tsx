@@ -59,7 +59,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
     { 
       category: 'Popular', 
       items: [
-        { name: 'Best Deals', redirect: region === 'IN' ? '/in/deals' : '/deals', available: true },
+        { name: 'Best Deals', redirect: '/deals', available: true },
         { name: 'Under $100', redirect: null, available: false },
         { name: 'New Arrivals', redirect: null, available: false }
       ]
@@ -212,8 +212,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
 
   const handleDealsClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    const dealsPath = region === 'IN' ? '/in/deals' : '/deals';
-    handleSearchNavigate(dealsPath);
+    handleSearchNavigate('/deals');
   };
 
   return (
@@ -1159,9 +1158,16 @@ const Layout = ({ children }: { children: ReactNode }) => {
               <span className="text-green-400 font-medium">✓ Verified Products</span>
             </div>
             
+            {/* Affiliate Disclosure */}
+            <div className="text-center text-sm text-gray-400 pt-4 max-w-2xl">
+              <p className="mb-2">
+                <span className="font-semibold text-orange-400">Amazon Associates Disclosure:</span> As an Amazon Associate I earn from qualifying purchases. This means when you click on product links and make a purchase, we may receive a small commission at no extra cost to you.
+              </p>
+            </div>
+            
             {/* Copyright */}
             <div className="text-center text-xs text-gray-500 pt-2 border-t border-white/10 w-full">
-              © 2024 Vibrics Deals. All rights reserved. | Made with ❤️ for deal hunters
+              © 2024 Be4YouDeals. All rights reserved. | Made with ❤️ for deal hunters
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ export const allSelfcareExtended = [
     "price": "$9.",
     "rating": "4.3",
     "productLink": "https://www.amazon.com/Winning-Reduce-Circles-Undereye-Wrinkles/dp/B0C4FY8FXW/ref=sr_1_1?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-1",
-    "imageLink": "https://m.media-amazon.com/images/I/61YyDYhIL4L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/61YyDYhIL4L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -14,7 +14,7 @@ export const allSelfcareExtended = [
     "price": "$19.",
     "rating": "4.4",
     "productLink": "https://www.amazon.com/Biodance-Bio-Collagen-Tightening-Hydrating-Molecular/dp/B0B2RM68G2/ref=sr_1_2?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-2",
-    "imageLink": "https://m.media-amazon.com/images/I/51hNtvMSdGL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51hNtvMSdGL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -23,7 +23,7 @@ export const allSelfcareExtended = [
     "price": "$17.",
     "rating": "4.8",
     "productLink": "https://www.amazon.com/Clean-Skin-Club-Disposable-Sensitive/dp/B07PBXXNCY/ref=sr_1_3?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&rdc=1&sprefix=self+ca%2Caps%2C615&sr=8-3",
-    "imageLink": "https://m.media-amazon.com/images/I/61581VJZ9EL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/61581VJZ9EL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -32,7 +32,7 @@ export const allSelfcareExtended = [
     "price": "$9.",
     "rating": "4.4",
     "productLink": "https://www.amazon.com/Shower-Steamers-Aromatherapy-Birthday-Gifts/dp/B0CLDN4BRM/ref=sr_1_4?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-4",
-    "imageLink": "https://m.media-amazon.com/images/I/810MBwVTSaL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/810MBwVTSaL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -41,7 +41,7 @@ export const allSelfcareExtended = [
     "price": "$19.",
     "rating": "4.4",
     "productLink": "https://www.amazon.com/medicube-overnight-elasticity-hydrating-moisturizing/dp/B0DGTMR754/ref=sr_1_5?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-5",
-    "imageLink": "https://m.media-amazon.com/images/I/61An0jiJFvL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/61An0jiJFvL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -50,7 +50,7 @@ export const allSelfcareExtended = [
     "price": "$9.",
     "rating": "4.4",
     "productLink": "https://www.amazon.com/GuruNanda-Express-Whitening-Natural-Sensitive/dp/B0BK2SC18T/ref=sr_1_6?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-6",
-    "imageLink": "https://m.media-amazon.com/images/I/71EybBZ-jpL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71EybBZ-jpL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -59,7 +59,7 @@ export const allSelfcareExtended = [
     "price": "$12.",
     "rating": "4.3",
     "productLink": "https://www.amazon.com/FOMIN-Aromatherapy-Shower-Steamers-Relaxation/dp/B0FN4SGD59/ref=sr_1_7?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-7",
-    "imageLink": "https://m.media-amazon.com/images/I/81ywbtXghbL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/81ywbtXghbL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -68,7 +68,7 @@ export const allSelfcareExtended = [
     "price": "$9.",
     "rating": "4.7",
     "productLink": "https://www.amazon.com/eos-Lotion-Moisture-Lightweight-Non-Greasy/dp/B0BZGRCBY4/ref=sr_1_8?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&rdc=1&sprefix=self+ca%2Caps%2C615&sr=8-8",
-    "imageLink": "https://m.media-amazon.com/images/I/51ZNB3skixL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51ZNB3skixL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -77,7 +77,7 @@ export const allSelfcareExtended = [
     "price": "$12.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/Mighty-Patch-Hydrocolloid-Absorbing-count/dp/B074PVTPBW/ref=sr_1_9?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&rdc=1&sprefix=self+ca%2Caps%2C615&sr=8-9",
-    "imageLink": "https://m.media-amazon.com/images/I/51YlAYwPx6L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51YlAYwPx6L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -86,7 +86,7 @@ export const allSelfcareExtended = [
     "price": "$12.",
     "rating": "4.5",
     "productLink": "https://www.amazon.com/Patches-Undereye-Wrinkles-Hyaluronic-Treatment/dp/B0CTK5ZTNK/ref=sr_1_10?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-10",
-    "imageLink": "https://m.media-amazon.com/images/I/71xtnK91oBL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71xtnK91oBL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -94,8 +94,8 @@ export const allSelfcareExtended = [
     "title": "Cooling Eye Mask for Eye Care - Great Self Care Gifts for Women - Migraines Headache Relief Ice Pack Mask Products - Cold Compress for Puffy Eyes - Birthday Gifts Mom Grandma Sister Teacher (Pink)",
     "price": "$9.",
     "rating": "4.5",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/71fjtndjb9L._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/71fjtndjb9L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -103,8 +103,8 @@ export const allSelfcareExtended = [
     "title": "Sun Bum Kids SPF 50 Clear Face Stick Sunscreen - Wet or Dry Skin Application Broad Spectrum Sunscreen with Vitamin E - Hawaii 104 Act Compliant (Without Octinoxate & Oxybenzone) - Travel Size 0.53 oz",
     "price": "$8.",
     "rating": "4.8",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/61JV9JPVVZL._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/61JV9JPVVZL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -112,8 +112,8 @@ export const allSelfcareExtended = [
     "title": "Lumin - Dynamic Duo - Skin Care kit for Men - Includes: Charcoal Face Wash Daily Detox & Daily Face Moisturizer,Suitable for all skin types, Daily Use, Two Month Supply",
     "price": "$39.",
     "rating": "4.4",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/51g-2nME+AL._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/51g-2nME+AL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -121,8 +121,8 @@ export const allSelfcareExtended = [
     "title": "Positive Crochet Taco Christmas Birthday Gifts for Women Men Self Care Thanksgiving Basket Son Mom Dad Daughter Sister Friend Coworkers Relaxation Gift Desk Home Decor Emotional Inspirational Support",
     "price": "$8.",
     "rating": "4.9",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/71L5Ff3xF2L._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/71L5Ff3xF2L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -131,7 +131,7 @@ export const allSelfcareExtended = [
     "price": "$18.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/Medicube-Zero-Pore-Pads-Dual-Textured/dp/B09V7Z4TJG/ref=sr_1_15?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-15",
-    "imageLink": "https://m.media-amazon.com/images/I/71Mcspt-6AL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71Mcspt-6AL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -140,7 +140,7 @@ export const allSelfcareExtended = [
     "price": "$5.",
     "rating": "4.5",
     "productLink": "https://www.amazon.com/QUSTERE-Hydrocolloid-Colorful-Stickers-Salicylic/dp/B0CDH47BN9/ref=sr_1_16?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-16",
-    "imageLink": "https://m.media-amazon.com/images/I/61z6f2krgNL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/61z6f2krgNL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -149,7 +149,7 @@ export const allSelfcareExtended = [
     "price": "$9.",
     "rating": "4.4",
     "productLink": "https://www.amazon.com/Calm-Essential-Oil-Roll-High-Quality/dp/B07JDWTDPB/ref=sr_1_17?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&rdc=1&sprefix=self+ca%2Caps%2C615&sr=8-17",
-    "imageLink": "https://m.media-amazon.com/images/I/710IP6q0O6L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/710IP6q0O6L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -158,7 +158,7 @@ export const allSelfcareExtended = [
     "price": "$28.",
     "rating": "4.5",
     "productLink": "https://www.amazon.com/Vaginal-Probiotics-Prebiotics-Lactobacillus-Probiotic/dp/B0D5FZGY8W/ref=sr_1_18?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-18",
-    "imageLink": "https://m.media-amazon.com/images/I/61tYAHJi3LL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/61tYAHJi3LL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -166,8 +166,8 @@ export const allSelfcareExtended = [
     "title": "Lumineux Ultimate Whitening Kit Bundle - Contains Toothpaste, Mouthwash, Strips and Whitening Pen - Enamel Safe and Clinically Proven to Whiten Without The Sensitivity - Removes Coffee and Tea Stains",
     "price": "$89.",
     "rating": "4.8",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/71ZOiPWqC+L._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/71ZOiPWqC+L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -175,8 +175,8 @@ export const allSelfcareExtended = [
     "title": "Happy Birthday Gifts for Women Mom Her Friend Sister Wife Grandma, Self Care Gifts Get Well Gifts Unique Relaxing Spa Gift Basket Set, Christmas Gifts for Women Mom Wife Grandma Friends Sister",
     "price": "$39.",
     "rating": "4.8",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/711m+wtoO8L._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/711m+wtoO8L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -184,8 +184,8 @@ export const allSelfcareExtended = [
     "title": "grace & stella Award Winning Under Eye Mask - Travel Essentials - Birthday Gifts for Women - Gel Eye Patches for Dark Circles, Puffy Eyes, Wrinkles, Undereye Bags - Vegan Self Care (48 Pairs, Gold)",
     "price": "$29.",
     "rating": "4.3",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/71SIzE-8N+L._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/71SIzE-8N+L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -193,8 +193,8 @@ export const allSelfcareExtended = [
     "title": "Hair Identifier Spray for Face Shaving,Moisturizing and Skin Care Dermaplaner Spray, Glow Reveal Face Spray for Face Dermaplaning, Peach Fuzz Remover for Women Face (1pc)",
     "price": "$9.",
     "rating": "4.2",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/71LiXhl-YiL._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/71LiXhl-YiL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -203,7 +203,7 @@ export const allSelfcareExtended = [
     "price": "$6.",
     "rating": "4.9",
     "productLink": "https://www.amazon.com/Little-Frogs-Guide-Self-Care-Affirmations/dp/1837991014/ref=sr_1_23?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-23",
-    "imageLink": "https://m.media-amazon.com/images/I/71wl9opsuQL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71wl9opsuQL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -212,7 +212,7 @@ export const allSelfcareExtended = [
     "price": "$5.",
     "rating": "4.5",
     "productLink": "https://www.amazon.com/Massager-Naturally-Conditioning-Migraine-Reusable/dp/B09X35Q53M/ref=sr_1_24?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-24",
-    "imageLink": "https://m.media-amazon.com/images/I/71zlX6hiCeL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71zlX6hiCeL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -221,7 +221,7 @@ export const allSelfcareExtended = [
     "price": "$5.",
     "rating": "4.2",
     "productLink": "https://www.amazon.com/Good-Molecules-Formulated-Revitalize-Fragrance/dp/B091NJQ29P/ref=sr_1_25?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-25",
-    "imageLink": "https://m.media-amazon.com/images/I/71kaC5NIrBL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71kaC5NIrBL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -230,7 +230,7 @@ export const allSelfcareExtended = [
     "price": "$11.",
     "rating": "4.3",
     "productLink": "https://www.amazon.com/Dr-Scholls-Foot-Disposable-Moisturizes/dp/B0BYBHRZ7T/ref=sr_1_26?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-26",
-    "imageLink": "https://m.media-amazon.com/images/I/71cNXJcCIyL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71cNXJcCIyL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -238,8 +238,8 @@ export const allSelfcareExtended = [
     "title": "LifeCell All In One Anti-Aging Cream – Reduces Wrinkles, Fine Lines, Dark Circles & Sun Damage – Retinol, Vitamin C, DMAE & Hyaluronic Acid – Fragrance-Free, for All Skin Types (2.54oz), 2-Pack",
     "price": "$329.",
     "rating": "4.1",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/71w3chdCveL._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/71w3chdCveL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -247,8 +247,8 @@ export const allSelfcareExtended = [
     "title": "grace & stella Retinol Under Eye Patches for Puffy Eyes and Dark Circles - Restoring Gel Under Eye Masks with Hyaluronic Acid - Vegan Cruelty-Free Skincare, Birthday Gifts for Women (Purple, 24 Pairs)",
     "price": "$21.",
     "rating": "4.3",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/7119TnIOOpL._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/7119TnIOOpL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -256,8 +256,8 @@ export const allSelfcareExtended = [
     "title": "MasterMedi Tongue Scraper with Multicolor Cases (2 Pack), 100% Stainless Steel, Reduce Bad Breath, Easy to Use Tongue Scraper for Adults, Tongue Cleaner for Oral Care & Hygiene",
     "price": "$8.",
     "rating": "4.6",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/71K0QjoPNGL._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/71K0QjoPNGL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -265,8 +265,8 @@ export const allSelfcareExtended = [
     "title": "LifeCell All In One Anti-Aging Cream – Reduces Wrinkles, Fine Lines, Dark Circles & Sun Damage – Retinol, Vitamin C, DMAE & Hyaluronic Acid – Fragrance-Free, for All Skin Types (2.54oz)",
     "price": "$189.",
     "rating": "4.0",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/71ca4Eq25eL._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/71ca4Eq25eL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -275,7 +275,7 @@ export const allSelfcareExtended = [
     "price": "$7.",
     "rating": "4.7",
     "productLink": "https://www.amazon.com/eos-Cashmere-Moisturizing-Irritation-Area-Approved/dp/B0CRRS3TG5/ref=sr_1_31?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-31",
-    "imageLink": "https://m.media-amazon.com/images/I/61+4sd2WXOL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/61+4sd2WXOL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -284,7 +284,7 @@ export const allSelfcareExtended = [
     "price": "$17.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/COSRX-Repairing-Hydrating-Secretion-Phthalates/dp/B00PBX3L7K/ref=sr_1_32?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-32",
-    "imageLink": "https://m.media-amazon.com/images/I/416kUGx2rQL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/416kUGx2rQL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -293,7 +293,7 @@ export const allSelfcareExtended = [
     "price": "$7.",
     "rating": "4.5",
     "productLink": "https://www.amazon.com/BAIMEI-Roller-Massager-Treatment-Routine/dp/B08RD6S5HF/ref=sr_1_33?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-33",
-    "imageLink": "https://m.media-amazon.com/images/I/71yoOvyYDBL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71yoOvyYDBL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -302,7 +302,7 @@ export const allSelfcareExtended = [
     "price": "$7.",
     "rating": "4.5",
     "productLink": "https://www.amazon.com/Roller-Reduces-Puffiness-Tightens-Pores/dp/B09R1KX4C2/ref=sr_1_34?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-34",
-    "imageLink": "https://m.media-amazon.com/images/I/61UIxb+-DWL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/61UIxb+-DWL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -311,7 +311,7 @@ export const allSelfcareExtended = [
     "price": "$3.",
     "rating": "4.7",
     "productLink": "https://www.amazon.com/eos-Natural-Birthday-Moisture-Products/dp/B0B2TKJVDH/ref=sr_1_35?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&rdc=1&sprefix=self+ca%2Caps%2C615&sr=8-35",
-    "imageLink": "https://m.media-amazon.com/images/I/71Qpu7-BsSL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71Qpu7-BsSL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -320,7 +320,7 @@ export const allSelfcareExtended = [
     "price": "$16.",
     "rating": "4.7",
     "productLink": "https://www.amazon.com/15-Min-Pamper-Kit-Naisture/dp/B07KY49QSD/ref=sr_1_36?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-36",
-    "imageLink": "https://m.media-amazon.com/images/I/71Yt21yAGjL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71Yt21yAGjL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -329,7 +329,7 @@ export const allSelfcareExtended = [
     "price": "$9.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/Fuck-Self-Love-Gratitude-Journal-Bullshit/dp/B0C2RH7K8N/ref=sr_1_37?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-37",
-    "imageLink": "https://m.media-amazon.com/images/I/61YfvERcm4L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/61YfvERcm4L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -338,7 +338,7 @@ export const allSelfcareExtended = [
     "price": "$8.",
     "rating": "4.4",
     "productLink": "https://www.amazon.com/Kitsch-Dermaplaning-Tool-Eyebrow-Dermaplane/dp/B0C92YTQ27/ref=sr_1_38?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&rdc=1&sprefix=self+ca%2Caps%2C615&sr=8-38",
-    "imageLink": "https://m.media-amazon.com/images/I/81fATuA2pbL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/81fATuA2pbL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -347,7 +347,7 @@ export const allSelfcareExtended = [
     "price": "$12.",
     "rating": "4.4",
     "productLink": "https://www.amazon.com/Steamers-Aromatherapy-BLRIET-Essential-Relaxation/dp/B0CHMDT2FM/ref=sr_1_39?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&rdc=1&sprefix=self+ca%2Caps%2C615&sr=8-39",
-    "imageLink": "https://m.media-amazon.com/images/I/71IeFfOoyNL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71IeFfOoyNL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -356,7 +356,7 @@ export const allSelfcareExtended = [
     "price": "$9.",
     "rating": "4.2",
     "productLink": "https://www.amazon.com/Brooklyn-Botany-Exfoliating-Cellulite-Blemishes/dp/B07GJR4KXM/ref=sr_1_40?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-40",
-    "imageLink": "https://m.media-amazon.com/images/I/71Gjz-ESatL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71Gjz-ESatL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -365,7 +365,7 @@ export const allSelfcareExtended = [
     "price": "$19.",
     "rating": "4.4",
     "productLink": "https://www.amazon.com/Medicube-Collagen-Wrapping-Elasticity-Hydration/dp/B0BRMYHMS5/ref=sr_1_41?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-41",
-    "imageLink": "https://m.media-amazon.com/images/I/61occWCJN-L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/61occWCJN-L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -374,7 +374,7 @@ export const allSelfcareExtended = [
     "price": "$17.",
     "rating": "4.3",
     "productLink": "https://www.amazon.com/ANUA-Heartleaf-Cleansing-Cleanser-Blackheads/dp/B0BN2PX8V3/ref=sr_1_42?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-42",
-    "imageLink": "https://m.media-amazon.com/images/I/61nHrsCJT1L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/61nHrsCJT1L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -383,7 +383,7 @@ export const allSelfcareExtended = [
     "price": "$7.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/Dove-Coconut-Exfoliates-Nourishes-Radiant/dp/B0DNTZTS1L/ref=sr_1_43?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-43",
-    "imageLink": "https://m.media-amazon.com/images/I/71mPN1QlerL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71mPN1QlerL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -392,7 +392,7 @@ export const allSelfcareExtended = [
     "price": "$9.",
     "rating": "4.8",
     "productLink": "https://www.amazon.com/Neutrogena-Cleansing-Towelettes-Waterproof-Alcohol-Free/dp/B00U2VQZDS/ref=sr_1_44?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-44",
-    "imageLink": "https://m.media-amazon.com/images/I/71iMrZEyv6L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71iMrZEyv6L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -401,7 +401,7 @@ export const allSelfcareExtended = [
     "price": "$45.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/Crest-Professional-Whitestrips-Whitening-Treatments/dp/B00AHAWWO0/ref=sr_1_45?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-45",
-    "imageLink": "https://m.media-amazon.com/images/I/715rFhZpV0L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/715rFhZpV0L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -410,7 +410,7 @@ export const allSelfcareExtended = [
     "price": "$19.",
     "rating": "4.4",
     "productLink": "https://www.amazon.com/Relief-Aromatherapy-Christmas-Relaxation-Eucalyptus/dp/B08BC88KG1/ref=sr_1_46?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-46",
-    "imageLink": "https://m.media-amazon.com/images/I/711gf00Bt-L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/711gf00Bt-L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -419,7 +419,7 @@ export const allSelfcareExtended = [
     "price": "$7.",
     "rating": "4.8",
     "productLink": "https://www.amazon.com/Tree-Hut-Hydrating-Exfoliating-Nourishing/dp/B07PR467S5/ref=sr_1_47?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-47",
-    "imageLink": "https://m.media-amazon.com/images/I/81+CZPubNNL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/81+CZPubNNL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -428,7 +428,7 @@ export const allSelfcareExtended = [
     "price": "$24.",
     "rating": "4.7",
     "productLink": "https://www.amazon.com/Summer-Fridays-Lip-Butter-Balm/dp/B0C42HJRBF/ref=sr_1_48?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-48",
-    "imageLink": "https://m.media-amazon.com/images/I/51dfM6rkwXL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51dfM6rkwXL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -437,7 +437,7 @@ export const allSelfcareExtended = [
     "price": "$5.",
     "rating": "4.5",
     "productLink": "https://www.amazon.com/WSYUB-Headbands-Microfiber-Absorbent-Wristbands/dp/B0BR6BQ4MZ/ref=sr_1_49?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-49",
-    "imageLink": "https://m.media-amazon.com/images/I/71WkglRWD-L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71WkglRWD-L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -446,7 +446,7 @@ export const allSelfcareExtended = [
     "price": "$10.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/Bio-Oil-Skincare-Vitamin-Stretchmarks-Moisturizer/dp/B000VPPUEA/ref=sr_1_50?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&rdc=1&sprefix=self+ca%2Caps%2C615&sr=8-50",
-    "imageLink": "https://m.media-amazon.com/images/I/61rtO5x7T-L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/61rtO5x7T-L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -455,7 +455,7 @@ export const allSelfcareExtended = [
     "price": "$5.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/EcoTools-Cruelty-Free-Exfoliate-Circulation-Eco-Friendly/dp/B016RFJDL8/ref=sr_1_51?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-51",
-    "imageLink": "https://m.media-amazon.com/images/I/81e0FvKNydL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/81e0FvKNydL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -464,7 +464,7 @@ export const allSelfcareExtended = [
     "price": "$5.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/BEDELITE-Pillowcase-Standard-Envelope-Closure/dp/B08R9NGTJJ/ref=sr_1_52?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-52",
-    "imageLink": "https://m.media-amazon.com/images/I/61olJClLFoL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/61olJClLFoL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -473,7 +473,7 @@ export const allSelfcareExtended = [
     "price": "$16.",
     "rating": "4.5",
     "productLink": "https://www.amazon.com/Dr-Teals-Sleep-Melatonin-Essential/dp/B09VH85M4Y/ref=sr_1_53?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&rdc=1&sprefix=self+ca%2Caps%2C615&sr=8-53",
-    "imageLink": "https://m.media-amazon.com/images/I/81Sy5O5MxZL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/81Sy5O5MxZL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -482,7 +482,7 @@ export const allSelfcareExtended = [
     "price": "$12.",
     "rating": "4.7",
     "productLink": "https://www.amazon.com/Positive-Affirmation-Emotional-Support-Teachers/dp/B0DTQ34TKQ/ref=sr_1_54?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-54",
-    "imageLink": "https://m.media-amazon.com/images/I/81bxE3UCKjL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/81bxE3UCKjL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -491,7 +491,7 @@ export const allSelfcareExtended = [
     "price": "$5.",
     "rating": "4.5",
     "productLink": "https://www.amazon.com/Mario-Badescu-Facial-Spray-Rosewater/dp/B002LC9OES/ref=sr_1_55?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-55",
-    "imageLink": "https://m.media-amazon.com/images/I/61gkFcU2s7L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/61gkFcU2s7L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -500,7 +500,7 @@ export const allSelfcareExtended = [
     "price": "$17.",
     "rating": "4.4",
     "productLink": "https://www.amazon.com/Shower-Steamers-Aromatherapy-Eucalyptus-Watermelon/dp/B0BFHXRG1F/ref=sr_1_56?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-56",
-    "imageLink": "https://m.media-amazon.com/images/I/71VRCN3TPPL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71VRCN3TPPL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -509,7 +509,7 @@ export const allSelfcareExtended = [
     "price": "$9.",
     "rating": "4.3",
     "productLink": "https://www.amazon.com/Dr-Scholls-Hydrating-Intensely-Moisturizes/dp/B08YZ7B2QC/ref=sr_1_57?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-57",
-    "imageLink": "https://m.media-amazon.com/images/I/81DUuE7+fqL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/81DUuE7+fqL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -518,7 +518,7 @@ export const allSelfcareExtended = [
     "price": "$16.",
     "rating": "4.4",
     "productLink": "https://www.amazon.com/Maskiss-24k-Gold-Under-Patches/dp/B0BDD7D34M/ref=sr_1_58?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-58",
-    "imageLink": "https://m.media-amazon.com/images/I/71aFK5TQtKL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71aFK5TQtKL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -527,7 +527,7 @@ export const allSelfcareExtended = [
     "price": "$3.",
     "rating": "4.5",
     "productLink": "https://www.amazon.com/Aveeno-Repairing-Prebiotic-Paraben-Free-Fragrance-Free/dp/B07H9CBGY6/ref=sr_1_59?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-59",
-    "imageLink": "https://m.media-amazon.com/images/I/71IvQkKC7LL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71IvQkKC7LL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -536,7 +536,7 @@ export const allSelfcareExtended = [
     "price": "$39.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/Birthday-Package-Sending-Thinking-Inspirational/dp/B0F5M9793N/ref=sr_1_60?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.8TufBcN-hVaUJstZqfWwcDhY1u3uXGujsbxeZ1vw4yL9P8kWI6zGyuDbEe4QZ3wYzieas7IfrM9G4M9mGHduZQdHibimPqwOgEjS3sOoz9Sc9YgDgjiwgF5dHhhvdVLhn0HWfVzExw3UrKPKbct51kX3tH_r5f1AeL6VwTMXqIhltJbvV_UUMS8CKi8Sh6jHGHcfY9Bv1kGohgI5Hw4erLM_O0xnnoxpqczbUZJ3u8Ahnm7vQ0RC_7p8nQBrFTmjs6eP_Ss3GU8n33zKrOcc_kgvOTi9AbXoPy5creZW3bs.Yo5WTlUSp8JLlbSPztmPaRQ0cSjP2VtDK1Gg4qb5Itw&dib_tag=se&keywords=self+care&qid=1758651196&sprefix=self+ca%2Caps%2C615&sr=8-60",
-    "imageLink": "https://m.media-amazon.com/images/I/81B748erV2L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/81B748erV2L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -544,8 +544,8 @@ export const allSelfcareExtended = [
     "title": "Emotional Healing and Wholeness: A Journey Back to Yourself",
     "price": "$9.",
     "rating": "",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/51JaXcKz2IL._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/51JaXcKz2IL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -553,8 +553,8 @@ export const allSelfcareExtended = [
     "title": "Successful Self-Leadership: An Inside-Out Approach in Seven Steps",
     "price": "$21.",
     "rating": "5.0",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/7115THvZ-2L._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/7115THvZ-2L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -562,8 +562,8 @@ export const allSelfcareExtended = [
     "title": "Break Free From Anxious Attachment: Unlock Your Stress-Free Path to Reclaim Emotional Regulation, Build Secure Relationships, and Enjoy Lasting Self-Worth in Just 15 Minutes a Day",
     "price": "$16.",
     "rating": "5.0",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/71rX84XMMuL._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/71rX84XMMuL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -571,8 +571,8 @@ export const allSelfcareExtended = [
     "title": "One Day at a Time Mood Tracker Journal: Daily Self-Care Check-Ins for Mental Health & Emotional Wellness",
     "price": "$13.",
     "rating": "4.9",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/61HFBs8k4jL._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/61HFBs8k4jL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -581,7 +581,7 @@ export const allSelfcareExtended = [
     "price": "$21.",
     "rating": "4.3",
     "productLink": "https://www.amazon.com/grace-stella-Purple-Treatment-Gels/dp/B0CPT8W3RV/ref=sr_1_53?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-53",
-    "imageLink": "https://m.media-amazon.com/images/I/7119TnIOOpL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/7119TnIOOpL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -590,7 +590,7 @@ export const allSelfcareExtended = [
     "price": "$11.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/Lumify-Redness-Reliever-Drops-2-5mL/dp/B07CDN39DP/ref=sr_1_54?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-54",
-    "imageLink": "https://m.media-amazon.com/images/I/81K8Uu1lraL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/81K8Uu1lraL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -599,7 +599,7 @@ export const allSelfcareExtended = [
     "price": "$9.",
     "rating": "4.7",
     "productLink": "https://www.amazon.com/l-f-Moisturizing-Hyaluronic-Cruelty-Free-Watermelon/dp/B0D442G15L/ref=sr_1_55?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-55",
-    "imageLink": "https://m.media-amazon.com/images/I/71XaExUGVeL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71XaExUGVeL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -608,7 +608,7 @@ export const allSelfcareExtended = [
     "price": "$0.",
     "rating": "4.4",
     "productLink": "https://www.amazon.com/Real-Self-Care-Transformative-Redefining-Wellness/dp/B0B5YKV981/ref=sr_1_56?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-56",
-    "imageLink": "https://m.media-amazon.com/images/I/71Swoji7AsL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71Swoji7AsL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -617,7 +617,7 @@ export const allSelfcareExtended = [
     "price": "$19.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/Medicube-Vitamin-Golden-Capsule-Moisturizer/dp/B0D2Z3GGCY/ref=sr_1_57?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-57",
-    "imageLink": "https://m.media-amazon.com/images/I/71bIhntljOL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71bIhntljOL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -626,7 +626,7 @@ export const allSelfcareExtended = [
     "price": "$5.",
     "rating": "4.5",
     "productLink": "https://www.amazon.com/Schick-Multipurpose-Exfoliating-Dermaplaning-Precision/dp/B0787GLBMV/ref=sr_1_58?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&rdc=1&sprefix=self+ca%2Caps%2C615&sr=8-58",
-    "imageLink": "https://m.media-amazon.com/images/I/71Cjhz9Sz7L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71Cjhz9Sz7L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -634,8 +634,8 @@ export const allSelfcareExtended = [
     "title": "Cooling Eye Mask for Eye Care - Great Self Care Gifts for Women - Migraines Headache Relief Ice Pack Mask Products - Cold Compress for Puffy Eyes - Birthday Gifts Mom Grandma Sister Teacher (Pink)",
     "price": "$9.",
     "rating": "4.5",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/71fjtndjb9L._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/71fjtndjb9L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -643,8 +643,8 @@ export const allSelfcareExtended = [
     "title": "Sun Bum Kids SPF 50 Clear Face Stick Sunscreen - Wet or Dry Skin Application Broad Spectrum Sunscreen with Vitamin E - Hawaii 104 Act Compliant (Without Octinoxate & Oxybenzone) - Travel Size 0.53 oz",
     "price": "$8.",
     "rating": "4.8",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/61JV9JPVVZL._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/61JV9JPVVZL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -652,8 +652,8 @@ export const allSelfcareExtended = [
     "title": "Happy Birthday Gifts for Women Mom Her Friend Sister Wife Grandma, Self Care Gifts Get Well Gifts Unique Relaxing Spa Gift Basket Set, Christmas Gifts for Women Mom Wife Grandma Friends Sister",
     "price": "$39.",
     "rating": "4.8",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/711m+wtoO8L._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/711m+wtoO8L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -661,8 +661,8 @@ export const allSelfcareExtended = [
     "title": "Positive Crochet Taco Christmas Birthday Gifts for Women Men Self Care Thanksgiving Basket Son Mom Dad Daughter Sister Friend Coworkers Relaxation Gift Desk Home Decor Emotional Inspirational Support",
     "price": "$8.",
     "rating": "4.9",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/71L5Ff3xF2L._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/71L5Ff3xF2L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -671,7 +671,7 @@ export const allSelfcareExtended = [
     "price": "$49.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/Gift-Basket-Women-Personal-Pampering/dp/B08Z5X1L1S/ref=sr_1_63?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-63",
-    "imageLink": "https://m.media-amazon.com/images/I/818BkB1NaqL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/818BkB1NaqL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -680,7 +680,7 @@ export const allSelfcareExtended = [
     "price": "$7.",
     "rating": "4.5",
     "productLink": "https://www.amazon.com/PEAUAMIE-Hyaluronic-Puffiness-treatment-products/dp/B0BS8Y2FLK/ref=sr_1_64?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-64",
-    "imageLink": "https://m.media-amazon.com/images/I/61NA-qyv+DL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/61NA-qyv+DL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -689,7 +689,7 @@ export const allSelfcareExtended = [
     "price": "$14.",
     "rating": "4.2",
     "productLink": "https://www.amazon.com/Valitic-Remover-Vitamin-Collagen-Turmeric/dp/B09MFMCTRK/ref=sr_1_65?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-65",
-    "imageLink": "https://m.media-amazon.com/images/I/61kDhkUHcYL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/61kDhkUHcYL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -698,7 +698,7 @@ export const allSelfcareExtended = [
     "price": "$28.",
     "rating": "4.5",
     "productLink": "https://www.amazon.com/Tower-28-Beauty-Rescue-Facial/dp/B0B3S7HJ9L/ref=sr_1_66?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-66",
-    "imageLink": "https://m.media-amazon.com/images/I/61ptTLnxn-L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/61ptTLnxn-L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -706,8 +706,8 @@ export const allSelfcareExtended = [
     "title": "The Love Crate Co Gift Baskets for Women, Unique Birthday Gifts, Best Friend Birthday Gift, Get Well Soon, Sending Sunshine Sunflower Gifts for Women, Thinking of You Care Package",
     "price": "$47.",
     "rating": "4.8",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/81ZEueIgPWL._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/81ZEueIgPWL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -715,8 +715,8 @@ export const allSelfcareExtended = [
     "title": "Self Care Gifts for Women Spa Gift Basket Birthday Gifts for Women , Get Well Soon Sympathy Gift Baskets Thinking of You Care Package , Relaxation Stress Relief Wellness Gifts for Mom Grandma Friends",
     "price": "$42.",
     "rating": "4.6",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/81nDKFqfe1L._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/81nDKFqfe1L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -724,8 +724,8 @@ export const allSelfcareExtended = [
     "title": "TheraTears Dry Eye Therapy Eye Drops for Dry Eyes, 1.0 Fl Oz",
     "price": "$11.",
     "rating": "4.7",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/718pejM9HXL._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/718pejM9HXL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -733,8 +733,8 @@ export const allSelfcareExtended = [
     "title": "Facial Steamer Spa Kit with Complimentary 17 Skin Care Tools | Face Steamer for Facial Deep Cleaning with Towel Warmer & Humidifier Mode| Self Care Gifts for Women, Spa Gifts, Birthday Gifts for Women",
     "price": "$54.",
     "rating": "4.7",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/613hYbsAgmL._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/613hYbsAgmL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -743,7 +743,7 @@ export const allSelfcareExtended = [
     "price": "$16.",
     "rating": "4.4",
     "productLink": "https://www.amazon.com/BodyRestore-Shower-Steamers-Aromatherapy-Packs/dp/B0BJYCRS51/ref=sr_1_71?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&rdc=1&sprefix=self+ca%2Caps%2C615&sr=8-71",
-    "imageLink": "https://m.media-amazon.com/images/I/71pb+JOaCHL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71pb+JOaCHL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -752,7 +752,7 @@ export const allSelfcareExtended = [
     "price": "$13.",
     "rating": "4.5",
     "productLink": "https://www.amazon.com/BeHoomi-Lavender-Disposable-Compress-Treatment/dp/B0B6VV24K5/ref=sr_1_72?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-72",
-    "imageLink": "https://m.media-amazon.com/images/I/717ZzHQW3eL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/717ZzHQW3eL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -761,7 +761,7 @@ export const allSelfcareExtended = [
     "price": "$9.",
     "rating": "4.4",
     "productLink": "https://www.amazon.com/Manicure-Pedicure-Set-Nail-Clippers/dp/B078YQW3RN/ref=sr_1_73?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-73",
-    "imageLink": "https://m.media-amazon.com/images/I/81HadX2-xPL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/81HadX2-xPL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -770,7 +770,7 @@ export const allSelfcareExtended = [
     "price": "$34.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/SOL-JANEIRO-Bum-Jet-Set/dp/B0B4HKNDLQ/ref=sr_1_74?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-74",
-    "imageLink": "https://m.media-amazon.com/images/I/81tZIwPhoNL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/81tZIwPhoNL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -779,7 +779,7 @@ export const allSelfcareExtended = [
     "price": "$4.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/Sleeping-Nourish-Hydrate-Vitamin-Antioxidants/dp/B0CNV5SG4S/ref=sr_1_75?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-75",
-    "imageLink": "https://m.media-amazon.com/images/I/512TjxbEr8L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/512TjxbEr8L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -788,7 +788,7 @@ export const allSelfcareExtended = [
     "price": "$29.",
     "rating": "4.3",
     "productLink": "https://www.amazon.com/Lemme-Vaginal-Health-Probiotic-Gummies/dp/B0BSMJJX3K/ref=sr_1_76?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-76",
-    "imageLink": "https://m.media-amazon.com/images/I/71AwX8bsf8L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71AwX8bsf8L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -797,7 +797,7 @@ export const allSelfcareExtended = [
     "price": "$9.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/Collagen-12-Sheets-Skincare-Moisturize-Pigmentation/dp/B07FPJHPX1/ref=sr_1_77?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-77",
-    "imageLink": "https://m.media-amazon.com/images/I/81QJcYtIDiL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/81QJcYtIDiL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -806,7 +806,7 @@ export const allSelfcareExtended = [
     "price": "$30.",
     "rating": "4.8",
     "productLink": "https://www.amazon.com/Touchland-Hydrating-Sanitizer-Watermelon-500-Sprays/dp/B09YT2H35S/ref=sr_1_78?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-78",
-    "imageLink": "https://m.media-amazon.com/images/I/61DfjhyuFbL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/61DfjhyuFbL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -815,7 +815,7 @@ export const allSelfcareExtended = [
     "price": "$8.",
     "rating": "4.7",
     "productLink": "https://www.amazon.com/Self-Love-Workbook-Women-Self-Doubt-Self-Compassion/dp/1647397294/ref=sr_1_79?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-79",
-    "imageLink": "https://m.media-amazon.com/images/I/81w6yGpgYyL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/81w6yGpgYyL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -824,7 +824,7 @@ export const allSelfcareExtended = [
     "price": "$26.",
     "rating": "4.3",
     "productLink": "https://www.amazon.com/Bikini-Trimmer-Women-Replaceable-Waterproof/dp/B0D4DC3GMS/ref=sr_1_80?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-80",
-    "imageLink": "https://m.media-amazon.com/images/I/71p5NkthA5L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71p5NkthA5L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -833,7 +833,7 @@ export const allSelfcareExtended = [
     "price": "$6.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/essentials-Feminine-Cranberry-Prebiotics-Chamomile/dp/B0072K2BMG/ref=sr_1_81?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&rdc=1&sprefix=self+ca%2Caps%2C615&sr=8-81",
-    "imageLink": "https://m.media-amazon.com/images/I/51Tm5Jc9CVL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51Tm5Jc9CVL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -842,7 +842,7 @@ export const allSelfcareExtended = [
     "price": "$49.",
     "rating": "4.3",
     "productLink": "https://www.amazon.com/Nekteck-Back-Neck-Shoulder-Massager/dp/B01BZOKLOO/ref=sr_1_82?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-82",
-    "imageLink": "https://m.media-amazon.com/images/I/71PGkxLq-DL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71PGkxLq-DL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -851,7 +851,7 @@ export const allSelfcareExtended = [
     "price": "$14.",
     "rating": "4.7",
     "productLink": "https://www.amazon.com/Self-Care-Activities-Women-Practical-Reconnect/dp/B0CHQMT7T9/ref=sr_1_83?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-83",
-    "imageLink": "https://m.media-amazon.com/images/I/81T02S3ZJWL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/81T02S3ZJWL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -860,7 +860,7 @@ export const allSelfcareExtended = [
     "price": "$19.",
     "rating": "4.8",
     "productLink": "https://www.amazon.com/EXTALOW-Mothers-Coconut-Lavender-Birthday/dp/B0DHZ86RRG/ref=sr_1_84?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-84",
-    "imageLink": "https://m.media-amazon.com/images/I/71RetYtXSbL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71RetYtXSbL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -869,7 +869,7 @@ export const allSelfcareExtended = [
     "price": "$15.",
     "rating": "4.3",
     "productLink": "https://www.amazon.com/Premium-Exfoliating-Mitts-Exfoliation-Microdermabrasion/dp/B07NHZP4FW/ref=sr_1_85?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-85",
-    "imageLink": "https://m.media-amazon.com/images/I/81TBOj8Lc5L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/81TBOj8Lc5L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -878,7 +878,7 @@ export const allSelfcareExtended = [
     "price": "$9.",
     "rating": "3.8",
     "productLink": "https://www.amazon.com/grace-stella-Caffeine-Serum-Puffing/dp/B0D9PMVR92/ref=sr_1_86?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-86",
-    "imageLink": "https://m.media-amazon.com/images/I/71aa2KWHjxL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71aa2KWHjxL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -887,7 +887,7 @@ export const allSelfcareExtended = [
     "price": "$9.",
     "rating": "4.7",
     "productLink": "https://www.amazon.com/ZealSea-Facial-Brightening-Hydrating-Collagen/dp/B0967HYR5M/ref=sr_1_87?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-87",
-    "imageLink": "https://m.media-amazon.com/images/I/71JuKO0VqGL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71JuKO0VqGL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -896,7 +896,7 @@ export const allSelfcareExtended = [
     "price": "$9.",
     "rating": "4.4",
     "productLink": "https://www.amazon.com/Taimand-Wrinkles-Collagen-Revitalises-Refreshes/dp/B0C4NWGVTF/ref=sr_1_88?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-88",
-    "imageLink": "https://m.media-amazon.com/images/I/71xZZcQy1IL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71xZZcQy1IL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -905,7 +905,7 @@ export const allSelfcareExtended = [
     "price": "$6.",
     "rating": "4.8",
     "productLink": "https://www.amazon.com/Neutrogena-Cleansing-Towelette-Waterproof-Individually/dp/B07GKVBQDG/ref=sr_1_89?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-89",
-    "imageLink": "https://m.media-amazon.com/images/I/718f8oZHkSL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/718f8oZHkSL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -914,7 +914,7 @@ export const allSelfcareExtended = [
     "price": "$16.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/Epielle-Hydrating-butter-Jojoba-Vitamin/dp/B076BX5HJ1/ref=sr_1_90?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-90",
-    "imageLink": "https://m.media-amazon.com/images/I/71H9vahqP8L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71H9vahqP8L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -923,7 +923,7 @@ export const allSelfcareExtended = [
     "price": "$15.",
     "rating": "5.0",
     "productLink": "https://www.amazon.com/Little-Frogs-Guide-Self-Care-Card/dp/1837995192/ref=sr_1_91?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-91",
-    "imageLink": "https://m.media-amazon.com/images/I/81Qfs3pObQL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/81Qfs3pObQL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -932,7 +932,7 @@ export const allSelfcareExtended = [
     "price": "$21.",
     "rating": "4.7",
     "productLink": "https://www.amazon.com/COSRX-Advanced-Secretion-Hydrating-Moisturizing/dp/B08JSL9W6K/ref=sr_1_92?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-92",
-    "imageLink": "https://m.media-amazon.com/images/I/61nDN97TfhL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/61nDN97TfhL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -941,7 +941,7 @@ export const allSelfcareExtended = [
     "price": "$9.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/BAIMEI-Massage-Relaxing-Stimulating-Wrinkles/dp/B07WWC3T9Q/ref=sr_1_93?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-93",
-    "imageLink": "https://m.media-amazon.com/images/I/61bAqal3ENL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/61bAqal3ENL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -950,7 +950,7 @@ export const allSelfcareExtended = [
     "price": "$15.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/Sacred-Self-Care-Practices-Nurturing-Selves/dp/0063287137/ref=sr_1_94?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-94",
-    "imageLink": "https://m.media-amazon.com/images/I/91FSt2r6HnL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/91FSt2r6HnL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -959,7 +959,7 @@ export const allSelfcareExtended = [
     "price": "$5.",
     "rating": "3.8",
     "productLink": "https://www.amazon.com/Self-Care-Novel-Leigh-Stein-ebook/dp/B0818Y3WHZ/ref=sr_1_95?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-95",
-    "imageLink": "https://m.media-amazon.com/images/I/717I5Ta25FL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/717I5Ta25FL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -968,7 +968,7 @@ export const allSelfcareExtended = [
     "price": "$13.",
     "rating": "",
     "productLink": "https://www.amazon.com/Self-Care-Russell-Smith-ebook/dp/B0FNLKDSH4/ref=sr_1_96?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-96",
-    "imageLink": "https://m.media-amazon.com/images/I/81-DzJrjz1L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/81-DzJrjz1L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -977,7 +977,7 @@ export const allSelfcareExtended = [
     "price": "$1.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/Self-Care-People-ADHD-Stress-Prioritize-ebook/dp/B09RX439NX/ref=sr_1_97?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-97",
-    "imageLink": "https://m.media-amazon.com/images/I/611iAgM4U6L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/611iAgM4U6L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -986,7 +986,7 @@ export const allSelfcareExtended = [
     "price": "$14.",
     "rating": "4.4",
     "productLink": "https://www.amazon.com/Disposable-Compress-Sleeping-Christmas-Unscented/dp/B07L9YL7NX/ref=sr_1_98?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-98",
-    "imageLink": "https://m.media-amazon.com/images/I/81h0Q-6d5PL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/81h0Q-6d5PL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -995,7 +995,7 @@ export const allSelfcareExtended = [
     "price": "$7.",
     "rating": "4.3",
     "productLink": "https://www.amazon.com/Kitsch-Friendly-Exfoliating-Glove-Removal/dp/B09S41K7SX/ref=sr_1_99?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-99",
-    "imageLink": "https://m.media-amazon.com/images/I/91tXlLAKIwL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/91tXlLAKIwL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1004,7 +1004,7 @@ export const allSelfcareExtended = [
     "price": "$22.",
     "rating": "4.5",
     "productLink": "https://www.amazon.com/Topicals-Faded-Under-Eye-Masks/dp/B0C3SB2P5G/ref=sr_1_100?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-100",
-    "imageLink": "https://m.media-amazon.com/images/I/51xDCjJWcML._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51xDCjJWcML._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1013,7 +1013,7 @@ export const allSelfcareExtended = [
     "price": "$18.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/Medicube-Zero-Pore-Blackhead-Facial/dp/B0D1G7XF9X/ref=sr_1_101?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-101",
-    "imageLink": "https://m.media-amazon.com/images/I/71MV5+RNA+L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71MV5+RNA+L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1022,7 +1022,7 @@ export const allSelfcareExtended = [
     "price": "$10.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/Year-Self-Care-Practices-Inspiration-Yourself/dp/1648765092/ref=sr_1_102?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-102",
-    "imageLink": "https://m.media-amazon.com/images/I/71djVQVdqeL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71djVQVdqeL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1031,7 +1031,7 @@ export const allSelfcareExtended = [
     "price": "$20.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/l-f-Hydrated-Skincare-Hydration-Cleanser/dp/B08T7DSZYD/ref=sr_1_103?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-103",
-    "imageLink": "https://m.media-amazon.com/images/I/71sWWbYc1rL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71sWWbYc1rL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1040,7 +1040,7 @@ export const allSelfcareExtended = [
     "price": "$0.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/Self-Care-Toolkit-Books-Self-Therapy-Overthinking/dp/B0CM9PNQWK/ref=sr_1_104?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-104",
-    "imageLink": "https://m.media-amazon.com/images/I/81bb7rO9jNL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/81bb7rO9jNL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1049,7 +1049,7 @@ export const allSelfcareExtended = [
     "price": "$0.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/Unfu-k-Yourself-Gary-John-Bishop-audiobook/dp/B0731QJ482/ref=sr_1_105?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-105",
-    "imageLink": "https://m.media-amazon.com/images/I/81ttqWCP7TL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/81ttqWCP7TL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1058,7 +1058,7 @@ export const allSelfcareExtended = [
     "price": "$5.",
     "rating": "4.7",
     "productLink": "https://www.amazon.com/Good-Molecules-Hyaluronic-Long-Lasting-Fragrance-free/dp/B08TM8DLFJ/ref=sr_1_106?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-106",
-    "imageLink": "https://m.media-amazon.com/images/I/719YMHdF7dL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/719YMHdF7dL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1067,7 +1067,7 @@ export const allSelfcareExtended = [
     "price": "$9.",
     "rating": "4.5",
     "productLink": "https://www.amazon.com/Crystal-Collagen-Moisturizing-Patches-Wrinkles/dp/B0CDH8TRR3/ref=sr_1_107?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-107",
-    "imageLink": "https://m.media-amazon.com/images/I/71y+26Vn1UL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71y+26Vn1UL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1076,7 +1076,7 @@ export const allSelfcareExtended = [
     "price": "$9.",
     "rating": "4.8",
     "productLink": "https://www.amazon.com/Witchs-Book-Self-Care-Magical-Pamper/dp/1507209142/ref=sr_1_108?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.WVGH_0rUP9JT24wvPpa8uXCk7P0K3v6AkffhR5pVOOqiY_yO23zuFGTO_7ZJRvXVLtQPKs-gzNIxk3oLq6Ryly3WKqfTrdhtG9ftLjiJfd1zZDIaQQjvtznX7FAG0lZjje3Obo3R6eVqanvw4TMuXFhhikQwp_PhrOR1EXr3aJGqjPpJtB88DC28_EMzjWsGbHYrzYaH_fGgq5eu5Not8H8_sPL72czSQnd6hZPI2zvW-pE5dbSHquyAgteXiRt2PggwlDiVcE1BiDv31NCIx7jd80fiaFxWq-psp4w1jYw.r3DP390kh9GPhdDFGLjblLlLjfjo7flMzwoiGO27kcE&dib_tag=se&keywords=self+care&qid=1758651201&sprefix=self+ca%2Caps%2C615&sr=8-108",
-    "imageLink": "https://m.media-amazon.com/images/I/71g9odVId9L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71g9odVId9L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1084,8 +1084,8 @@ export const allSelfcareExtended = [
     "title": "Periods for Young Girls: 9 Proven Strategies for Confidently Navigating the Menstrual Cycle, Celebrating Puberty, and Practicing Self-Care and Body Acceptance for Growing Tweens",
     "price": "$9.",
     "rating": "4.8",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/71wXGAWW8cL._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/71wXGAWW8cL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1094,7 +1094,7 @@ export const allSelfcareExtended = [
     "price": "$9.",
     "rating": "4.8",
     "productLink": "https://www.amazon.com/Aquaphor-Healing-Protectant-Avocado-Butter/dp/B09RYRCXKM/ref=sr_1_98?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.gYehBn6DfG5IMql8qBwbdGFPHdSW-rs4t3A1YXq7Km2xXQd9m4xtIuvkpBI_CGHSztVqOkMWwzkYDqvK68WNN4MMVJ7fUd-blLazcyyIpKhB9qHk7TSE3cCRPMX0kLzg6ghb3hhf6l35RChqtMy25Fuf-511GERab8jnrkbktI51YuGPtODVFRR0wF_wkKEAQGrKcOynJAygm9XWCXLGRdwquVofuii23VtmFIdyCe2oxHPJ_qcTLAbBGRj2Eq053sTVA8heAkJie9UB5MxoNnul1OoyEal3IG0eqmWOc2w.-jvXLxNw-icZrIXyF-6yGw5W8FZucYxuCy8t5gS6Bf8&dib_tag=se&keywords=self+care&qid=1758651206&sprefix=self+ca%2Caps%2C615&sr=8-98",
-    "imageLink": "https://m.media-amazon.com/images/I/61GDtxif9-L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/61GDtxif9-L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1103,7 +1103,7 @@ export const allSelfcareExtended = [
     "price": "$24.",
     "rating": "4.9",
     "productLink": "https://www.amazon.com/Gifts-Baskets-Thinking-Relaxation-Package/dp/B0DPQBRQ2V/ref=sr_1_99?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.gYehBn6DfG5IMql8qBwbdGFPHdSW-rs4t3A1YXq7Km2xXQd9m4xtIuvkpBI_CGHSztVqOkMWwzkYDqvK68WNN4MMVJ7fUd-blLazcyyIpKhB9qHk7TSE3cCRPMX0kLzg6ghb3hhf6l35RChqtMy25Fuf-511GERab8jnrkbktI51YuGPtODVFRR0wF_wkKEAQGrKcOynJAygm9XWCXLGRdwquVofuii23VtmFIdyCe2oxHPJ_qcTLAbBGRj2Eq053sTVA8heAkJie9UB5MxoNnul1OoyEal3IG0eqmWOc2w.-jvXLxNw-icZrIXyF-6yGw5W8FZucYxuCy8t5gS6Bf8&dib_tag=se&keywords=self+care&qid=1758651206&sprefix=self+ca%2Caps%2C615&sr=8-99",
-    "imageLink": "https://m.media-amazon.com/images/I/81swiNdCx9L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/81swiNdCx9L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1112,7 +1112,7 @@ export const allSelfcareExtended = [
     "price": "$17.",
     "rating": "4.5",
     "productLink": "https://www.amazon.com/ANAiRUi-Turmeric-Clay-Mask-Minerals/dp/B086V843R8/ref=sr_1_100?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.gYehBn6DfG5IMql8qBwbdGFPHdSW-rs4t3A1YXq7Km2xXQd9m4xtIuvkpBI_CGHSztVqOkMWwzkYDqvK68WNN4MMVJ7fUd-blLazcyyIpKhB9qHk7TSE3cCRPMX0kLzg6ghb3hhf6l35RChqtMy25Fuf-511GERab8jnrkbktI51YuGPtODVFRR0wF_wkKEAQGrKcOynJAygm9XWCXLGRdwquVofuii23VtmFIdyCe2oxHPJ_qcTLAbBGRj2Eq053sTVA8heAkJie9UB5MxoNnul1OoyEal3IG0eqmWOc2w.-jvXLxNw-icZrIXyF-6yGw5W8FZucYxuCy8t5gS6Bf8&dib_tag=se&keywords=self+care&qid=1758651206&sprefix=self+ca%2Caps%2C615&sr=8-100",
-    "imageLink": "https://m.media-amazon.com/images/I/714Aj94nsJL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/714Aj94nsJL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1121,7 +1121,7 @@ export const allSelfcareExtended = [
     "price": "$7.",
     "rating": "4.7",
     "productLink": "https://www.amazon.com/Tree-Hut-Exfoliating-Nourishing-Essential/dp/B0FLQPWM1Z/ref=sr_1_101?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.gYehBn6DfG5IMql8qBwbdGFPHdSW-rs4t3A1YXq7Km2xXQd9m4xtIuvkpBI_CGHSztVqOkMWwzkYDqvK68WNN4MMVJ7fUd-blLazcyyIpKhB9qHk7TSE3cCRPMX0kLzg6ghb3hhf6l35RChqtMy25Fuf-511GERab8jnrkbktI51YuGPtODVFRR0wF_wkKEAQGrKcOynJAygm9XWCXLGRdwquVofuii23VtmFIdyCe2oxHPJ_qcTLAbBGRj2Eq053sTVA8heAkJie9UB5MxoNnul1OoyEal3IG0eqmWOc2w.-jvXLxNw-icZrIXyF-6yGw5W8FZucYxuCy8t5gS6Bf8&dib_tag=se&keywords=self+care&qid=1758651206&sprefix=self+ca%2Caps%2C615&sr=8-101",
-    "imageLink": "https://m.media-amazon.com/images/I/71zE21yA4HL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71zE21yA4HL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1130,7 +1130,7 @@ export const allSelfcareExtended = [
     "price": "$26.",
     "rating": "4.7",
     "productLink": "https://www.amazon.com/Birthday-Package-Thinking-Inspirational-Sympathy/dp/B0F2TGWWHN/ref=sr_1_102?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.gYehBn6DfG5IMql8qBwbdGFPHdSW-rs4t3A1YXq7Km2xXQd9m4xtIuvkpBI_CGHSztVqOkMWwzkYDqvK68WNN4MMVJ7fUd-blLazcyyIpKhB9qHk7TSE3cCRPMX0kLzg6ghb3hhf6l35RChqtMy25Fuf-511GERab8jnrkbktI51YuGPtODVFRR0wF_wkKEAQGrKcOynJAygm9XWCXLGRdwquVofuii23VtmFIdyCe2oxHPJ_qcTLAbBGRj2Eq053sTVA8heAkJie9UB5MxoNnul1OoyEal3IG0eqmWOc2w.-jvXLxNw-icZrIXyF-6yGw5W8FZucYxuCy8t5gS6Bf8&dib_tag=se&keywords=self+care&qid=1758651206&sprefix=self+ca%2Caps%2C615&sr=8-102",
-    "imageLink": "https://m.media-amazon.com/images/I/81x2SERsQHL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/81x2SERsQHL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1139,7 +1139,7 @@ export const allSelfcareExtended = [
     "price": "$9.",
     "rating": "4.8",
     "productLink": "https://www.amazon.com/Self-Love-Therapy-Coloring-Inspire-Yourself/dp/B0DP27KQ61/ref=sr_1_103?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.gYehBn6DfG5IMql8qBwbdGFPHdSW-rs4t3A1YXq7Km2xXQd9m4xtIuvkpBI_CGHSztVqOkMWwzkYDqvK68WNN4MMVJ7fUd-blLazcyyIpKhB9qHk7TSE3cCRPMX0kLzg6ghb3hhf6l35RChqtMy25Fuf-511GERab8jnrkbktI51YuGPtODVFRR0wF_wkKEAQGrKcOynJAygm9XWCXLGRdwquVofuii23VtmFIdyCe2oxHPJ_qcTLAbBGRj2Eq053sTVA8heAkJie9UB5MxoNnul1OoyEal3IG0eqmWOc2w.-jvXLxNw-icZrIXyF-6yGw5W8FZucYxuCy8t5gS6Bf8&dib_tag=se&keywords=self+care&qid=1758651206&sprefix=self+ca%2Caps%2C615&sr=8-103",
-    "imageLink": "https://m.media-amazon.com/images/I/61UE3hfqnnL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/61UE3hfqnnL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1148,7 +1148,7 @@ export const allSelfcareExtended = [
     "price": "$8.",
     "rating": "4.8",
     "productLink": "https://www.amazon.com/Care-Keeping-You-American-Wellbeing/dp/1683372301/ref=sr_1_104?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.gYehBn6DfG5IMql8qBwbdGFPHdSW-rs4t3A1YXq7Km2xXQd9m4xtIuvkpBI_CGHSztVqOkMWwzkYDqvK68WNN4MMVJ7fUd-blLazcyyIpKhB9qHk7TSE3cCRPMX0kLzg6ghb3hhf6l35RChqtMy25Fuf-511GERab8jnrkbktI51YuGPtODVFRR0wF_wkKEAQGrKcOynJAygm9XWCXLGRdwquVofuii23VtmFIdyCe2oxHPJ_qcTLAbBGRj2Eq053sTVA8heAkJie9UB5MxoNnul1OoyEal3IG0eqmWOc2w.-jvXLxNw-icZrIXyF-6yGw5W8FZucYxuCy8t5gS6Bf8&dib_tag=se&keywords=self+care&qid=1758651206&sprefix=self+ca%2Caps%2C615&sr=8-104",
-    "imageLink": "https://m.media-amazon.com/images/I/71i+RMXuRqL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71i+RMXuRqL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1157,7 +1157,7 @@ export const allSelfcareExtended = [
     "price": "$9.",
     "rating": "4.3",
     "productLink": "https://www.amazon.com/Moisturizing-Socks-Cracked-Feet-Women/dp/B0B3SHRZK7/ref=sr_1_105?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.gYehBn6DfG5IMql8qBwbdGFPHdSW-rs4t3A1YXq7Km2xXQd9m4xtIuvkpBI_CGHSztVqOkMWwzkYDqvK68WNN4MMVJ7fUd-blLazcyyIpKhB9qHk7TSE3cCRPMX0kLzg6ghb3hhf6l35RChqtMy25Fuf-511GERab8jnrkbktI51YuGPtODVFRR0wF_wkKEAQGrKcOynJAygm9XWCXLGRdwquVofuii23VtmFIdyCe2oxHPJ_qcTLAbBGRj2Eq053sTVA8heAkJie9UB5MxoNnul1OoyEal3IG0eqmWOc2w.-jvXLxNw-icZrIXyF-6yGw5W8FZucYxuCy8t5gS6Bf8&dib_tag=se&keywords=self+care&qid=1758651206&rdc=1&sprefix=self+ca%2Caps%2C615&sr=8-105",
-    "imageLink": "https://m.media-amazon.com/images/I/81fdphCtS5L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/81fdphCtS5L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1166,7 +1166,7 @@ export const allSelfcareExtended = [
     "price": "$12.",
     "rating": "4.7",
     "productLink": "https://www.amazon.com/Bubble-Skincare-Hydrating-Facial-Moisturizer/dp/B0BSZ23FTF/ref=sr_1_106?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.gYehBn6DfG5IMql8qBwbdGFPHdSW-rs4t3A1YXq7Km2xXQd9m4xtIuvkpBI_CGHSztVqOkMWwzkYDqvK68WNN4MMVJ7fUd-blLazcyyIpKhB9qHk7TSE3cCRPMX0kLzg6ghb3hhf6l35RChqtMy25Fuf-511GERab8jnrkbktI51YuGPtODVFRR0wF_wkKEAQGrKcOynJAygm9XWCXLGRdwquVofuii23VtmFIdyCe2oxHPJ_qcTLAbBGRj2Eq053sTVA8heAkJie9UB5MxoNnul1OoyEal3IG0eqmWOc2w.-jvXLxNw-icZrIXyF-6yGw5W8FZucYxuCy8t5gS6Bf8&dib_tag=se&keywords=self+care&qid=1758651206&sprefix=self+ca%2Caps%2C615&sr=8-106",
-    "imageLink": "https://m.media-amazon.com/images/I/613SWxohkjL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/613SWxohkjL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1174,8 +1174,8 @@ export const allSelfcareExtended = [
     "title": "Cooling Eye Mask for Eye Care - Great Self Care Gifts for Women - Migraines Headache Relief Ice Pack Mask Products - Cold Compress for Puffy Eyes - Birthday Gifts Mom Grandma Sister Teacher (Pink)",
     "price": "$9.",
     "rating": "4.5",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/71fjtndjb9L._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/71fjtndjb9L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1183,8 +1183,8 @@ export const allSelfcareExtended = [
     "title": "Aquaphor Healing Ointment Advanced Therapy Skin Protectant, Dry Skin Body Moisturizer, 7 Oz Tube",
     "price": "$11.",
     "rating": "4.8",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/61vI44BO7uL._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/61vI44BO7uL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1192,8 +1192,8 @@ export const allSelfcareExtended = [
     "title": "Sun Bum Kids SPF 50 Clear Face Stick Sunscreen - Wet or Dry Skin Application Broad Spectrum Sunscreen with Vitamin E - Hawaii 104 Act Compliant (Without Octinoxate & Oxybenzone) - Travel Size 0.53 oz",
     "price": "$8.",
     "rating": "4.8",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/61JV9JPVVZL._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/61JV9JPVVZL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1201,8 +1201,8 @@ export const allSelfcareExtended = [
     "title": "Birthday Gifts for Women Self Care Gifts for Women Spa Gifts Set Get Well Soon Gifts Baskets Care Package Blue Gifts Box Christmas Gifts for Mom Her Bestie Sister Best Friend Wife Girlfriend Coworker",
     "price": "$29.",
     "rating": "4.6",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/81mhBnawJrL._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/81mhBnawJrL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1211,7 +1211,7 @@ export const allSelfcareExtended = [
     "price": "$56.",
     "rating": "4.1",
     "productLink": "https://www.amazon.com/HXDZFX-FACIAL-LIGHT-THERAPY-HK207/dp/B091YLCY1J/ref=sr_1_111?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.gYehBn6DfG5IMql8qBwbdGFPHdSW-rs4t3A1YXq7Km2xXQd9m4xtIuvkpBI_CGHSztVqOkMWwzkYDqvK68WNN4MMVJ7fUd-blLazcyyIpKhB9qHk7TSE3cCRPMX0kLzg6ghb3hhf6l35RChqtMy25Fuf-511GERab8jnrkbktI51YuGPtODVFRR0wF_wkKEAQGrKcOynJAygm9XWCXLGRdwquVofuii23VtmFIdyCe2oxHPJ_qcTLAbBGRj2Eq053sTVA8heAkJie9UB5MxoNnul1OoyEal3IG0eqmWOc2w.-jvXLxNw-icZrIXyF-6yGw5W8FZucYxuCy8t5gS6Bf8&dib_tag=se&keywords=self+care&qid=1758651206&sprefix=self+ca%2Caps%2C615&sr=8-111",
-    "imageLink": "https://m.media-amazon.com/images/I/61Yhh22SaWL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/61Yhh22SaWL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1220,7 +1220,7 @@ export const allSelfcareExtended = [
     "price": "$10.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/Self-Care-Day-Night-Reflection-Journal/dp/1683835549/ref=sr_1_112?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.gYehBn6DfG5IMql8qBwbdGFPHdSW-rs4t3A1YXq7Km2xXQd9m4xtIuvkpBI_CGHSztVqOkMWwzkYDqvK68WNN4MMVJ7fUd-blLazcyyIpKhB9qHk7TSE3cCRPMX0kLzg6ghb3hhf6l35RChqtMy25Fuf-511GERab8jnrkbktI51YuGPtODVFRR0wF_wkKEAQGrKcOynJAygm9XWCXLGRdwquVofuii23VtmFIdyCe2oxHPJ_qcTLAbBGRj2Eq053sTVA8heAkJie9UB5MxoNnul1OoyEal3IG0eqmWOc2w.-jvXLxNw-icZrIXyF-6yGw5W8FZucYxuCy8t5gS6Bf8&dib_tag=se&keywords=self+care&qid=1758651206&sprefix=self+ca%2Caps%2C615&sr=8-112",
-    "imageLink": "https://m.media-amazon.com/images/I/71EuC2fKlqL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71EuC2fKlqL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1229,7 +1229,7 @@ export const allSelfcareExtended = [
     "price": "$8.",
     "rating": "4.7",
     "productLink": "https://www.amazon.com/Self-Love-Journal-Women-Self-Worth-Self-Acceptance/dp/B0CJG2873S/ref=sr_1_113?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.gYehBn6DfG5IMql8qBwbdGFPHdSW-rs4t3A1YXq7Km2xXQd9m4xtIuvkpBI_CGHSztVqOkMWwzkYDqvK68WNN4MMVJ7fUd-blLazcyyIpKhB9qHk7TSE3cCRPMX0kLzg6ghb3hhf6l35RChqtMy25Fuf-511GERab8jnrkbktI51YuGPtODVFRR0wF_wkKEAQGrKcOynJAygm9XWCXLGRdwquVofuii23VtmFIdyCe2oxHPJ_qcTLAbBGRj2Eq053sTVA8heAkJie9UB5MxoNnul1OoyEal3IG0eqmWOc2w.-jvXLxNw-icZrIXyF-6yGw5W8FZucYxuCy8t5gS6Bf8&dib_tag=se&keywords=self+care&qid=1758651206&sprefix=self+ca%2Caps%2C615&sr=8-113",
-    "imageLink": "https://m.media-amazon.com/images/I/81OXg7S34WL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/81OXg7S34WL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1238,7 +1238,7 @@ export const allSelfcareExtended = [
     "price": "$10.",
     "rating": "4.7",
     "productLink": "https://www.amazon.com/Kitsch-Massager-Stainless-Massage-Wrinkles/dp/B09RQ9GLDJ/ref=sr_1_114?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.gYehBn6DfG5IMql8qBwbdGFPHdSW-rs4t3A1YXq7Km2xXQd9m4xtIuvkpBI_CGHSztVqOkMWwzkYDqvK68WNN4MMVJ7fUd-blLazcyyIpKhB9qHk7TSE3cCRPMX0kLzg6ghb3hhf6l35RChqtMy25Fuf-511GERab8jnrkbktI51YuGPtODVFRR0wF_wkKEAQGrKcOynJAygm9XWCXLGRdwquVofuii23VtmFIdyCe2oxHPJ_qcTLAbBGRj2Eq053sTVA8heAkJie9UB5MxoNnul1OoyEal3IG0eqmWOc2w.-jvXLxNw-icZrIXyF-6yGw5W8FZucYxuCy8t5gS6Bf8&dib_tag=se&keywords=self+care&qid=1758651206&sprefix=self+ca%2Caps%2C615&sr=8-114",
-    "imageLink": "https://m.media-amazon.com/images/I/71SMUQ9rvFL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71SMUQ9rvFL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1246,8 +1246,8 @@ export const allSelfcareExtended = [
     "title": "The Love Crate Co Gift Baskets for Women, Unique Birthday Gifts, Best Friend Birthday Gift, Get Well Soon, Sending Sunshine Sunflower Gifts for Women, Thinking of You Care Package",
     "price": "$47.",
     "rating": "4.8",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/81ZEueIgPWL._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/81ZEueIgPWL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1255,8 +1255,8 @@ export const allSelfcareExtended = [
     "title": "Happy Birthday Gifts for Women Mom Her Friend Sister Wife Grandma, Self Care Gifts Get Well Gifts Unique Relaxing Spa Gift Basket Set, Christmas Gifts for Women Mom Wife Grandma Friends Sister",
     "price": "$39.",
     "rating": "4.8",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/71I+4GIAWqL._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/71I+4GIAWqL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1264,8 +1264,8 @@ export const allSelfcareExtended = [
     "title": "MasterMedi Tongue Scraper with Multicolor Cases (2 Pack), 100% Stainless Steel, Reduce Bad Breath, Easy to Use Tongue Scraper for Adults, Tongue Cleaner for Oral Care & Hygiene",
     "price": "$8.",
     "rating": "4.6",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/71K0QjoPNGL._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/71K0QjoPNGL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1273,8 +1273,8 @@ export const allSelfcareExtended = [
     "title": "TULA Skin Care Eye Balm Glow & Get It - Dark Circle Treatment, Instantly Hydrate and Brighten Undereye Area, Portable and Perfect to Use On-the-go, 0.35 oz.",
     "price": "$38.",
     "rating": "4.3",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/71JVKtvkZwL._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/71JVKtvkZwL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1283,7 +1283,7 @@ export const allSelfcareExtended = [
     "price": "$8.",
     "rating": "4.4",
     "productLink": "https://www.amazon.com/Earplugs-Puffiness-Sleeping-Pressure-Headaches/dp/B07HD61PYN/ref=sr_1_119?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.gYehBn6DfG5IMql8qBwbdGFPHdSW-rs4t3A1YXq7Km2xXQd9m4xtIuvkpBI_CGHSztVqOkMWwzkYDqvK68WNN4MMVJ7fUd-blLazcyyIpKhB9qHk7TSE3cCRPMX0kLzg6ghb3hhf6l35RChqtMy25Fuf-511GERab8jnrkbktI51YuGPtODVFRR0wF_wkKEAQGrKcOynJAygm9XWCXLGRdwquVofuii23VtmFIdyCe2oxHPJ_qcTLAbBGRj2Eq053sTVA8heAkJie9UB5MxoNnul1OoyEal3IG0eqmWOc2w.-jvXLxNw-icZrIXyF-6yGw5W8FZucYxuCy8t5gS6Bf8&dib_tag=se&keywords=self+care&qid=1758651206&sprefix=self+ca%2Caps%2C615&sr=8-119",
-    "imageLink": "https://m.media-amazon.com/images/I/71J157-uKML._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71J157-uKML._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1292,7 +1292,7 @@ export const allSelfcareExtended = [
     "price": "$8.",
     "rating": "4.7",
     "productLink": "https://www.amazon.com/Complete-Guide-Self-Care-Practices-Healthier/dp/0785838309/ref=sr_1_120?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.gYehBn6DfG5IMql8qBwbdGFPHdSW-rs4t3A1YXq7Km2xXQd9m4xtIuvkpBI_CGHSztVqOkMWwzkYDqvK68WNN4MMVJ7fUd-blLazcyyIpKhB9qHk7TSE3cCRPMX0kLzg6ghb3hhf6l35RChqtMy25Fuf-511GERab8jnrkbktI51YuGPtODVFRR0wF_wkKEAQGrKcOynJAygm9XWCXLGRdwquVofuii23VtmFIdyCe2oxHPJ_qcTLAbBGRj2Eq053sTVA8heAkJie9UB5MxoNnul1OoyEal3IG0eqmWOc2w.-jvXLxNw-icZrIXyF-6yGw5W8FZucYxuCy8t5gS6Bf8&dib_tag=se&keywords=self+care&qid=1758651206&sprefix=self+ca%2Caps%2C615&sr=8-120",
-    "imageLink": "https://m.media-amazon.com/images/I/91Afoxt4K0L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/91Afoxt4K0L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": "Only 1 left in stock - order soon."
   },
@@ -1301,7 +1301,7 @@ export const allSelfcareExtended = [
     "price": "$13.",
     "rating": "4.7",
     "productLink": "https://www.amazon.com/Self-Care-Autistic-People-Recharge-Stress/dp/1507221932/ref=sr_1_121?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.gYehBn6DfG5IMql8qBwbdGFPHdSW-rs4t3A1YXq7Km2xXQd9m4xtIuvkpBI_CGHSztVqOkMWwzkYDqvK68WNN4MMVJ7fUd-blLazcyyIpKhB9qHk7TSE3cCRPMX0kLzg6ghb3hhf6l35RChqtMy25Fuf-511GERab8jnrkbktI51YuGPtODVFRR0wF_wkKEAQGrKcOynJAygm9XWCXLGRdwquVofuii23VtmFIdyCe2oxHPJ_qcTLAbBGRj2Eq053sTVA8heAkJie9UB5MxoNnul1OoyEal3IG0eqmWOc2w.-jvXLxNw-icZrIXyF-6yGw5W8FZucYxuCy8t5gS6Bf8&dib_tag=se&keywords=self+care&qid=1758651206&sprefix=self+ca%2Caps%2C615&sr=8-121",
-    "imageLink": "https://m.media-amazon.com/images/I/71aRVyFUqdL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71aRVyFUqdL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1310,7 +1310,7 @@ export const allSelfcareExtended = [
     "price": "$9.",
     "rating": "4.5",
     "productLink": "https://www.amazon.com/Knock-Self-Care-Tracker-Checklist-9-inches/dp/B09PC8JW46/ref=sr_1_122?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.gYehBn6DfG5IMql8qBwbdGFPHdSW-rs4t3A1YXq7Km2xXQd9m4xtIuvkpBI_CGHSztVqOkMWwzkYDqvK68WNN4MMVJ7fUd-blLazcyyIpKhB9qHk7TSE3cCRPMX0kLzg6ghb3hhf6l35RChqtMy25Fuf-511GERab8jnrkbktI51YuGPtODVFRR0wF_wkKEAQGrKcOynJAygm9XWCXLGRdwquVofuii23VtmFIdyCe2oxHPJ_qcTLAbBGRj2Eq053sTVA8heAkJie9UB5MxoNnul1OoyEal3IG0eqmWOc2w.-jvXLxNw-icZrIXyF-6yGw5W8FZucYxuCy8t5gS6Bf8&dib_tag=se&keywords=self+care&qid=1758651206&sprefix=self+ca%2Caps%2C615&sr=8-122",
-    "imageLink": "https://m.media-amazon.com/images/I/81yQ2EW-p8L._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/81yQ2EW-p8L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1318,8 +1318,8 @@ export const allSelfcareExtended = [
     "title": "MDSolarSciences Tinted Sheer Lip Balm SPF 30 Hydrating Lip Sunscreen Shea Butter, Jojoba & Avocado Oils Moisturizing, Vegan, Clean & Cruelty Free Lip Care 0.15 oz",
     "price": "$25.",
     "rating": "3.9",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/71u3KOuAPRL._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/71u3KOuAPRL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1327,8 +1327,8 @@ export const allSelfcareExtended = [
     "title": "grace & stella Award Winning Under Eye Mask - Travel Essentials - Birthday Gifts for Women - Gel Eye Patches for Dark Circles, Puffy Eyes, Wrinkles, Undereye Bags - Vegan Self Care (48 Pairs, Gold)",
     "price": "$29.",
     "rating": "4.3",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/71SIzE-8N+L._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/71SIzE-8N+L._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1336,8 +1336,8 @@ export const allSelfcareExtended = [
     "title": "VALITIC Kojic Acid Dark Spot Remover Soap Bars with Vitamin C, Retinol, Collagen, Turmeric - Original Japanese Complex Infused with Hyaluronic Acid, Vitamin E, Shea Butter, Castile Olive Oil (2 Pack)",
     "price": "$14.",
     "rating": "4.2",
-    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#",
-    "imageLink": "https://m.media-amazon.com/images/I/61kDhkUHcYL._AC_UL320_.jpg",
+    "productLink": "https://www.amazon.com/s?k=self+care&crid=1WNWNP7AVH9B8&sprefix=self+ca%2Caps%2C615&ref=nb_sb_noss_2#&tag=vibricsdeals-21",
+    "imageLink": "https://m.media-amazon.com/images/I/61kDhkUHcYL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   },
@@ -1346,7 +1346,7 @@ export const allSelfcareExtended = [
     "price": "$45.",
     "rating": "4.6",
     "productLink": "https://www.amazon.com/Youth-People-Headliners-Skincare-Giftset/dp/B0FKCXSTM6/ref=sr_1_126?crid=1WNWNP7AVH9B8&dib=eyJ2IjoiMSJ9.gYehBn6DfG5IMql8qBwbdGFPHdSW-rs4t3A1YXq7Km2xXQd9m4xtIuvkpBI_CGHSztVqOkMWwzkYDqvK68WNN4MMVJ7fUd-blLazcyyIpKhB9qHk7TSE3cCRPMX0kLzg6ghb3hhf6l35RChqtMy25Fuf-511GERab8jnrkbktI51YuGPtODVFRR0wF_wkKEAQGrKcOynJAygm9XWCXLGRdwquVofuii23VtmFIdyCe2oxHPJ_qcTLAbBGRj2Eq053sTVA8heAkJie9UB5MxoNnul1OoyEal3IG0eqmWOc2w.-jvXLxNw-icZrIXyF-6yGw5W8FZucYxuCy8t5gS6Bf8&dib_tag=se&keywords=self+care&qid=1758651206&sprefix=self+ca%2Caps%2C615&sr=8-126",
-    "imageLink": "https://m.media-amazon.com/images/I/71UuQpOk4bL._AC_UL320_.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/71UuQpOk4bL._AC_UL320_.jpg?tag=vibricsdeals-21",
     "asin": "",
     "availability": ""
   }

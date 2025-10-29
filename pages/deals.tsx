@@ -575,10 +575,10 @@ function FeaturedDealCard({ deal, index, region }: { deal: any; index: number; r
 
   const handleAmazonRedirect = () => {
     if (deal.link) {
-      // Add your USA affiliate tag to the product link
+      // Add your affiliate tag to the product link
       const affiliateLink = deal.link.includes('?') 
-        ? `${deal.link}&tag=beforeyou-20&linkId=b3b134c0f45e2e73d36e027f9b9495a4`
-        : `${deal.link}?tag=beforeyou-20&linkId=b3b134c0f45e2e73d36e027f9b9495a4`;
+        ? `${deal.link}&tag=vibricsdeals-21&linkId=b3b134c0f45e2e73d36e027f9b9495a4`
+        : `${deal.link}?tag=vibricsdeals-21&linkId=b3b134c0f45e2e73d36e027f9b9495a4`;
       
       // Log affiliate click
       logger.logAffiliateClick(

@@ -2,12 +2,19 @@
 import { register, Counter, Histogram, Gauge, collectDefaultMetrics } from 'prom-client';
 
 // Prevent multiple registrations in development
-let defaultMetricsCollected = false;
-
-// Collect default metrics (CPU, memory, etc.) only once
-if (!defaultMetricsCollected) {
-  collectDefaultMetrics();
-  defaultMetricsCollected = true;
+// Check if metrics are already collected by checking if any metric exists
+try {
+  const existingMetric = register.getSingleMetric('process_cpu_user_seconds_total');
+  if (!existingMetric) {
+    collectDefaultMetrics();
+  }
+} catch (error) {
+  // If error checking, just try to collect (will skip if already exists)
+  try {
+    collectDefaultMetrics();
+  } catch (e) {
+    // Metrics already collected, ignore
+  }
 }
 
 // Custom application metrics - use getOrCreate pattern to prevent duplicates

@@ -7,8 +7,11 @@ import Layout from "../components/Layout";
 import { Toaster } from "react-hot-toast";
 import { RegionProvider } from "../contexts/RegionContext";
 import { LoadingProvider } from "../contexts/LoadingContext";
+import { ThemeProvider } from "../contexts/ThemeContext";
 import GlobalLoader from "../components/GlobalLoader";
 import ErrorBoundary from "../components/ErrorBoundary";
+import MobileBottomNav from "../components/MobileBottomNav";
+import ThemeToggle from "../components/ThemeToggle";
 import monitoring from "../lib/monitoring";
 import Head from "next/head";
 import type { AppProps } from "next/app";
@@ -151,35 +154,51 @@ function MyApp({ Component, pageProps }: AppProps) {
           }}
         />
       </Head>
-      <RegionProvider>
-        <LoadingProvider>
-          <Toaster position="top-right" />
-          <GlobalLoader 
-            isLoading={isNavigating} 
-            loadingText="Loading page..." 
-            size="lg"
-          >
-            {isLoginPage || isSignupPage ? (
-              <Component {...pageProps} />
-            ) : (
-              <Layout>
-                <Component {...pageProps} />
-              </Layout>
-            )}
-          </GlobalLoader>
-          {/* Immediate loading overlay for Sentry/compilation delays */}
-          {isInitialLoad && (
-            <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center">
-              <div className="bg-white dark:bg-gray-800 rounded-lg p-8 shadow-2xl">
-                <div className="flex flex-col items-center space-y-4">
-                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500"></div>
-                  <p className="text-gray-600 dark:text-gray-300 font-medium">Loading Vibrics Deals...</p>
+      <ThemeProvider>
+        <RegionProvider>
+          <LoadingProvider>
+            <ErrorBoundary>
+              <Toaster position="top-right" />
+              
+              {/* Theme Toggle Button - Fixed top right */}
+              {!isLoginPage && !isSignupPage && (
+                <div className="fixed top-4 right-4 z-50">
+                  <ThemeToggle />
                 </div>
-              </div>
-            </div>
-          )}
-        </LoadingProvider>
-      </RegionProvider>
+              )}
+              
+              <GlobalLoader 
+                isLoading={isNavigating} 
+                loadingText="Loading page..." 
+                size="lg"
+              >
+                {isLoginPage || isSignupPage ? (
+                  <Component {...pageProps} />
+                ) : (
+                  <Layout>
+                    <Component {...pageProps} />
+                  </Layout>
+                )}
+              </GlobalLoader>
+              
+              {/* Mobile Bottom Navigation */}
+              <MobileBottomNav />
+              
+              {/* Immediate loading overlay for initial app load */}
+              {isInitialLoad && (
+                <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center">
+                  <div className="bg-white dark:bg-gray-800 rounded-lg p-8 shadow-2xl">
+                    <div className="flex flex-col items-center space-y-4">
+                      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500"></div>
+                      <p className="text-gray-600 dark:text-gray-300 font-medium">Loading Vibrics Deals...</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </ErrorBoundary>
+          </LoadingProvider>
+        </RegionProvider>
+      </ThemeProvider>
     </>
   );
 }
